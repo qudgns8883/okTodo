@@ -6,6 +6,7 @@ import android.location.Address
 import android.location.Geocoder
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -21,7 +22,11 @@ import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.FragmentOneBinding
 import com.example.oktodo.databinding.FragmentTwoBinding
+import com.example.oktodo.myPage.MyPage
+import com.example.oktodo.util.base.BaseFragment
 import com.example.oktodo.util.drawerUtil.DrawerUtil
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.io.IOException
 import java.lang.IllegalArgumentException
 import java.time.ZoneId
@@ -29,7 +34,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-class OneFragment : Fragment() {
+class OneFragment : BaseFragment() {
     // 뷰모델 및 바인딩 변수 선언
     private lateinit var viewModel: LocationViewModel
     private lateinit var airBinding: FragmentOneBinding
@@ -119,6 +124,20 @@ class OneFragment : Fragment() {
             }
             false
         }
+    }
+
+    // 인터페이스로 정의한 메뉴 관련 로직을 처리
+    override fun handleMenuClick(itemId: Int): Boolean {
+                Log.d("intentwwwwwwwww", "${itemId}")
+        when (itemId) {
+            R.id.userMyPage -> {
+                // MyPage 액티비티로 이동하는 로직
+                val intent = Intent(requireActivity(), MyPage::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+        return false
     }
 
     // UI 업데이트 메소드

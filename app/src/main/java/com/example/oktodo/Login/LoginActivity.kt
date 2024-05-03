@@ -135,6 +135,7 @@ class LoginActivity : AppCompatActivity() {
                 // 닉네임과 프로필 이미지 URL 추출
                 val nickname = response.profile?.nickname ?: "Unknown"
                 val profileImage = response.profile?.profileImage ?: ""
+                val email = response.profile?.email ?: ""
 
                 if (nickname != null && profileImage != null) {
                     // ChosenActivity로 이동하고 닉네임과 프로필 이미지 URL 전달
@@ -142,6 +143,7 @@ class LoginActivity : AppCompatActivity() {
                     prefs.putBoolean("IsLoggedIn", true)
                     prefs.putString("Nickname", nickname) // 닉네임 저장
                     prefs.putString("ProfileImageUrl", profileImage) // 프로필 이미지 URL 저장
+                    prefs.putString("Email", email) // 이메일 정보 저장
                     prefs.putString("LoginType", "Naver") // 로그인 타입 저장
                     prefs.apply()
 
@@ -253,6 +255,7 @@ class LoginActivity : AppCompatActivity() {
                 prefs.putBoolean("IsLoggedIn", true)
                 prefs.putString("Nickname", user.displayName) // 닉네임 저장
                 prefs.putString("ProfileImageUrl", user.photoUrl.toString()) // 프로필 이미지 URL 저장
+                prefs.putString("Email", user.email ?: "") // 이메일 저장, 이메일이 null일 경우 빈 문자열 저장
                 prefs.putString("LoginType", "Google") // 로그인 타입 저장
                 prefs.apply()
 
@@ -299,6 +302,7 @@ class LoginActivity : AppCompatActivity() {
                     "ProfileImageUrl",
                     user.kakaoAccount?.profile?.profileImageUrl
                 ) // 프로필 이미지 URL 저장
+                prefs.putString("Email", user.kakaoAccount?.email) // 이메일 정보 저장
                 prefs.putString("LoginType", "Kakao") // 로그인 타입 저장
                 prefs.apply()
 
