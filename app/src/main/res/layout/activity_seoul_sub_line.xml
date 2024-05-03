@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/seoulmetro5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#A8D08F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9" />
+
+    <TextView
+        android:id="@+id/subway"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="Subway"
+        android:textColor="#404040"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/icon_home"
+        app:layout_constraintStart_toEndOf="@+id/menu_icon"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9" />
+
+    <ImageView
+        android:id="@+id/icon_home"
+        android:src="@drawable/icon_home"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="280dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="#D7F1C7"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinner_line_selector"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_9">
+
+        <RelativeLayout
+            android:id="@+id/place_block"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/sub_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center"
+                android:text="서울 지하철\n실시간 도착정보"
+                android:textColor="#404040"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Spinner
+        android:id="@+id/spinner_line_selector"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/spinner_sub"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+
+    <Spinner
+        android:id="@+id/spinner_station_selector"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/spinner_line_selector"
+        android:background="@drawable/spinner_sub"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_line_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <android.widget.Button
+        android:id="@+id/seoulBackBtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_sub"
+        android:text="취소"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toEndOf="@+id/checkBtn"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_station_selector"
+        tools:ignore="MissingConstraints" />
+
+    <android.widget.Button
+        android:id="@+id/checkBtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_sub"
+        android:text="확인"
+        android:textSize="23dp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@+id/spinner_station_selector"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_station_selector"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="66dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
