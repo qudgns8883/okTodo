@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seoulmetro5"
+    tools:context=".metro.MetroActivity">
+
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#A8D08F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9" />
+
+    <TextView
+        android:id="@+id/subway"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="Subway"
+        android:textColor="#404040"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/icon_home"
+        app:layout_constraintStart_toEndOf="@+id/menu_icon"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9" />
+
+    <ImageView
+        android:id="@+id/icon_home"
+        android:src="@drawable/icon_home"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+    <android.widget.Button
+        android:id="@+id/busanBtn"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_sub"
+        android:text="부산 지하철\n시간표"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9" />
+
+    <android.widget.Button
+        android:id="@+id/seoulBtn"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_sub"
+        android:text="서울지하철 실시간 도착정보"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/busanBtn" />
+
+    <!--토글-->
+    <FrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:elevation="4dp"
+        app:layout_constraintWidth_percent="0.75"> <!-- 드로어의 너비가 전체의 75%가 되도록 설정 -->
+        <!--elevation = z값을 설정함, 이값없으면 이유는모르겠지만 지하철 버튼들이 토글화면을 가림..-->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

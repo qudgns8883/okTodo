@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/seoulmetro5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#A8D08F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9" />
+
+    <TextView
+        android:id="@+id/subway"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="Subway"
+        android:textColor="#404040"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/icon_home"
+        app:layout_constraintStart_toEndOf="@+id/menu_icon"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9" />
+
+    <ImageView
+        android:id="@+id/icon_home"
+        android:src="@drawable/icon_home"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginEnd="40dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        app:cardBackgroundColor="#D7F1C7"-->
+<!--        app:cardCornerRadius="50dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/rectangle_9">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/place_block"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/location"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginEnd="60dp"-->
+<!--                android:layout_toStartOf="@+id/sub_station"-->
+<!--                android:src="@drawable/icon_sub" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/search_icon"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_marginStart="60dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_toEndOf="@+id/sub_station"-->
+<!--                android:src="@drawable/icon_search" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/sub_station"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:lineSpacingExtra="2sp"-->
+<!--                android:text=""-->
+<!--                android:textColor="#404040"-->
+<!--                android:textSize="20dp" />-->
+<!--        </RelativeLayout>-->
+<!--        -->
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="110dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/station_card1"-->
+<!--        android:layout_width="313dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginBottom="310dp"-->
+<!--        app:cardBackgroundColor="#D7F1C7"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/station_text1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/station1_direction"-->
+<!--                    android:layout_width="188dp"-->
+<!--                    android:layout_height="39dp"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_marginStart="60dp"-->
+<!--                    android:layout_marginEnd="60dp"-->
+<!--                    android:gravity="center_horizontal|center_vertical"-->
+<!--                    android:lineSpacingExtra="2sp"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="#404040"-->
+<!--                    android:textSize="20dp"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/trainTimeFirst"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:layout_marginStart="70dp"-->
+<!--                    android:textSize="26sp"-->
+<!--                    android:text="" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/trainTimeSecond"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:layout_marginEnd="70dp"-->
+<!--                    android:text=""-->
+<!--                    android:textSize="26sp" />-->
+<!--            </RelativeLayout>-->
+
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
