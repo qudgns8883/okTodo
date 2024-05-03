@@ -50,7 +50,6 @@ class ForumSecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("test", "Fragment2() 호출됨")
         // 프래그먼트 2에 대한 쿼리 호출
         viewModel.queryForFragment2()
 

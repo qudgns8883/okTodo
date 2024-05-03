@@ -43,7 +43,6 @@ class ForumThirdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = ForumFragmentThirdBinding.inflate(inflater, container, false)
-        Log.d("test", "Fragment3() 호출됨222")
         return binding.root
     }
 
@@ -51,7 +50,6 @@ class ForumThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("test", "Fragment3() 호출됨")
         // 프래그먼트 3에 대한 쿼리 호출
         viewModel.queryForFragment3()
 

@@ -43,15 +43,6 @@ class ForumMainActivity  : AppCompatActivity() {
 
 //        // 탭 생성 및 추가
         val tabLayout = findViewById<TabLayout>(R.id.forum_tabs)
-//        val tab1: TabLayout.Tab = tabLayout.newTab()
-//        tab1.text="전체"
-//        tabLayout.addTab(tab1)
-//        val tab2: TabLayout.Tab = tabLayout.newTab()
-//        tab2.text="교통"
-//        tabLayout.addTab(tab2)
-//        val tab3: TabLayout.Tab = tabLayout.newTab()
-//        tab3.text="날씨"
-//        tabLayout.addTab(tab3)
 
         // 시작 시 첫 번째 탭이 선택된 상태로 하기 위해서 추가
         supportFragmentManager.beginTransaction().apply {
