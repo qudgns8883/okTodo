@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.AirAndWeather.FragmentActivity
@@ -23,6 +24,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.oktodo.metro.MetroActivity
+import com.example.oktodo.myPage.MyPage
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,10 +49,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 마이 페이지
-//        binding.commView.setOnClickListener {
-//            val intent = Intent(this, MyPage::class.java)
-//            startActivity(intent)
-//        }
+        binding.commView.setOnClickListener {
+            val intent = Intent(this, MyPage::class.java)
+            startActivity(intent)
+        }
 
         // 날씨, 미세먼지
         binding.weatherView.setOnClickListener {
@@ -76,11 +78,11 @@ class MainActivity : AppCompatActivity() {
             // 로그인 상태에 따라 닉네임 설정, 기본값은 "LOGIN"
             val nickname = if (isLoggedIn) prefs.getString("Nickname", "") else "LOGIN"
 
-//            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
-//            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
-//
-//            val imagePath = prefs.getString("UserImageFilePath", null)
-//            Log.d("LoginActivity", "ImageImageImageImage Path: $imagePath") // 로그 찍는 부분
+            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
+            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
+
+            val imagePath = prefs.getString("UserImageFilePath", null)
+            Log.d("LoginActivity", "ImageImageImageImage Path: $imagePath") // 로그 찍는 부분
 
             // 로그를 사용하여 profileImageUrl 확인
             // 사용자 닉네임으로 UI 업데이트

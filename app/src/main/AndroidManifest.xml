@@ -40,14 +40,14 @@
             android:name=".Login.SignUpActivity"
             android:exported="false">
         </activity>
-        <!--        <activity-->
-        <!--            android:name=".myPage.MyPage"-->
-        <!--            android:exported="false">-->
-        <!--        </activity>-->
-        <!--        <activity-->
-        <!--            android:name=".myPage.MyPageEdit"-->
-        <!--            android:exported="false">-->
-        <!--        </activity>-->
+                <activity
+                    android:name=".myPage.MyPage"
+                    android:exported="false">
+                </activity>
+                <activity
+                    android:name=".myPage.MyPageEdit"
+                    android:exported="false">
+                </activity>
         <activity
             android:name=".AirAndWeather.FragmentActivity"
             android:exported="false">
