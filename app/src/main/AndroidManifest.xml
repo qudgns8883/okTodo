@@ -17,10 +17,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".metro.BusanBusActivity"
+            android:name=".metro.BusanBusChosenActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".metro.BusanBusActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,17 +29,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".metro.MetroActivity"
+            android:name=".MainActivity"
             android:exported="false"></activity>
+        <activity
+            android:name=".metro.MetroActivity"
+            android:exported="false" />
         <activity
             android:name=".metro.BusanChosenActivity"
             android:exported="false" />
         <activity
             android:name=".metro.BusanSubLineActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".metro.SeoulSubLineActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".metro.SeoulChosenActivity"
             android:exported="false" />
