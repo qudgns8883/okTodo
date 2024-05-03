@@ -21,14 +21,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->
-        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakaod16087d80c91cf7da093934da501b028" />
             </intent-filter>
         </activity>
@@ -40,14 +43,14 @@
             android:name=".Login.SignUpActivity"
             android:exported="false">
         </activity>
-        <!--        <activity-->
-        <!--            android:name=".myPage.MyPage"-->
-        <!--            android:exported="false">-->
-        <!--        </activity>-->
-        <!--        <activity-->
-        <!--            android:name=".myPage.MyPageEdit"-->
-        <!--            android:exported="false">-->
-        <!--        </activity>-->
+        <activity
+            android:name=".myPage.MyPage"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".myPage.MyPageEdit"
+            android:exported="false">
+        </activity>
         <activity
             android:name=".AirAndWeather.FragmentActivity"
             android:exported="false">
@@ -99,16 +102,13 @@
 
         <activity
             android:name=".forum.ForumMainActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".forum.ForumWriteActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".forum.ForumReadActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
     </application>
 
 </manifest>
