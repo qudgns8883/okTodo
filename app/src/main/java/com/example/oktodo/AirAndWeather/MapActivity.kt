@@ -36,7 +36,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         setContentView(binding.root)
 
         if (!Places.isInitialized()) {
-            Places.initialize(applicationContext, "AIzaSyAujALAFIteouRrtbkX3wwHogjuPSMHkJE")
+            Places.initialize(applicationContext, "AIzaSyC_CUl36edoRjzzGKcOb4ZTGWrp6TdVZl8")
         }
 
         currentLat = intent.getDoubleExtra("currentLat", 0.0)

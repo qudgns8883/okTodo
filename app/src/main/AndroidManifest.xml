@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 이 권한은 앱이 디바이스의 정확한 위치에 접근할 수 있도록 허용함, 권한이 허용되면 앱은 GPS 또는 다른 정밀한 위치 제공자를 통해 디바이스의 정확한 위치에 액세스할 수 있음 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 이 권한은 앱이 디바이스의 대략적인 위치에 접근할 수 있도록 허용함, 이 권한이 허용되면 앱은 Wi-Fi 네트워크 또는 휴대폰 기지국과 같은 대략적인 위치 제공자를 통해 디바이스의 대략적인 위치에 액세스할 수 있음 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".Login.MyApp"
@@ -17,6 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OkTodo"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
@@ -56,12 +58,15 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAujALAFIteouRrtbkX3wwHogjuPSMHkJE" />
+            android:value="AIzaSyC_CUl36edoRjzzGKcOb4ZTGWrp6TdVZl8" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="kakaod16087d80c91cf7da093934da501b028" />
 
+        <activity
+            android:name=".metro.BusanBusActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -71,6 +76,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".metro.MetroActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".metro.BusanChosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".metro.BusanSubLineActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".metro.SeoulSubLineActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".metro.SeoulChosenActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

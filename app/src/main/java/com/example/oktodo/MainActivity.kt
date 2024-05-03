@@ -19,6 +19,10 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.cardview.widget.CardView
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.oktodo.metro.MetroActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,6 +57,13 @@ class MainActivity : AppCompatActivity() {
             scope.launch {
                 handleWeatherViewClick()
             }
+        }
+
+        var metro = findViewById<CardView>(R.id.sub_view)
+
+        metro.setOnClickListener {
+            intent = Intent(this, MetroActivity::class.java)
+            startActivity(intent)
         }
     }
 
