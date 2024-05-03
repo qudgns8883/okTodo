@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_seoul_gangnam"
+        android:title="강남구" />
+    <item
+        android:id="@+id/menu_item_seoul_gangdong"
+        android:title="강동구" />
+    <item
+        android:id="@+id/menu_item_seoul_gangbuk"
+        android:title="강북구" />
+    <item
+        android:id="@+id/menu_item_seoul_gangseo"
+        android:title="강서구" />
+    <item
+        android:id="@+id/menu_item_seoul_gwanak"
+        android:title="관악구" />
+    <item
+        android:id="@+id/menu_item_seoul_gwangjin"
+        android:title="광진구" />
+    <item
+        android:id="@+id/menu_item_seoul_guro"
+        android:title="구로구" />
+    <item
+        android:id="@+id/menu_item_seoul_geumcheon"
+        android:title="금천구" />
+    <item
+        android:id="@+id/menu_item_seoul_nowon"
+        android:title="노원구" />
+    <item
+        android:id="@+id/menu_item_seoul_dobong"
+        android:title="도봉구" />
+    <item
+        android:id="@+id/menu_item_seoul_dongdaemun"
+        android:title="동대문구" />
+    <item
+        android:id="@+id/menu_item_seoul_dongjak"
+        android:title="동작구" />
+    <item
+        android:id="@+id/menu_item_seoul_mapo"
+        android:title="마포구" />
+    <item
+        android:id="@+id/menu_item_seoul_seodaemun"
+        android:title="서대문구" />
+    <item
+        android:id="@+id/menu_item_seoul_seocho"
+        android:title="서초구" />
+    <item
+        android:id="@+id/menu_item_seoul_seongdong"
+        android:title="성동구" />
+    <item
+        android:id="@+id/menu_item_seoul_seongbuk"
+        android:title="성북구" />
+    <item
+        android:id="@+id/menu_item_seoul_songpa"
+        android:title="송파구" />
+    <item
+        android:id="@+id/menu_item_seoul_yangcheon"
+        android:title="양천구" />
+    <item
+        android:id="@+id/menu_item_seoul_yeongdeungpo"
+        android:title="영등포구" />
+    <item
+        android:id="@+id/menu_item_seoul_yongsan"
+        android:title="용산구" />
+    <item
+        android:id="@+id/menu_item_seoul_eunpyeong"
+        android:title="은평구" />
+    <item
+        android:id="@+id/menu_item_seoul_jongno"
+        android:title="종로구" />
+    <item
+        android:id="@+id/menu_item_seoul_jung"
+        android:title="중구" />
+    <item
+        android:id="@+id/menu_item_seoul_jungnang"
+        android:title="중랑구" />
+</menu>

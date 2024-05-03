@@ -212,16 +212,10 @@ class MyPage : AppCompatActivity() {
         val mnoString = sharedPreferences.getString("mno", null)
         val mno = mnoString?.toIntOrNull()
 
-        if (mno == null) {
-            Toast.makeText(applicationContext, "오류가 발생했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
-            Log.e("DeleteUserAccount", "Failed to get member number (Mno) from SharedPreferences.")
-            return
-        }
-
         // 비동기 처리를 위해 Coroutine 사용
         lifecycleScope.launch {
             try {
-                val member = memberDao.getMemberById(mno)
+                val member = memberDao.getMemberById(mno!!)
                 if (member != null) {
                     memberDao.deleteMember(member)
                     withContext(Dispatchers.Main) {

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">okTodo</string>
+    <string name="action_settings">Settings</string>
 
     <string name="measured_at">측정 시간</string>
 
@@ -917,6 +918,20 @@
         <item>안평역</item>
     </string-array>
 
+    <!--forum and todoList-->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
->>>>>>> origin/master
+    <string name="importance">중요도</string>
+    <string name="importance_low">낮음</string>
+    <string name="importance_middle">중간</string>
+    <string name="importance_high">높음</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="drawer_opened">Opened Draver</string>
+    <string name="drawer_closed">Closed Draver</string>
 </resources>

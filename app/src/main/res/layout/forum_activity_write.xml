@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--헤더-->
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#C2D8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/icon_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+        <TextView
+            android:id="@+id/todo"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:lineSpacingExtra="3sp"
+            android:text="Posting"
+            android:textColor="#404040"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="@+id/menu_icon" />
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/icon_home"
+            app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+    </GridLayout> <!--헤더-->
+    <!--작성란-->
+    <LinearLayout
+        android:id="@+id/write"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+        <!--    라디오 버튼-->
+        <LinearLayout
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginStart="5dp"
+                android:text="카테고리 선택하기"/>
+
+            <RadioGroup
+                android:id="@+id/f_radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/f_rg_btn1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="교통" />
+
+                <RadioButton
+                    android:id="@+id/f_rg_btn2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="날씨" />
+            </RadioGroup>
+        </LinearLayout>
+        <!--위치 지정-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:text="위치 선택하기"/>
+
+            <RelativeLayout
+                android:id="@+id/myLocationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_com2"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:textSize="17dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:text="내 위치1"
+                    android:textAppearance="?attr/textAppearanceBody1" />
+
+                <TextView
+                    android:id="@+id/locationTextView2"
+                    android:textSize="17dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_toRightOf="@id/locationTextView"
+                    android:text="내 위치2"
+                    android:textAppearance="?attr/textAppearanceBody1" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginStart="5dp"
+                android:text="글 작성하기"/>
+
+            <EditText
+                android:id="@+id/add_editView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:inputType="text"
+                android:padding="10dp"
+                android:background="@drawable/place_space"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/write">
+
+        <android.widget.Button
+            android:id="@+id/checkBtn"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_com"
+            android:backgroundTint="#C2D8FF"
+            android:textColor="#404040"
+            android:text="확인"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/write"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="65dp" />
+
+        <android.widget.Button
+            android:id="@+id/resetBtn"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_com"
+            android:backgroundTint="#C2D8FF"
+            android:textColor="#404040"
+            android:text="취소"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/write"
+            app:layout_constraintStart_toEndOf="@+id/checkBtn"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#C2D8FF"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.75"> <!-- 드로어의 너비가 전체의 75%가 되도록 설정 -->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="24dp">-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/myLocationView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#87CEEB"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:padding="16dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/locationTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="50dp"-->
+<!--            android:text="내 위치1"-->
+<!--            android:textAppearance="?attr/textAppearanceBody1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/locationTextView2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="50dp"-->
+<!--            android:layout_toRightOf="@id/locationTextView"-->
+<!--            android:text="내 위치2"-->
+<!--            android:textAppearance="?attr/textAppearanceBody1" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:text="글 작성"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textColor="@android:color/darker_gray"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/add_editView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:inputType="text"/>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/deleteFab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:clickable="true"-->
+<!--        android:src="@drawable/ic_baseline_delete_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--</LinearLayout>-->

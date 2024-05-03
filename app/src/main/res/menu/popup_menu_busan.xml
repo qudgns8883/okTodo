@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_busan_gangseo"
+        android:title="강서구" />
+    <item
+        android:id="@+id/menu_item_busan_geumjeong"
+        android:title="금정구" />
+    <item
+        android:id="@+id/menu_item_busan_nam"
+        android:title="남구" />
+    <item
+        android:id="@+id/menu_item_busan_dong"
+        android:title="동구" />
+    <item
+        android:id="@+id/menu_item_busan_dongnae"
+        android:title="동래구" />
+    <item
+        android:id="@+id/menu_item_busan_buk"
+        android:title="북구" />
+    <item
+        android:id="@+id/menu_item_busan_sasang"
+        android:title="사상구" />
+    <item
+        android:id="@+id/menu_item_busan_saha"
+        android:title="사하구" />
+    <item
+        android:id="@+id/menu_item_busan_seo"
+        android:title="서구" />
+    <item
+        android:id="@+id/menu_item_busan_suyeong"
+        android:title="수영구" />
+    <item
+        android:id="@+id/menu_item_busan_yeongdo"
+        android:title="영도구" />
+    <item
+        android:id="@+id/menu_item_busan_haeundae"
+        android:title="해운대구" />
+</menu>

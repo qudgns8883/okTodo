@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.AirAndWeather.FragmentActivity
@@ -23,6 +24,7 @@ import kotlinx.coroutines.withContext
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
 import com.example.oktodo.myPage.MyPage
 
@@ -40,18 +42,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 네이버 로그인 기능을 사용하기 전 SDK 초기화
-        NaverIdLoginSDK.initialize(this, "uiQucVW4O9r9bhg80XvD", "FyxVPv_DH_", "부산it 네이버로그인")
-
+        scope.launch {
+            // 네이버 로그인 기능을 사용하기 전 SDK 초기화
+            NaverIdLoginSDK.initialize(this@MainActivity, "uiQucVW4O9r9bhg80XvD", "FyxVPv_DH_", "부산it 네이버로그인")
+        }
         // 코루틴 내에서 `loginUpdateUI` 함수를 비동기적으로 실행
         scope.launch {
             loginUpdateUI()
-        }
-
-        // 마이 페이지
-        binding.commView.setOnClickListener {
-            val intent = Intent(this, MyPage::class.java)
-            startActivity(intent)
         }
 
         // 날씨, 미세먼지
@@ -61,10 +58,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // 지하철
         var metro = findViewById<CardView>(R.id.sub_view)
 
         metro.setOnClickListener {
             intent = Intent(this, MetroActivity::class.java)
+            startActivity(intent)
+        }
+
+        // forum
+        val forumView = findViewById<View>(R.id.comm_view)
+        forumView.setOnClickListener {
+            val intent = Intent(this, ForumMainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -78,11 +83,11 @@ class MainActivity : AppCompatActivity() {
             // 로그인 상태에 따라 닉네임 설정, 기본값은 "LOGIN"
             val nickname = if (isLoggedIn) prefs.getString("Nickname", "") else "LOGIN"
 
-            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
-            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
-
-            val imagePath = prefs.getString("UserImageFilePath", null)
-            Log.d("LoginActivity", "ImageImageImageImage Path: $imagePath") // 로그 찍는 부분
+//            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
+//            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
+//
+//            val imagePath = prefs.getString("UserImageFilePath", null)
+//            Log.d("LoginActivity", "ImageImageImageImage Path: $imagePath") // 로그 찍는 부분
 
             // 로그를 사용하여 profileImageUrl 확인
             // 사용자 닉네임으로 UI 업데이트
@@ -129,7 +134,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 로그아웃 알림 표시
-        Toast.makeText(this@MainActivity, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this@MainActivity, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show()
 
         // UI 업데이트
         CoroutineScope(Dispatchers.Main).launch {
