@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_seoul"
+        android:title="서울" />
+    <item
+        android:id="@+id/action_busan"
+        android:title="부산" />
+</menu>

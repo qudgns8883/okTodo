@@ -1,0 +1,1876 @@
+{
+  "stations": [
+    {
+      "name": "다대포해수욕장역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=95&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=95&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=95&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=95&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=95&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=95&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "다대포항역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=96&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=96&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=96&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=96&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=96&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=96&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "낫개역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=97&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=97&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=97&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=97&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=97&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=97&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "신장림역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=98&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=98&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=98&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=98&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=98&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=98&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "장림역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=99&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=99&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=99&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=99&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=99&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=99&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "동매역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=100&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=100&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=100&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=100&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=100&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=100&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "신평역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "하단역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=102&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=102&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=101&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=102&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "당리역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=103&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=103&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=103&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=103&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=103&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=103&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "사하역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=104&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=104&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=104&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=104&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=104&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=104&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "괴정역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=105&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=105&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=105&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=105&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=105&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=105&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "대티역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=106&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=106&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=106&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=106&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=106&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=106&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "서대신역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=107&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=107&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=107&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=107&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=107&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=107&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "동대신역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=108&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=108&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=108&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=108&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=108&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=108&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "토성역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=109&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=109&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=109&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=109&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=109&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=109&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "자갈치역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=110&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=110&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=110&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=110&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=110&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=110&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "남포역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=111&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=111&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=111&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=111&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=111&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=111&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "중앙역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=112&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=112&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=112&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=112&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=112&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=112&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "부산역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=113&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=113&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=113&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=113&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=113&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=113&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "초량역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=114&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=114&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=114&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=114&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=114&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=114&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "부산진역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=115&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=115&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=115&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=115&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=115&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=115&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "좌천역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=116&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=116&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=116&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=116&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=116&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=116&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "범일역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=117&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=117&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=117&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=117&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=117&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=117&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "범내골역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=118&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=118&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=118&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=118&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=118&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=118&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "서면역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=219&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=219&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=119&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=119&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=219&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=219&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=119&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=119&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=219&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=219&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=119&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=119&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "부전역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=120&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=120&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=120&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=120&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=120&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=120&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "양정역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=121&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=121&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=121&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=121&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=121&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=121&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "시청역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=122&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=122&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=122&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=122&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=122&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=122&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "연산역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=305&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=305&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=123&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=123&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=305&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=305&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=123&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=123&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=305&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=305&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=123&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=123&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "교대역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=124&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=124&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=124&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=124&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=124&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=124&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "동래역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=402&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=402&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=125&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=125day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=402&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=402&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=125&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=125&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=402&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=402&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=125&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=125&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "명륜역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=126&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=126&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=126&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=126&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=126&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=126&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "온천장역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=127&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=127&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=127&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=127&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=127&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=127&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "부산대역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=128&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=128&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=128&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=128&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=128&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=128&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "장전역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=129&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=129&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=129&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=129&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=129&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=129&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "구서역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=130&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=130&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=130&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=130&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=130&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=130&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "두실역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=131&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=131&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=131&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=131&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=131&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=131&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "남산역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=132&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=132&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=132&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=132&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=132&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=132&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "범어사역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=133&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=133&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=133&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=133&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=133&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=133&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "노포역",
+      "urls": {
+        "평일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=134&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=134&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=134&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=134&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "다대포해수욕장행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=134&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "노포행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=134&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "장산역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=201&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=201&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=201&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=201&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=201&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=201&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "중동역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=202&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=202&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=202&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=202&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=202&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=202&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "해운대역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=203&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=203&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=203&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=203&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=203&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=203&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "동백역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=204&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=204&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=204&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=204&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=204&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=204&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "벡스코(시립미술관)역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=205&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=205&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=205&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=205&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=205&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=205&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "센텀시티역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=206&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=206&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=206&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=206&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=206&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=206&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "민락역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=207&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=207&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=207&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=207&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=207&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=207&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "수영역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=301&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=301&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=208&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=208&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=301&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=301&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=208&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=208&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=301&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=301&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=208&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=208&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "광안역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=209&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=209&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=209&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=209&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=209&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=209&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "금련산역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=210&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=210&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=210&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=210&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=210&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=210&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "남천역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=211&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=211&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=211&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=211&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=211&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=211&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "경성대.부산대역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=212&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=212&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=212&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=212&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=212&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=212&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "대연역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=213&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=213&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=213&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=213&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=213&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=213&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "못골역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=214&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=214&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=214&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=214&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=214&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=214&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "지게골역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=215&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=215&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=215&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=215&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=215&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=215&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "문현역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=216&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=216&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=216&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=216&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=216&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=216&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "국제금융센터.부산은행",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=217&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=217&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=217&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=217&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=217&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=217&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "전포역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=218&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=218&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=218&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=218&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=218&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=218&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "부암역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=220&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=220&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=220&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=220&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=220&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=220&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "가야역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=221&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=221&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=221&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=221&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=221&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=221&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "동의대역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=222&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=222&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=222&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=222&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=222&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=222&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "개금역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=223&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=223&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=223&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=223&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=223&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=223&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "냉정역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=224&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=224&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=224&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=224&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=224&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=224&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "주례역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=225&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=225&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=225&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=225&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=225&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=225&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "감전역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=226&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=226&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=226&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=226&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=226&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=226&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "사상역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=227&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=227&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=227&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=227&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=227&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=227&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "덕포역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=228&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=228&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=228&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=228&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=228&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=228&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "모덕역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=229&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=229&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=229&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=229&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=229&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=229&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "모라역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=230&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=230&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=230&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=230&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=230&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=230&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "구남역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=231&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=231&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=231&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=231&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=231&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=231&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "구명역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=232&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=232&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=232&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=232&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=232&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=232&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "덕천역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=313&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=313&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=233&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=233&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=313&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=313&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=233&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=233&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=313&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=313&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=233&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=233&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "수정역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=234&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=234&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=234&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=234&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=234&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=234&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "화명역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=235&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=235&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=235&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=235&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=235&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=235&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "율리역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=236&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=236&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=236&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=236&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=236&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=236&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "동원역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=237&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=237&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=237&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=237&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=237&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=237&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "금곡역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=238&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=238&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=238&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=238&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=238&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=238&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "호포역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=239&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=239&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=239&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=239&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=239&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=239&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "증산역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=240&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=240&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=240&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=240&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=240&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=240&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "부산대양산캠퍼스역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=241&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=241&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=241&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=241&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=241&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=241&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "남양산역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=242&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=242&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=242&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=242&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=242&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=242&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "양산역",
+      "urls": {
+        "평일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=243&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=243&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=243&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=243&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "장산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=243&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "양산행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=243&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "망미역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=302&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=302&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=302&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=302&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=302&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=302&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "배산역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=303&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=303&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=303&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=303&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=303&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=303&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "물만골역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=304&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=304&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=304&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=304&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=304&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=304&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "거제역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=306&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=306&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=306&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=306&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=306&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=306&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "종합운동장역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=307&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=307&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=307&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=307&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=307&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=307&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "사직역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=308&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=308&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=308&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=308&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=308&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=308&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "미남역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=401&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=401&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=309&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=309&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=401&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=401&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=309&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=309&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=401&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=401&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=309&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=309&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "만덕역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=310&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=310&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=310&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=310&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=310&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=310&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "남산정역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=311&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=311&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=311&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=311&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=311&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=311&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "숙등역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=312&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=312&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=312&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=312&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=312&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=312&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "구포역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=314&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=314&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=314&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=314&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=314&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=314&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "강서구청역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=315&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=315&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=315&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=315&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=315&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=315&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "체육공원역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=316&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=316&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=316&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=316&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=316&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=316&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "대저역",
+      "urls": {
+        "평일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=317&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=317&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=317&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=317&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "수영행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=317&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "대저행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=317&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "수안역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=403&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=403&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=403&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=403&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=403&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=403&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "낙민역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=404&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=404&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=404&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=404&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=404&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=404&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "충렬사역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=405&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=405&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=405&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=405&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=405&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=405&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "명장역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=406&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=406&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=406&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=406&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=406&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=406&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "서동역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=407&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=407&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=407&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=407&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=407&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=407&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "금사역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=408&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=408&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=408&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=408&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=408&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=408&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "반여농산물시장역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=409&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=409&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=409&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=409&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=409&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=409&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "석대역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=410&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=410&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=410&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=410&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=410&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=410&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "영산대역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=411&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=411&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=411&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=411&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=411&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=411&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "윗반송역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=412&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=412&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=412&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=412&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=412&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=412&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "고촌역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=413&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=413&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=413&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=413&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=413&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=413&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    },
+    {
+      "name": "안평역",
+      "urls": {
+        "평일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=414&day=1&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=414&day=1&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "토요일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=414&day=2&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=414&day=2&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        },
+        "일/공휴일" : {
+          "미남행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=414&day=3&updown=0&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D",
+          "안평행": "http://data.humetro.busan.kr/voc/api/open_api_process.tnn?act=json&scode=414&day=3&updown=1&numOfRows=200&serviceKey=JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
+        }
+      }
+    }
+  ]
+}
