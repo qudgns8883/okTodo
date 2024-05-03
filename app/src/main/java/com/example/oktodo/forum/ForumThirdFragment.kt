@@ -59,10 +59,12 @@ class ForumThirdFragment : Fragment() {
             recyclerView,
             onClick = { forum ->
                 viewModel.selectedForum = forum
-                val intent = Intent(requireContext(), ForumWriteActivity::class.java)
+                val intent = Intent(requireContext(), ForumReadActivity::class.java)
                 intent.putExtra("forumCno", forum.cno.toString()) // 선택된 포럼 정보를 인텐트에 추가
                 intent.putExtra("forumContent", forum.forumContent) // 선택된 포럼 정보를 인텐트에 추가
                 intent.putExtra("forumCategory", forum.forumCategory)
+                intent.putExtra("forumPlace1", forum.forumPlace1)
+                intent.putExtra("forumPlace2", forum.forumPlace2)
                 startActivity(intent)
             }
         )

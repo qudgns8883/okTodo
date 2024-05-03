@@ -105,6 +105,10 @@
             android:name=".forum.ForumWriteActivity"
             android:exported="false"
             />
+        <activity
+            android:name=".forum.ForumReadActivity"
+            android:exported="false"
+            />
     </application>
 
 </manifest>
