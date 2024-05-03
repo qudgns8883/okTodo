@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/icon_home_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--입력란-->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@drawable/main_todo" />
+        <!--이메일 입력-->
+        <LinearLayout
+            android:id="@+id/email_place"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_login"
+                android:gravity="center"
+                android:text="Email"
+                android:textColor="#404040"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textEmailAddress" />
+        </LinearLayout><!--이메일 입력-->
+
+        <!--비밀번호 입력-->
+        <LinearLayout
+            android:id="@+id/password_place"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_login"
+                android:gravity="center"
+                android:text="Password"
+                android:textColor="#404040"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textPassword" />
+
+        </LinearLayout><!--비밀번호 입력-->
+    </LinearLayout><!--입력란-->
+
+    <!--로그인 버튼-->
+    <LinearLayout
+        android:id="@+id/buttonLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <!-- 자체 로그인 / 회원가입-->
+
+            <android.widget.Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_signup"
+                android:text="LOGIN"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <android.widget.Button
+                android:id="@+id/buttonSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_login2"
+                android:text="Sign up"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/buttonGoogleLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/google" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/buttonKakaoLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/kakao" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/buttonNaverLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/naver" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout><!--로그인 버튼-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
