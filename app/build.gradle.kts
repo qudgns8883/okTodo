@@ -38,6 +38,9 @@ android {
     viewBinding {
         enable = true
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -73,6 +76,12 @@ dependencies {
 
     kapt("androidx.room:room-compiler:$roomVersion")
 
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    annotationProcessor ("androidx.room:room-compiler:$roomVersion")
+
+    implementation ("androidx.fragment:fragment-ktx:1.3.0")
+
     // Glide 이미지
     implementation("com.github.bumptech.glide:glide:4.12.0")
     kapt("com.github.bumptech.glide:compiler:4.12.0")
@@ -101,4 +110,12 @@ dependencies {
     // 소셜 로그인 네이버
     implementation("com.navercorp.nid:oauth:5.9.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+    // WorkManager
+    val work_version = "2.7.0"
+    implementation ("androidx.work:work-runtime-ktx:$work_version")
+
+    // Navigation UI 라이브러리 의존성 추가
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.0")
 }

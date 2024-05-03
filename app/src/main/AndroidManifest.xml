@@ -96,6 +96,15 @@
         <activity
             android:name=".metro.SeoulChosenActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".forum.ForumMainActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".forum.ForumWriteActivity"
+            android:exported="false"
+            />
     </application>
 
 </manifest>

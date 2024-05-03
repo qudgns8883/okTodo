@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.AirAndWeather.FragmentActivity
@@ -22,6 +23,7 @@ import kotlinx.coroutines.withContext
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
 
 class MainActivity : AppCompatActivity() {
@@ -63,6 +65,13 @@ class MainActivity : AppCompatActivity() {
 
         metro.setOnClickListener {
             intent = Intent(this, MetroActivity::class.java)
+            startActivity(intent)
+        }
+
+        // forum
+        val forumView = findViewById<View>(R.id.comm_view)
+        forumView.setOnClickListener {
+            val intent = Intent(this, ForumMainActivity::class.java)
             startActivity(intent)
         }
     }
