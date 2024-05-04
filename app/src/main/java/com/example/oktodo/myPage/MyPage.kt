@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.bumptech.glide.Glide
 import com.example.oktodo.Login.LoginActivity
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
@@ -22,6 +23,9 @@ import com.example.oktodo.databinding.ActivityMypageBinding
 import com.example.oktodo.db.AppDatabase
 import com.example.oktodo.db.MemberDao
 import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -56,9 +60,6 @@ class MyPage : AppCompatActivity() {
         // 사용자 인터페이스 설정
         setupUserInterface(loginType, userPassword!!)
 
-        // 이미지 뷰의 윤곽을 클립합니다.
-        binding.imageView.clipToOutline = true
-
         // Room 데이터베이스 인스턴스화 및 DAO 가져오기
         db = AppDatabase.getInstance(this)!!
         memberDao = db.getMemberDao()
@@ -83,6 +84,16 @@ class MyPage : AppCompatActivity() {
             }
             false
         }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
     }
 
     // 사용자 인터페이스 설정
@@ -127,17 +138,28 @@ class MyPage : AppCompatActivity() {
 
     // 사용자 프로필 이미지를 로드하는 메소드
     private fun loadUserProfileImage() {
-        val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
-        val imagePath = sharedPreferences.getString("UserImageFilePath", null)
+        lifecycleScope.launch {
+            val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+            val loginType = sharedPreferences.getString("LoginType", "")
+            val imageUrl = sharedPreferences.getString("ProfileImageUrl", null)
+            val imagePath = sharedPreferences.getString("UserImageFilePath", null)
+            val imageView = binding.editImage
 
-        if (imagePath != null) {
-            // 저장된 이미지 경로에서 비트맵을 디코딩
-            val bitmap = BitmapFactory.decodeFile(imagePath)
-            // 디코딩된 비트맵을 ImageView에 설정하여 사용자 프로필 이미지로 표시
-            binding.editImage.setImageBitmap(bitmap)
-        } else {
-            // 기본 이미지 설정
-            binding.editImage.setImageResource(R.drawable.profileee)
+            when (loginType) {
+                "Kakao", "Google", "Naver" -> {
+                    Glide.with(this@MyPage).load(imageUrl).into(imageView)
+                }
+                "General" -> {
+                    if (imagePath != null) {
+                        // 저장된 이미지 경로에서 비트맵을 디코딩
+                        val bitmap = withContext(Dispatchers.IO) { BitmapFactory.decodeFile(imagePath) }
+                        imageView.setImageBitmap(bitmap)
+                    } else {
+                        imageView.setImageResource(R.drawable.profileee) // 기본 이미지 설정
+                    }
+                }
+                else -> imageView.setImageResource(R.drawable.profileee) // 기본 이미지 설정
+            }
         }
     }
 

@@ -69,6 +69,18 @@ class FragmentActivity : AppCompatActivity() {
         }
     }
 
+    // MyFragmentPagerAdapter: ViewPager2에 사용될 프래그먼트 어댑터
+    class MyFragmentPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
+        // 표시될 프래그먼트 목록
+        private val fragments: List<Fragment> = listOf(OneFragment(), TwoFragment())
+
+        // 프래그먼트의 총 개수 반환
+        override fun getItemCount(): Int = fragments.size
+
+        // 특정 위치에 해당하는 프래그먼트 반환
+        override fun createFragment(position: Int): Fragment = fragments[position]
+    }
+
     // 모든 권한 체크 메소드
     private fun checkAllPermissions() {
         if (!isLocationServicesAvailable()) {
@@ -151,17 +163,5 @@ class FragmentActivity : AppCompatActivity() {
             finish()
         })
         builder.create().show()
-    }
-
-    // MyFragmentPagerAdapter: ViewPager2에 사용될 프래그먼트 어댑터
-    class MyFragmentPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
-        // 표시될 프래그먼트 목록
-        private val fragments: List<Fragment> = listOf(OneFragment(), TwoFragment())
-
-        // 프래그먼트의 총 개수 반환
-        override fun getItemCount(): Int = fragments.size
-
-        // 특정 위치에 해당하는 프래그먼트 반환
-        override fun createFragment(position: Int): Fragment = fragments[position]
     }
 }

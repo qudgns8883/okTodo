@@ -67,7 +67,6 @@
             android:layout_marginTop="30dp"
             android:gravity="center">
 
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/imageView"
                 android:layout_width="150dp"
@@ -83,7 +82,6 @@
                     android:layout_width="152dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/profileee" />
-
 
             </androidx.cardview.widget.CardView>
 
