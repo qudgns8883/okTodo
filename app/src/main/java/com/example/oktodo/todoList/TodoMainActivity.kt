@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
@@ -12,7 +14,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.oktodo.HelpActivity
 import com.example.oktodo.MainActivity
+import com.example.oktodo.NoticeActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.TodoActivityMainBinding
 
@@ -80,4 +84,6 @@ class TodoMainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
+
 }

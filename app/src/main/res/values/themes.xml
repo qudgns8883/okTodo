@@ -13,4 +13,14 @@
         <item name="colorControlNormal">#ff0000</item>
     </style>
     <style name="Theme.OkTodo.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <!--help, notice xml 관련-->
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+
 </resources>

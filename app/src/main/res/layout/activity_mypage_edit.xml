@@ -92,8 +92,8 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/editImage"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="155dp"
+                    android:layout_height="match_parent"
                     android:src="@drawable/profileee" />
 
 

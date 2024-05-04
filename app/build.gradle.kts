@@ -118,4 +118,11 @@ dependencies {
     // Navigation UI 라이브러리 의존성 추가
     implementation("androidx.navigation:navigation-ui-ktx:2.4.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.0")
+
+    //공지사항 파이어베이스 db 이용
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-analytics")
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-firestore-ktx")
 }
