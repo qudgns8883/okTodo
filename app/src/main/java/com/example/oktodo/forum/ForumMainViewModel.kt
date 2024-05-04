@@ -28,21 +28,8 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
     private val _updateComplete = MutableStateFlow(false)
     val updateComplete: StateFlow<Boolean> = _updateComplete
 
-//    init {
-//        // ViewModel에서 데이터베이스 작업을 비동기적으로 처리
-//        viewModelScope.launch(Dispatchers.IO) {
-//            // Flow 객체는 collect로 현재 값을 가져올 수 있음
-//            // getAll() 메서드는 Folw<List<<>> 타입을 반환함
-//            db.forumDao().getAll().collect { forums ->
-//                // StateFlow 객체는 value 프로퍼티로 현재 상태값을 읽거나 쓸 수 있음
-//                _items.value = forums
-//            }
-//        }
-//    }
-
-    // 프래그먼트 1에 대한 쿼리
+    // 프래그먼트 4에 대한 쿼리(전체 탭)
     fun queryForFragment1() {
-        Log.d("test", "queryForFragment1() 호출됨")
         viewModelScope.launch(Dispatchers.IO) {
             db.forumDao().getAll().collect { forums ->
                 _items.value = forums
@@ -50,9 +37,8 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    // 프래그먼트 2에 대한 쿼리
+    // 프래그먼트 2에 대한 쿼리(교통 탭)
     fun queryForFragment2() {
-        Log.d("test", "queryForFragment2() 호출됨")
         viewModelScope.launch(Dispatchers.IO) {
             db.forumDao().getAllT().collect { forums ->
                 _items.value = forums
@@ -60,7 +46,7 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    // 프래그먼트 3에 대한 쿼리
+    // 프래그먼트 3에 대한 쿼리(날씨 탭)
     fun queryForFragment3() {
         viewModelScope.launch(Dispatchers.IO) {
             db.forumDao().getAllW().collect { forums ->

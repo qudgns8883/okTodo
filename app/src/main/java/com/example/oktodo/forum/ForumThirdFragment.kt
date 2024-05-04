@@ -43,7 +43,6 @@ class ForumThirdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = ForumFragmentThirdBinding.inflate(inflater, container, false)
-        Log.d("test", "Fragment3() 호출됨222")
         return binding.root
     }
 
@@ -51,7 +50,6 @@ class ForumThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("test", "Fragment3() 호출됨")
         // 프래그먼트 3에 대한 쿼리 호출
         viewModel.queryForFragment3()
 
@@ -61,10 +59,12 @@ class ForumThirdFragment : Fragment() {
             recyclerView,
             onClick = { forum ->
                 viewModel.selectedForum = forum
-                val intent = Intent(requireContext(), ForumWriteActivity::class.java)
+                val intent = Intent(requireContext(), ForumReadActivity::class.java)
                 intent.putExtra("forumCno", forum.cno.toString()) // 선택된 포럼 정보를 인텐트에 추가
                 intent.putExtra("forumContent", forum.forumContent) // 선택된 포럼 정보를 인텐트에 추가
                 intent.putExtra("forumCategory", forum.forumCategory)
+                intent.putExtra("forumPlace1", forum.forumPlace1)
+                intent.putExtra("forumPlace2", forum.forumPlace2)
                 startActivity(intent)
             }
         )

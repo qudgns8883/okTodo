@@ -33,5 +33,4 @@ data class MemberEntity(
 //
 //    @Relation(parentColumn = "mno", entityColumn = "mno")
 //    val communication: List<Communication>? = null
-
 )
