@@ -16,6 +16,7 @@ import androidx.appcompat.widget.PopupMenu
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.ForumActivityWriteBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
 import java.util.Calendar
 
 class ForumWriteActivity : AppCompatActivity() {
@@ -47,9 +48,14 @@ class ForumWriteActivity : AppCompatActivity() {
         }
 
         // Intent에서 포럼 정보 가져오기
+        // intent에서 값을 가져오고, null인 경우 대체값을 사용
+        val mno = intent?.getStringExtra("mno") ?: "default_value"
         val forumContent = intent.getStringExtra("forumContent")
         val forumCno = intent.getStringExtra("forumCno")
         val forumCategory = intent.getStringExtra("forumCategory")
+        // 팝업1-팝업2 순으로 열리게 구현해놔서 수정시 팝업2만 수정 불가 (코드 수정 필요)
+//        val forumPlace1 = intent.getStringExtra("forumPlace1")
+//        val forumPlace2 = intent.getStringExtra("forumPlace2")
 
         // 교통 or 날씨 라디오버튼
         val inputCategory = when (forumCategory) {
@@ -70,6 +76,17 @@ class ForumWriteActivity : AppCompatActivity() {
         // 초기 선택된 지역 표시
         locationTextView.text = selectedLocation
         locationTextView2.text = selectedLocation2
+        // 팝업1-팝업2 순으로 열리게 구현해놔서 수정시 팝업2만 수정 불가 (코드 수정 필요)
+//        if(forumPlace1 != null) {
+//            locationTextView.text = forumPlace1
+//        } else {
+//            locationTextView.text = selectedLocation
+//        }
+//        if(forumPlace2 != null) {
+//            locationTextView2.text = forumPlace2
+//        } else {
+//            locationTextView2.text = selectedLocation2
+//        }
 
         // 팝업 메뉴 초기화
         popupMenu = PopupMenu(this, myLocationView)
@@ -110,13 +127,16 @@ class ForumWriteActivity : AppCompatActivity() {
                     forumPlace2 = inputPlace2
                 )
             } else {
-                viewModel.addForum(
-                    inputData,
-                    forumTime = currentTime,
-                    forumCategory = inputCategory,
-                    forumPlace1 = inputPlace1,
-                    forumPlace2 = inputPlace2
-                )
+                if (mno != null) {
+                    viewModel.addForum(
+                        mno = mno,
+                        inputData,
+                        forumTime = currentTime,
+                        forumCategory = inputCategory,
+                        forumPlace1 = inputPlace1,
+                        forumPlace2 = inputPlace2
+                    )
+                }
             }
             val resultIntent = intent
             resultIntent.putExtra("result", inputData)

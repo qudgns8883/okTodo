@@ -13,6 +13,7 @@ import com.example.oktodo.AirAndWeather.FragmentActivity
 import com.example.oktodo.R
 import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
+import com.example.oktodo.todoList.TodoMainActivity
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.coroutines.launch
 import java.io.File
@@ -70,7 +71,14 @@ object CardViewClickListener {
                     )
                 )
             }
-            // todo.setOnClickListener { context.startActivity(Intent(context, TodoMainActivity::class.java)) }
+            todo.setOnClickListener {
+                context.startActivity(
+                    Intent(
+                        context,
+                        TodoMainActivity::class.java
+                    )
+                )
+            }
             sub.setOnClickListener {
                 context.startActivity(
                     Intent(

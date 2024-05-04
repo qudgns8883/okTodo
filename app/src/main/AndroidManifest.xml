@@ -80,8 +80,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".HelpActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".NoticeActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".metro.MetroActivity"
-            android:exported="false"></activity>
+            android:exported="false">
+        </activity>
         <activity
             android:name=".metro.BusanChosenActivity"
             android:exported="false" />
@@ -100,10 +109,16 @@
             android:exported="false" />
 
         <activity
+            android:name=".todoList.TodoMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".forum.ForumMainActivity"
             android:exported="false" />
         <activity
             android:name=".forum.ForumWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forum.ForumReadActivity"
             android:exported="false" />
     </application>
 

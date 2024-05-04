@@ -9,7 +9,7 @@ import androidx.room.TypeConverters
 // @Database 어노테이션은 안드로이드 Jetpack의 Room 라이브러리에서 사용되며, 데이터베이스를 정의하는 클래스에 이 어노테이션을 사용
 // entities: TodoEntity 클래스를 데이터베이스의 엔티티로 포함시킴
 // version = 2: 데이터베이스의 버전을 나타내는 부분
-@Database(entities = [MemberEntity::class, Forum::class], version = 1) // 조건 1
+@Database(entities = [MemberEntity::class, Todo::class, Todo2::class, Forum::class], version = 1) // 조건 1
 // RoomDatabase를 상속함으로써 AppDatabase 클래스는 Room 라이브러리의 데이터베이스와 관련된 기능들을 이용할 수 있게됨
 @TypeConverters(TodoConverters::class)
 abstract class AppDatabase : RoomDatabase() { // 조건 2
@@ -17,6 +17,7 @@ abstract class AppDatabase : RoomDatabase() { // 조건 2
     // 추상 메서드인 getTodoDao()를 선언하고, 이 메서드가 TodoDao 인터페이스를 반환하도록 정의
 //    abstract fun getTodoDao() : TodoDao // 조건 3
     abstract fun getMemberDao(): MemberDao
+    abstract fun todoDao(): TodoDao
     abstract fun forumDao() : ForumDao
 
 
@@ -36,6 +37,22 @@ abstract class AppDatabase : RoomDatabase() { // 조건 2
                     .fallbackToDestructiveMigration().build()
             }
             return appDatabase
+        }
+
+        // TodoWorker 에서 사용
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        fun getInstance2(context: Context): AppDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "db_todo"
+                ).build()
+                INSTANCE = instance
+                instance
+            }
         }
     }
 }

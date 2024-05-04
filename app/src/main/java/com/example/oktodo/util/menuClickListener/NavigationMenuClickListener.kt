@@ -10,8 +10,10 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import com.example.oktodo.AirAndWeather.FragmentActivity
+import com.example.oktodo.HelpActivity
 import com.example.oktodo.Login.LoginActivity
 import com.example.oktodo.MainActivity
+import com.example.oktodo.NoticeActivity
 import com.example.oktodo.R
 import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
@@ -43,11 +45,13 @@ class NavigationMenuClickListener(private val context: Context) :
 
             R.id.help -> {
                 // 도움말 페이지로 이동
+                context.startActivity(Intent(context, HelpActivity::class.java))
                 return true
             }
 
             R.id.notice -> {
                 // 공지사항 페이지로 이동
+                context.startActivity(Intent(context, NoticeActivity::class.java))
                 return true
             }
 

@@ -28,6 +28,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
 import com.example.oktodo.myPage.MyPage
+import com.example.oktodo.todoList.TodoMainActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
 
     // 코루틴을 Android의 메인 스레드(즉, UI 스레드)에서 실행하도록 지정
     private val scope = CoroutineScope(Job() + Dispatchers.Main)
+
+    // mno 값 저장
+    var mno: String = "default_value"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,10 +76,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // todoList
+        val todoView = findViewById<View>(R.id.todo_view) // todo_view ID를 가진 뷰를 참조
+        todoView.setOnClickListener {
+            val intent = Intent(this, TodoMainActivity::class.java)
+            intent.putExtra("mno", mno)
+            startActivity(intent)
+        }
+
         // forum
         val forumView = findViewById<View>(R.id.comm_view)
         forumView.setOnClickListener {
             val intent = Intent(this, ForumMainActivity::class.java)
+            intent.putExtra("mno", mno)
             startActivity(intent)
         }
     }
@@ -88,6 +101,7 @@ class MainActivity : AppCompatActivity() {
             val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
             // 로그인 상태에 따라 닉네임 설정, 기본값은 "LOGIN"
             val nickname = if (isLoggedIn) prefs.getString("Nickname", "") else "LOGIN"
+            mno = if (isLoggedIn) prefs.getString("mno", "").toString() else "default_value"
 
 //            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
 //            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
