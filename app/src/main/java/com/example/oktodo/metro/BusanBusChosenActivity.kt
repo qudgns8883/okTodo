@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.oktodo.R
 import com.example.oktodo.metro.data.BusInfo
 import org.xmlpull.v1.XmlPullParser
@@ -26,6 +28,8 @@ class BusanBusChosenActivity : AppCompatActivity() {
     private val serviceKey =
         "JwUvpcd%2FCCe%2B3OPRMv9uJQu1uaExf23jTY3Nkg7dSAAjVI3x9PyNlO6WXq3TvOhTCqSFXLlDY98BBjR%2Fm6EGHQ%3D%3D"
     lateinit var busInfo: TextView
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: BusInfoAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +42,12 @@ class BusanBusChosenActivity : AppCompatActivity() {
         Log.d("check busAPI", busAPI)
 
         sendBusRequest(busAPI)
+
+        recyclerView = findViewById(R.id.busInfoRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        adapter = BusInfoAdapter(emptyList())
+        recyclerView.adapter = adapter
 
     }
 
@@ -52,16 +62,14 @@ class BusanBusChosenActivity : AppCompatActivity() {
                 conn.requestMethod = "GET"
 
                 val inputStream = conn.inputStream
-                Log.d("check inputStream","${inputStream}")
                 // XML 데이터 파싱
                 val busInfos = parseXml(inputStream)
-                Log.d("check","${busInfos}")
                 // UI 업데이트를 위한 메인 스레드 호출
                 runOnUiThread {
-                    // 파싱된 데이터를 이용해 UI 업데이트
-                    busInfo.text = busInfos.joinToString("\n") {
-                        "${it.nodenm} - ${it.lineno}번 버스: ${it.min1}분 후 도착, (${it.station1}번째 전 정류소)"
-                    }
+                    // 어댑터에 새로운 데이터 설정
+                    adapter = BusInfoAdapter(busInfos)
+                    recyclerView.adapter = adapter
+                    adapter.notifyDataSetChanged()
                 }
                 inputStream.close()
             } catch (e: Exception) {
@@ -91,20 +99,19 @@ class BusanBusChosenActivity : AppCompatActivity() {
             }
         }
 
-        Log.d("parserXml check", "$busInfos")
         return busInfos
     }
 
     fun readItem(parser: XmlPullParser): BusInfo {
         parser.require(XmlPullParser.START_TAG, null, "item")
 
-        var bstopid: String? = null
-        var nodenm: String? = null
-        var min1: String? = null
-        var min2: String? = null
-        var station1: String? = null
-        var station2: String? = null
-        var lineno: String? = null
+        var bstopid: String = ""
+        var nodenm: String = ""
+        var min1: String = ""
+        var min2: String = ""
+        var station1: String = ""
+        var station2: String = ""
+        var lineno: String = ""
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.eventType != XmlPullParser.START_TAG) {
@@ -121,7 +128,7 @@ class BusanBusChosenActivity : AppCompatActivity() {
                 else -> skip(parser)
             }
         }
-        return BusInfo(bstopid!!, nodenm!!, min1!!, min2!!, station1!!, station2!!, lineno!!)
+        return BusInfo(bstopid, nodenm, min1, min2, station1, station2, lineno)
         // 데이터클래스에 선언한 변수 순서와 똑같이 순서를 맞춰줘야함
     }
     fun readText(parser: XmlPullParser): String {
