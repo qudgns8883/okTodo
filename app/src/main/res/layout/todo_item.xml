@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lists"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/list"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        리스트 내부 정렬-->
+        <LinearLayout
+            android:id="@+id/gridLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_9"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/todo_important_view"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:contentDescription="TODO"
+                android:layout_weight="1"
+                android:src="@drawable/vvvip" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:text="00:00"
+                android:textColor="#404040"
+                android:textSize="25sp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="@+id/important" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:text="item"
+                android:textColor="#404040"
+                android:textSize="25sp"
+                android:layout_weight="3"
+                app:layout_constraintStart_toStartOf="@+id/todo_time" />
+
+            <CheckBox
+                android:id="@+id/done_check"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginEnd="15dp"
+                android:textColor="#404040"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout> <!-- 리스트 내부 정렬-->
+    </LinearLayout><!--    리스트 정렬-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,6 +27,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
 import com.example.oktodo.myPage.MyPage
+import com.example.oktodo.todoList.TodoMainActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -63,6 +64,13 @@ class MainActivity : AppCompatActivity() {
 
         metro.setOnClickListener {
             intent = Intent(this, MetroActivity::class.java)
+            startActivity(intent)
+        }
+
+        // todoList
+        val todoView = findViewById<View>(R.id.todo_view) // todo_view ID를 가진 뷰를 참조
+        todoView.setOnClickListener {
+            val intent = Intent(this, TodoMainActivity::class.java)
             startActivity(intent)
         }
 

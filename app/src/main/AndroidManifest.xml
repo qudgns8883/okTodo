@@ -101,6 +101,9 @@
             android:exported="false" />
 
         <activity
+            android:name=".todoList.TodoMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".forum.ForumMainActivity"
             android:exported="false" />
         <activity
