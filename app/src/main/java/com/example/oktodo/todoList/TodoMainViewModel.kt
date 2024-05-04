@@ -22,7 +22,7 @@ class TodoMainViewModel(application: Application) : AndroidViewModel(application
     // Room 데이터베이스
     private val db: AppDatabase = Room.databaseBuilder(
         application,
-        AppDatabase::class.java, "todo"
+        AppDatabase::class.java, "db_todo"
     ).build()
 
     private val _items = MutableStateFlow<List<Todo>>(emptyList())

@@ -3,10 +3,12 @@ package com.example.oktodo.forum
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +35,9 @@ class ForumMainActivity  : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // intent에서 값을 가져오고, null인 경우 대체값을 사용
+        val mno = intent?.getStringExtra("mno") ?: "default_value"
+
         // 토글
         drawerLayout = findViewById(R.id.navigation_drawer)
         val showNavigationButton = findViewById<View>(R.id.menu_icon)
@@ -41,12 +46,12 @@ class ForumMainActivity  : AppCompatActivity() {
             toggleDrawer() // 네비게이션 뷰를 보이도록 변경
         }
 
-//        // 탭 생성 및 추가
+        // 탭 생성 및 추가
         val tabLayout = findViewById<TabLayout>(R.id.forum_tabs)
 
         // 시작 시 첫 번째 탭이 선택된 상태로 하기 위해서 추가
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.forum_tabContent, ForumFourthFragment())
+            replace(R.id.forum_tabContent, ForumFourthFragment.userInstance(mno)) // 액티비티에서 프래그먼트로 값 넘겨주기
             addToBackStack(null)
             commit()
         }
@@ -56,9 +61,9 @@ class ForumMainActivity  : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 val transaction = supportFragmentManager.beginTransaction()
                 when (tab?.position) {
-                    0 -> transaction.replace(R.id.forum_tabContent, ForumFourthFragment())
-                    1 -> transaction.replace(R.id.forum_tabContent, ForumSecondFragment())
-                    2 -> transaction.replace(R.id.forum_tabContent, ForumThirdFragment())
+                    0 -> transaction.replace(R.id.forum_tabContent, ForumFourthFragment.userInstance(mno))
+                    1 -> transaction.replace(R.id.forum_tabContent, ForumSecondFragment.userInstance(mno))
+                    2 -> transaction.replace(R.id.forum_tabContent, ForumThirdFragment.userInstance(mno))
                 }
                 transaction.addToBackStack(null)
                 transaction.commit()
@@ -76,7 +81,8 @@ class ForumMainActivity  : AppCompatActivity() {
 
         // 글 작성 버튼
         val requestLauncher = registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult())
+            ActivityResultContracts.StartActivityForResult()
+        )
         { result ->
             if (result.resultCode == RESULT_OK) {
                 viewModel.loadForumData() // 새로운 데이터를 가져오기 위해 ViewModel에서 데이터 새로고침
@@ -84,9 +90,16 @@ class ForumMainActivity  : AppCompatActivity() {
                 viewModel.loadForumData()
             }
         }
+
         binding.mainFab.setOnClickListener {
-            val intent = Intent(this, ForumWriteActivity::class.java)
-            requestLauncher.launch(intent)
+            // mno값 null 판단
+            if (mno == "default_value") { // null(예외 처리된 값)
+                Toast.makeText(applicationContext, "Login please", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, ForumWriteActivity::class.java)
+                intent.putExtra("mno", mno)
+                requestLauncher.launch(intent)
+            }
         }
     }
 
