@@ -61,8 +61,8 @@ class BusInfoAdapter(private var busInfoList: List<BusInfo>): RecyclerView.Adapt
 //            itemView.findViewById<TextView>(R.id.min2).text = "${busInfo.min2}분 후 도착"
 //            itemView.findViewById<TextView>(R.id.station1).text = "${busInfo.station1}정거장 전"
 //            itemView.findViewById<TextView>(R.id.station2).text = "${busInfo.station2}정거장 전"
-            itemView.findViewById<TextView>(R.id.busInfo1).text = "${busInfo.min1}분 후 도착 ${busInfo.station1}정거장 전"
-            itemView.findViewById<TextView>(R.id.busInfo2).text = "${busInfo.min2}분 후 도착 ${busInfo.station2}정거장 전"
+            itemView.findViewById<TextView>(R.id.busInfo1).text = "${busInfo.min1}분 후 도착 / ${busInfo.station1}정거장 전"
+            itemView.findViewById<TextView>(R.id.busInfo2).text = "${busInfo.min2}분 후 도착 / ${busInfo.station2}정거장 전"
 
         }
     }

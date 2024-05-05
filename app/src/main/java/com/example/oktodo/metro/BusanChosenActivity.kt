@@ -2,12 +2,19 @@ package com.example.oktodo.metro
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.TextView
 
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
+import com.example.oktodo.databinding.ActivityBusanChosenBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,13 +27,21 @@ import java.net.URL
 class BusanChosenActivity : AppCompatActivity() {
 
 
-    lateinit var textView: TextView
-    lateinit var stationTextView: TextView
+    private lateinit var textView: TextView
+    private lateinit var stationTextView: TextView
+    private lateinit var binding: ActivityBusanChosenBinding
+    private lateinit var scrollView: ScrollView
+    private var isDrawerOpen = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_busan_chosen)
 
+        binding = ActivityBusanChosenBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        scrollView = findViewById(R.id.busanScrollView)
         textView = findViewById(R.id.B_subText)
         stationTextView = findViewById(R.id.BusanStation)
         val mainBtn = findViewById<ImageView>(R.id.icon_home)
@@ -96,6 +111,43 @@ class BusanChosenActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
 
+            // 메뉴 아이콘 클릭 시 네비게이션 드로어의 가시성을 토글
+            binding.menuIcon.setOnClickListener {
+                isDrawerOpen = DrawerUtil.toggleDrawer(binding.navigationDrawer, isDrawerOpen)
+            }
+
+            // 메인 레이아웃에 터치 리스너를 설정
+            // 경고를 무시: 이 경우 performClick을 호출하지 않는 것이 의도된 동작
+            binding.root.setOnTouchListener { _, event ->
+                if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                    if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                        isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                    }
+                }
+                false
+            }
+
+            scrollView.setOnTouchListener { _, event ->
+                if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                    if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                        isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                    }
+                }
+                false
+            }
+
+            // NavigationView의 헤더 뷰를 얻음
+            val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+            val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+            // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+            CardViewClickListener.setupCardViewClickListeners(headerView, this@BusanChosenActivity, this@BusanChosenActivity)
+
+            // View Binding을 사용하여 NavigationView에 리스너 설정
+            binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this@BusanChosenActivity))
+
+
+
             var counter = 0
 
             for (i in 0 until itemList.length()) {
@@ -111,5 +163,8 @@ class BusanChosenActivity : AppCompatActivity() {
                 }
             }
         }
+
+
     }
+
 }

@@ -2,14 +2,24 @@ package com.example.oktodo.metro
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.MotionEvent
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
+import com.example.oktodo.databinding.ActivitySeoulChosenBinding
 import com.example.oktodo.metro.data.TrainSchedule
+import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,8 +30,13 @@ import java.net.URL
 
 class SeoulChosenActivity : AppCompatActivity() {
 
-    lateinit var recyclerView: RecyclerView
-    lateinit var adapter: TrainScheduleAdapter
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: TrainScheduleAdapter
+    private lateinit var binding: ActivitySeoulChosenBinding
+    private var isDrawerOpen = false
+    private lateinit var drawerLayout: DrawerLayout
+
+
 
 
     // loadStationData : 로컬에 저장되어있는 (res/raw/ ~~~) 를 가져옴 ( 직접 지정해둔 api 링크를 불러오는거 )
@@ -31,10 +46,12 @@ class SeoulChosenActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivitySeoulChosenBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_seoul_chosen)
+        setContentView(binding.root)
 
         val mainBtn = findViewById<ImageView>(R.id.icon_home)
+
 
         mainBtn.setOnClickListener{
             intent = Intent(this,MainActivity::class.java)
@@ -52,7 +69,46 @@ class SeoulChosenActivity : AppCompatActivity() {
         val stationName = intent.getStringExtra("stationName")
         val stationData = loadStationData(stationName)
 
+
         CoroutineScope(Dispatchers.Main).launch {
+
+            // 메뉴 아이콘 클릭 시 네비게이션 드로어의 가시성을 토글
+            binding.menuIcon.setOnClickListener {
+                isDrawerOpen = DrawerUtil.toggleDrawer(binding.navigationDrawer, isDrawerOpen)
+            }
+
+            // 메인 레이아웃에 터치 리스너를 설정
+            // 경고를 무시: 이 경우 performClick을 호출하지 않는 것이 의도된 동작
+            binding.root.setOnTouchListener { _, event ->
+                if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                    if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                        isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                    }
+                }
+                false
+            }
+
+            recyclerView.setOnTouchListener { _, event ->
+                if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                    if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                        isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                    }
+                }
+                false
+            }
+
+            // NavigationView의 헤더 뷰를 얻음
+            val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+            val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+            // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+            CardViewClickListener.setupCardViewClickListeners(headerView, this@SeoulChosenActivity, this@SeoulChosenActivity)
+
+            // View Binding을 사용하여 NavigationView에 리스너 설정
+            binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this@SeoulChosenActivity))
+
+
+
             val trainScheduleList = fetchTrainSchedule(stationData)
             adapter.updateData(trainScheduleList)
         }
@@ -129,7 +185,8 @@ class SeoulChosenActivity : AppCompatActivity() {
                     trainScheduleList.add(schedule)
                 }
             } catch (e: Exception) {
-                Toast.makeText(applicationContext, "네트워크 에러!!!", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext, "네트워크 에러!!!", Toast.LENGTH_SHORT).show()
+                Log.d("test check error","네트워크 에러")
             }
             return@withContext trainScheduleList
         }

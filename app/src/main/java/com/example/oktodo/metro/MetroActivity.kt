@@ -12,16 +12,20 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
+import com.example.oktodo.databinding.ActivityMetroBinding
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 
 class MetroActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityMetroBinding
     private lateinit var drawerLayout: FrameLayout
     private var isDrawerOpen = false
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        binding = ActivityMetroBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_metro)
 
         val mainBtn: ImageView = findViewById(R.id.icon_home)
@@ -50,6 +54,16 @@ class MetroActivity : AppCompatActivity() {
         showNavigationButton.setOnClickListener {
             toggleDrawer() // 네비게이션 뷰를 보이도록 변경
         }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
 
         val mainLayout: View = findViewById(android.R.id.content)
         mainLayout.setOnTouchListener { _, event ->

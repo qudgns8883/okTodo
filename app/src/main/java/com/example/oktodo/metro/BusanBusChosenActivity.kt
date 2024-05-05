@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oktodo.R
 import com.example.oktodo.metro.data.BusInfo
+import com.example.oktodo.metro.data.BusNumberConverter
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.BufferedReader
@@ -37,9 +38,8 @@ class BusanBusChosenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_busan_bus_chosen)
 
         val userInput = intent.getStringExtra("userInput")
-        Log.d("check userInput", "${userInput}")
-        val busAPI = "${url}?serviceKey=${serviceKey}&arsno=${userInput}"
-        Log.d("check busAPI", busAPI)
+        val digitInput = userInput?.let { BusNumberConverter.convertToDigit(it) }
+        val busAPI = "${url}?serviceKey=${serviceKey}&arsno=${digitInput}"
 
         sendBusRequest(busAPI)
 

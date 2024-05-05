@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:background="@color/white">
+<!--헤더-->
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_menu_b"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="3sp"
+        android:text="Notice"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toStartOf="@id/icon_home"
+        app:layout_constraintStart_toEndOf="@id/menu_icon"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+    <ImageView
+        android:id="@+id/icon_home"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/icon_home_b"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+    <!--헤더-->
+
+    <!-- 공지사항 리사이클러 뷰-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_9">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notice_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </FrameLayout>
+<!-- 공지사항 리사이클러 뷰-->
+
+<!--네비바(토굴)-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+    <!--토글-->
+    <FrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.75"> <!-- 드로어의 너비가 전체의 75%가 되도록 설정 -->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout><!--네비바(토굴)-->
+</androidx.constraintlayout.widget.ConstraintLayout>

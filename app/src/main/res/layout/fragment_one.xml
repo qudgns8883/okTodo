@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#F2B8C0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/icon_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="3sp"
+        android:text="Air Quality"
+        android:textStyle="bold"
+        android:textColor="#404040"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toStartOf="@id/homeIcon"
+        app:layout_constraintStart_toEndOf="@id/menu_icon"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/icon_home"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="#FBDADE"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_9">
+
+        <LinearLayout
+            android:id="@+id/place_block"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.05"
+                android:layout_marginTop="10dp"
+                android:text="예시용"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_location_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.05"
+                android:text="대한민국 서울특별시"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_location1" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_check_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="-0.05"
+        android:text="@string/measured_at"
+        android:textColor="@color/text_light_grey"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_bg" />
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bg_good"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
+        android:text="61"
+        android:textColor="@color/text_grey"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_bg"
+        app:layout_constraintEnd_toEndOf="@id/img_bg"
+        app:layout_constraintStart_toStartOf="@id/img_bg"
+        app:layout_constraintTop_toTopOf="@id/img_bg" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.05"
+        android:text="보통"
+        android:textColor="@color/text_light_grey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_bg"
+        app:layout_constraintStart_toStartOf="@+id/img_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_count" />
+
+    <TextView
+        android:id="@+id/tv_check_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.05"
+        android:text="2021-08-29 13:00"
+        android:textColor="@color/text_light_grey"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_check_time_title" />
+
+    <ImageView
+        android:id="@+id/btn_refresh"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:src="@drawable/icon_refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_check_time" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <!--토글-->
+    <FrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.75"> <!-- 드로어의 너비가 전체의 75%가 되도록 설정 -->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+{
+  "project_info": {
+    "project_number": "962649989443",
+    "project_id": "alert-sol-418003",
+    "storage_bucket": "alert-sol-418003.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962649989443:android:82c90b01498f59b5808ff6",
+        "android_client_info": {
+          "package_name": "com.example.airandweather"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_CUl36edoRjzzGKcOb4ZTGWrp6TdVZl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962649989443:android:880521006b7aad4b808ff6",
+        "android_client_info": {
+          "package_name": "com.example.oktodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962649989443-v14odl3k0fg9okosarv9cjt3bdvcdfke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oktodo",
+            "certificate_hash": "a3aefe3729beee6a955c9ceee8f251e642540df7"
+          }
+        },
+        {
+          "client_id": "962649989443-v94uv5mug0r964otctg3ncqm572lkuh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oktodo",
+            "certificate_hash": "7991352fbf091c5cbbf06bb9d100bee237a16510"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_CUl36edoRjzzGKcOb4ZTGWrp6TdVZl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

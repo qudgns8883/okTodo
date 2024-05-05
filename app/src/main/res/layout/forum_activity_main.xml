@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--헤더-->
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#C2D8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_9">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/icon_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+
+        <TextView
+            android:id="@+id/todo"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:lineSpacingExtra="3sp"
+            android:text="Community"
+            android:textColor="#404040"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="@+id/menu_icon" />
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_home"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rectangle_9" />
+    </GridLayout> <!--헤더-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_9">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/forum_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="교통" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날씨" />
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/forum_tabContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.013"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:textColor="#404040"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.75"> <!-- 드로어의 너비가 전체의 75%가 되도록 설정 -->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
