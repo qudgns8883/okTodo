@@ -51,11 +51,12 @@ class MainActivity : AppCompatActivity() {
             // 네이버 로그인 기능을 사용하기 전 SDK 초기화
             NaverIdLoginSDK.initialize(
                 this@MainActivity,
-                "uiQucVW4O9r9bhg80XvD",
-                "FyxVPv_DH_",
-                "부산it 네이버로그인"
+                getString(R.string.social_login_info_naver_client_id),
+                getString(R.string.social_login_info_naver_client_secret),
+                getString(R.string.social_login_info_naver_client_name)
             )
         }
+
         // 코루틴 내에서 `loginUpdateUI` 함수를 비동기적으로 실행
         scope.launch {
             loginUpdateUI()
@@ -102,12 +103,6 @@ class MainActivity : AppCompatActivity() {
             // 로그인 상태에 따라 닉네임 설정, 기본값은 "LOGIN"
             val nickname = if (isLoggedIn) prefs.getString("Nickname", "") else "LOGIN"
             mno = if (isLoggedIn) prefs.getString("mno", "").toString() else "default_value"
-
-//            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
-//            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
-//
-//            val imagePath = prefs.getString("UserImageFilePath", null)
-//            Log.d("LoginActivity", "ImageImageImageImage Path: $imagePath") // 로그 찍는 부분
 
             // 로그를 사용하여 profileImageUrl 확인
             // 사용자 닉네임으로 UI 업데이트

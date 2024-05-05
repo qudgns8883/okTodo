@@ -56,9 +56,19 @@ class NavigationMenuClickListener(private val context: Context) :
             }
 
             R.id.logout -> {
-                // 로그아웃 처리
-                performLogout(context.getSharedPreferences("AppPreferences", Context.MODE_PRIVATE))
-                return true
+                if (!isLoggedIn()) {
+                    // 이미 로그아웃 상태인 경우, 로그인 액티비티로 이동
+                    context.startActivity(Intent(context, LoginActivity::class.java))
+                } else {
+                    // 로그인 상태인 경우, 로그아웃 처리 후 로그인 액티비티로 이동
+                    performLogout(
+                        context.getSharedPreferences(
+                            "AppPreferences",
+                            Context.MODE_PRIVATE
+                        )
+                    )
+                    return true
+                }
             }
         }
         return false

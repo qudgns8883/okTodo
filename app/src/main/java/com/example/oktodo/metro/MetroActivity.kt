@@ -28,7 +28,7 @@ class MetroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMetroBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_metro)
+        setContentView(binding.root)
 
         val mainBtn: ImageView = findViewById(R.id.icon_home)
         val busanBtn: Button = findViewById(R.id.busanBtn)
