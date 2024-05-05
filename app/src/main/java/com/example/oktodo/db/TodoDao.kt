@@ -22,18 +22,27 @@ interface TodoDao {
     @Query("SELECT COUNT(*) FROM todo WHERE checked = false AND mno = :mno")
     suspend fun getUncheckedCount(mno: String): Long
 
-    @Query("SELECT * FROM todo2 WHERE tno2 >= :startDayOfWeek AND tno2 <= :endDayOfWeek AND mno = :mno")
-    fun getThisWeekTodos(startDayOfWeek: Long, endDayOfWeek: Long, mno: String): Flow<List<Todo2>>
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(entity: Todo)
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert2(todo2: Todo2)
 
     @Update
     suspend fun update(entity: Todo)
 
     @Delete
     suspend fun delete(entity: Todo)
+
+    @Query("SELECT * FROM todo2 WHERE tno2 >= :startDayOfWeek AND tno2 <= :endDayOfWeek AND mno = :mno ORDER BY date DESC")
+    fun getThisWeekTodos(startDayOfWeek: Long, endDayOfWeek: Long, mno: String): Flow<List<Todo2>>
+
+    // PK와 FK 확인
+    @Query("SELECT * FROM todo2 WHERE tno2 = :tno2 AND mno = :mno")
+    suspend fun findTodo2ByKeys(tno2: Long, mno: String): Todo2?
+
+    @Insert
+    suspend fun insert2(todo2: Todo2)
+
+    @Update
+    suspend fun update2(entity: Todo2)
+
+
 }

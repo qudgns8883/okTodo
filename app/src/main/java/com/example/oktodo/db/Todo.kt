@@ -61,7 +61,6 @@ data class Todo(
 )
 data class Todo2(
 
-    @PrimaryKey
     @ColumnInfo(name = "tno2")
     var tno2: Long,
 
@@ -78,8 +77,11 @@ data class Todo2(
     var day: Long,
 
     @ColumnInfo(name = "date")
-    var date: Long = Calendar.getInstance().timeInMillis,
+    var date: Long,
 
     @ColumnInfo(name = "mno")
     var mno: String
-)
+) {
+    @PrimaryKey(autoGenerate = true)
+    var tno: Long = 0
+}
