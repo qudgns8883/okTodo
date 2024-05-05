@@ -1,14 +1,17 @@
 package com.example.oktodo.todoList
 
 import android.app.TimePickerDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -20,13 +23,21 @@ import java.time.LocalTime
 import java.util.Calendar
 
 class TodoSecondFragment : Fragment() {
-    private val viewModel by activityViewModels<TodoMainViewModel>()
-
     private var _binding: TodoFragmentSecondBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    // mno 가져오기
+    private val prefs by lazy {
+        requireActivity().getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+    }
+    private val isLoggedIn by lazy {
+        prefs.getBoolean("IsLoggedIn", false)
+    }
+    private val mno by lazy {
+        if (isLoggedIn) prefs.getString("mno", "").toString() else "default_value"
+    }
+
+    private val viewModel by activityViewModels<TodoMainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +52,7 @@ class TodoSecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // todo_time 버튼을 찾음
-        val todoTimeButton = view.findViewById<Button>(R.id.todo_time)
+        val todoTimeButton = binding.todoTime
 
         // todo_time 버튼에 클릭 리스너 설정
         todoTimeButton.setOnClickListener {
@@ -49,14 +60,13 @@ class TodoSecondFragment : Fragment() {
         }
 
         // 홈 이미지 클릭 리스너
-        view.findViewById<ImageView>(R.id.home_icon).setOnClickListener {
+        binding.homeIcon.setOnClickListener {
             val intent = Intent(requireActivity(), MainActivity::class.java)
             startActivity(intent)
         }
 
         viewModel.selectedTodo?.let {todo ->
             binding.todoEditText.setText(todo.todoContent)
-            binding.calendarView.date = todo.date
 
             // todoTime 값을 버튼에 설정
             val formattedTime = String.format("%02d:%02d", todo.todoTime / (60 * 60 * 1000), (todo.todoTime % (60 * 60 * 1000)) / (60 * 1000))
@@ -92,14 +102,6 @@ class TodoSecondFragment : Fragment() {
         }
 
         val calendar = Calendar.getInstance()
-
-        binding.calendarView.setOnDateChangeListener {_, year, month, dayOfMonth ->
-            calendar.apply {
-                set(Calendar.YEAR, year)
-                set(Calendar.MONTH, month)
-                set(Calendar.DAY_OF_MONTH, dayOfMonth)
-            }
-        }
 
         fun convertBooleanArrayToString(checkedArray: BooleanArray): String {
             val daysOfWeek = listOf("mon", "tue", "wed", "thu", "fri", "sat", "sun")
@@ -155,15 +157,20 @@ class TodoSecondFragment : Fragment() {
                         todoTime = selectedTimeInMillis,
                     )
                 } else {
-                    viewModel.addTodo(
-                        binding.todoEditText.text.toString(),
-                        day = dayCheckedString,
-                        checked = false,
-                        importance = todoImportance,
-                        date = calendar.timeInMillis,
-                        todoTime = selectedTimeInMillis,
-                        todoRegTime = LocalTime.now(),
-                    )
+                    if (mno != null) {
+                        viewModel.addTodo(
+                            mno = mno,
+                            binding.todoEditText.text.toString(),
+                            day = dayCheckedString,
+                            checked = false,
+                            importance = todoImportance,
+                            date = calendar.timeInMillis,
+                            todoTime = selectedTimeInMillis,
+                            todoRegTime = LocalTime.now(),
+                        )
+                    } else {
+                        Toast.makeText(requireContext(), "잠시 후 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 findNavController().popBackStack()
             }

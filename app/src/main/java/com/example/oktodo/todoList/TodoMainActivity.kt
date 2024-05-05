@@ -1,20 +1,26 @@
 package com.example.oktodo.todoList
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.TodoActivityMainBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
 import com.example.oktodo.util.menuClickListener.CardViewClickListener
 import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.google.android.material.navigation.NavigationView
@@ -32,6 +38,17 @@ class TodoMainActivity : AppCompatActivity() {
 
         binding = TodoActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 로그인 확인
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
+        val mno = if (isLoggedIn) {
+            prefs.getString("mno", "").toString()
+        } else {
+            Toast.makeText(this, "Login please", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
 
         setSupportActionBar(binding.toolbar)
 
@@ -66,7 +83,7 @@ class TodoMainActivity : AppCompatActivity() {
 
     private fun toggleDrawer() {
         val drawerLayout = findViewById<FrameLayout>(R.id.navigation_drawer)
-        if(isDrawerOpen) {
+        if (isDrawerOpen) {
             drawerLayout.visibility = View.GONE
         } else {
             drawerLayout.visibility = View.VISIBLE

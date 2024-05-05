@@ -11,6 +11,10 @@ import kotlinx.coroutines.launch
 import java.util.Calendar
 
 class TodoWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
+    // mno 가져오기
+    val prefs = applicationContext.getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+    private val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
+    val mno = if (isLoggedIn) prefs.getString("mno", "").toString() else "default_value"
 
     override suspend fun doWork(): Result {
         // 데이터베이스 인스턴스 가져오기
@@ -19,13 +23,14 @@ class TodoWorker(context: Context, params: WorkerParameters) : CoroutineWorker(c
 
         // 비동기 작업으로 데이터베이스 값 가져오기 + 계산
         CoroutineScope(Dispatchers.IO).launch {
-            val checkCnt = db.todoDao().getCheckedCount()
-            val uncheckCnt = db.todoDao().getUncheckedCount()
+            val checkCnt = db.todoDao().getCheckedCount(mno)
+            val uncheckCnt = db.todoDao().getUncheckedCount(mno)
             val totalCount = checkCnt + uncheckCnt
             val calculate = if (totalCount > 0) ((checkCnt.toDouble() / totalCount) * 100).toLong() else 0
 
             // 새로운 할 일 객체 생성 및 초기화
             val todo2Item = Todo2(
+                mno = mno,
                 checkedCnt = checkCnt, // 체크된 항목 수 초기화
                 uncheckedCnt = uncheckCnt, // 체크되지 않은 항목 수 초기화
                 day = todayWeek,
