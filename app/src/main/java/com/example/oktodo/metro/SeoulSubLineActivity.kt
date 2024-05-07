@@ -171,6 +171,5 @@ class SeoulSubLineActivity : AppCompatActivity() {
         // View Binding을 사용하여 NavigationView에 리스너 설정
         binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
 
-
     }
 }
