@@ -30,6 +30,7 @@ class MetroActivity : AppCompatActivity() {
 
         val mainBtn: ImageView = findViewById(R.id.icon_home)
         val busanBtn: Button = findViewById(R.id.busanBtn)
+        val busanBusBtn: Button = findViewById(R.id.busanBusBtn)
         val seoulBtn: Button = findViewById(R.id.seoulBtn)
 
         busanBtn.setOnClickListener {
@@ -39,6 +40,11 @@ class MetroActivity : AppCompatActivity() {
 
         seoulBtn.setOnClickListener {
             val intent = Intent(this, SeoulSubLineActivity::class.java)
+            startActivity(intent)
+        }
+
+        busanBusBtn.setOnClickListener {
+            val intent = Intent(this, BusanBusActivity::class.java)
             startActivity(intent)
         }
 

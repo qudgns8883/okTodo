@@ -105,7 +105,11 @@ class   TrainScheduleAdapter(private var trainScheduleList: List<TrainSchedule>)
 
         fun bind(schedule: TrainSchedule) {
             destinationTextView.text = "${schedule.destination}행"
-            arrivalTimeTextView.text = "${schedule.arrivalTime}분 뒤 도착"
+            if (schedule.arrivalTime == "0") {
+                arrivalTimeTextView.text ="도착정보없음"
+            } else {
+                arrivalTimeTextView.text = "${schedule.arrivalTime}분 뒤 도착"
+            }
         }
     }
 }

@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@id/busEditText" />
 
     <android.widget.Button
-        android:id="@+id/busanBackBtn"
+        android:id="@+id/busanBusBackBtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:background="@drawable/button_sub"
@@ -127,5 +127,26 @@
         android:text="취소"
         app:layout_constraintEnd_toEndOf="@+id/busEditText"
         app:layout_constraintTop_toTopOf="@+id/button_bus_search" />
+
+    <FrameLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:elevation="4dp"
+        app:layout_constraintWidth_percent="0.75"> <!-- 드로어의 너비가 전체의 75%가 되도록 설정 -->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
