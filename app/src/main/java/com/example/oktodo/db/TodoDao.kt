@@ -34,7 +34,6 @@ interface TodoDao {
     @Query("SELECT * FROM todo2 WHERE tno2 >= :startDayOfWeek AND tno2 <= :endDayOfWeek AND mno = :mno ORDER BY date DESC")
     fun getThisWeekTodos(startDayOfWeek: Long, endDayOfWeek: Long, mno: String): Flow<List<Todo2>>
 
-    // PK와 FK 확인
     @Query("SELECT * FROM todo2 WHERE tno2 = :tno2 AND mno = :mno")
     suspend fun findTodo2ByKeys(tno2: Long, mno: String): Todo2?
 

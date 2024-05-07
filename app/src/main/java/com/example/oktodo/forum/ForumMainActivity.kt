@@ -1,5 +1,6 @@
 package com.example.oktodo.forum
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
@@ -37,8 +38,14 @@ class ForumMainActivity  : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // intent에서 값을 가져오고, null인 경우 대체값을 사용
-        val mno = intent?.getStringExtra("mno") ?: "default_value"
+        // 로그인 확인
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
+        val mno = if (isLoggedIn) {
+            prefs.getString("mno", "").toString()
+        } else {
+            "default_value"
+        }
 
         // 토글
         drawerLayout = findViewById(R.id.navigation_drawer)
