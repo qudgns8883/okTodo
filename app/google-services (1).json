@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "456771333726",
+    "firebase_url": "https://ok-todo-default-rtdb.firebaseio.com",
+    "project_id": "ok-todo",
+    "storage_bucket": "ok-todo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456771333726:android:835d3908582369dba14ecf",
+        "android_client_info": {
+          "package_name": "com.example.ok_todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaZneOZaKCk8pYMhu6QyxT0uMIT1WsOSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456771333726:android:85ece2bcb569e360a14ecf",
+        "android_client_info": {
+          "package_name": "com.example.oktodo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaZneOZaKCk8pYMhu6QyxT0uMIT1WsOSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
