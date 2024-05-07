@@ -67,7 +67,6 @@ class ForumFourthFragment : Fragment() {
         // 액티비티에서 받은 값 사용하기
         val mno = arguments?.getString("mno")
 
-        //${forum.mno}작성자  ${mno}로그인
         // recyclerView 초기화 및 설정
         val recyclerView = binding.forumRecyclerView
         adapter = ForumAdapter(
