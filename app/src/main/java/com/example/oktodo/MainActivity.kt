@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         val todoView = findViewById<View>(R.id.todo_view) // todo_view ID를 가진 뷰를 참조
         todoView.setOnClickListener {
             val intent = Intent(this, TodoMainActivity::class.java)
-            intent.putExtra("mno", mno)
+//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
 
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         val forumView = findViewById<View>(R.id.comm_view)
         forumView.setOnClickListener {
             val intent = Intent(this, ForumMainActivity::class.java)
-            intent.putExtra("mno", mno)
+//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
     }
