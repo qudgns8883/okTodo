@@ -13,7 +13,7 @@ interface ForumDao {
     @Query("SELECT * FROM forum ORDER BY cno DESC")
     fun getAll(): Flow<List<Forum>>
 
-    @Query("SELECT * FROM forum WHERE forum_category = '교통' ORDER BY cno DESC")
+    @Query("SELECT * FROM forum WHERE forum_category = '교통'  ORDER BY cno DESC")
     fun getAllT(): Flow<List<Forum>>
 
     @Query("SELECT * FROM forum WHERE forum_category = '날씨' ORDER BY cno DESC")

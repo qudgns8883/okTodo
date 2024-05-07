@@ -126,11 +126,14 @@ class TwoFragment : Fragment() {
         val navigationView = view.findViewById<NavigationView>(R.id.main_drawer_view)
         val headerView = navigationView.getHeaderView(0)
 
+        // NavigationView 메뉴 텍스트 업데이트 코드 추가
+        NavigationMenuClickListener(requireContext()).updateMenuText(navigationView)
+
         // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
         CardViewClickListener.setupCardViewClickListeners(headerView, requireContext(), this)
 
         // View Binding을 사용하여 NavigationView에 리스너 설정
-        weatherBinding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(requireContext()))
+        airBinding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(requireContext()))
     }
 
     // UI 업데이트 메소드
