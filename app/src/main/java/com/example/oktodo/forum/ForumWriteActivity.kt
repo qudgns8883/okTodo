@@ -1,6 +1,7 @@
 package com.example.oktodo.forum
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Build
@@ -35,6 +36,15 @@ class ForumWriteActivity : AppCompatActivity() {
         binding = ForumActivityWriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 로그인 확인
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
+        val mno = if (isLoggedIn) {
+            prefs.getString("mno", "").toString()
+        } else {
+            "default_value"
+        }
+
         binding.homeIcon.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -49,8 +59,6 @@ class ForumWriteActivity : AppCompatActivity() {
         }
 
         // Intent에서 포럼 정보 가져오기
-        // intent에서 값을 가져오고, null인 경우 대체값을 사용
-        val mno = intent?.getStringExtra("mno") ?: "default_value"
         val forumContent = intent.getStringExtra("forumContent")
         val forumCno = intent.getStringExtra("forumCno")
         val forumCategory = intent.getStringExtra("forumCategory")
