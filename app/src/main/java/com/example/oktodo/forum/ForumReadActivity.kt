@@ -64,10 +64,7 @@ class ForumReadActivity : AppCompatActivity() {
         binding.locationTextView.setText(forumPlace1)
         binding.locationTextView2.setText(forumPlace2)
 
-
-        if (mno == "default_value") { // mno null(예외 처리된 값)
-            binding.checkBtn.visibility = View.GONE // 수정 버튼 안 보이게 함
-        } else if (postMno == mno) { // 작성자 일치
+        if (postMno == mno) { // 작성자 일치
             binding.checkBtn.setOnClickListener {
                 // Write로 값 넘겨주기
                 val intent = Intent(this, ForumWriteActivity::class.java)
@@ -90,7 +87,7 @@ class ForumReadActivity : AppCompatActivity() {
 
     private fun toggleDrawer() {
         val drawerLayout = findViewById<FrameLayout>(R.id.navigation_drawer)
-        if(isDrawerOpen) {
+        if (isDrawerOpen) {
             drawerLayout.visibility = View.GONE
         } else {
             drawerLayout.visibility = View.VISIBLE
