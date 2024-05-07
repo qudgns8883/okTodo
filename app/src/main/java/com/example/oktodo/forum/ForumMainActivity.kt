@@ -52,6 +52,9 @@ class ForumMainActivity  : AppCompatActivity() {
         val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
         val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
 
+        // NavigationView 메뉴 텍스트 업데이트 코드 추가
+        NavigationMenuClickListener(this).updateMenuText(navigationView)
+
         // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
         CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
 

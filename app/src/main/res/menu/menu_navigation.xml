@@ -15,5 +15,5 @@
     <item
         android:id="@+id/logout"
         android:icon="@drawable/icon_logout"
-        android:title="로그아웃"/>
+        android:title="로그인"/>
 </menu>
