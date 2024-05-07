@@ -125,32 +125,37 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private suspend fun registerMemberAndLog(email: String, loginType: String, nickname: String, profileImage: String) {
+        // 이메일로 기존 회원 검색
         val existingMember = memberDao.findMemberByEmail(email)
         if (existingMember == null) {
             try {
+                // 새 회원 등록
                 val byteArrayImage = profileImage.toByteArray(Charsets.UTF_8)
-                // 새로운 회원 정보를 데이터베이스에 등록
                 val newMember = MemberEntity(null, email, loginType, nickname, byteArrayImage)
                 memberDao.insertMember(newMember)
 
-                val allMembers = memberDao.getAllMembers()
-                allMembers.forEach { member ->
-                    Log.d("Mno :  ${member.mno} , LoginActivity", "Member: Email: ${member.email}, Nickname: ${member.nickName}")
-                }
+                // 새로 등록한 회원 정보 가져오기
+                val insertedMember = memberDao.findMemberByEmail(email)
+                saveMemberIdToPreferences(insertedMember?.mno)
 
                 // 로그 출력
-                Log.d(
-                    "LoginActivity",
-                    "Member registration successful: Email: $email, LoginType: $loginType, Nickname: $nickname, ImageSize: ${byteArrayImage.size} bytes"
-                )
+                Log.d("LoginActivity", "Member registration successful: Email: $email, LoginType: $loginType, Nickname: $nickname, ImageSize: ${byteArrayImage.size} bytes")
             } catch (e: Exception) {
-                // 로그인 실패 또는 데이터베이스 삽입 실패 로그
                 Log.e("LoginActivity", "Member registration failed", e)
             }
-        }else{
-            // 이미 등록된 이메일 주소가 있는 경우 로그 출력
+        } else {
+            // 기존 회원의 mno를 SharedPreferences에 저장
+            saveMemberIdToPreferences(existingMember.mno)
+
+            // 로그 출력
             Log.d("LoginActivity", "Member already exists: Email: $email")
         }
+    }
+
+    private fun saveMemberIdToPreferences(mno: Int?) {
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE).edit()
+        prefs.putString("mno", mno.toString())
+        prefs.apply()
     }
 
     // ================== 네이버 소셜 로그인 ================
