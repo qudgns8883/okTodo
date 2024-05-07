@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
@@ -66,11 +67,9 @@ class ForumReadActivity : AppCompatActivity() {
 
         if (mno == "default_value") { // mno null(예외 처리된 값)
             binding.checkBtn.visibility = View.GONE // 수정 버튼 안 보이게 함
-        } else if (postMno != mno) { // 작성자 불일치
-            binding.checkBtn.visibility = View.GONE
-        } else { // 작성자 일치
-            // Write로 값 넘겨주기
+        } else if (postMno == mno) { // 작성자 일치
             binding.checkBtn.setOnClickListener {
+                // Write로 값 넘겨주기
                 val intent = Intent(this, ForumWriteActivity::class.java)
                 intent.putExtra("forumCno", forumCno)
                 intent.putExtra("forumContent", forumContent)
@@ -80,6 +79,8 @@ class ForumReadActivity : AppCompatActivity() {
                 intent.putExtra("mno", mno)
                 startActivity(intent)
             }
+        } else { // 작성자 불일치
+            binding.checkBtn.visibility = View.GONE
         }
 
         binding.resetBtn.setOnClickListener {
