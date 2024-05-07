@@ -10,6 +10,10 @@ import androidx.room.Update
 @Dao
 interface MemberDao {
 
+    //모든회원 조회
+    @Query("SELECT * FROM MemberEntity")
+    suspend fun getAllMembers(): List<MemberEntity>
+
     // 삽입
     @Insert
     suspend fun insertMember(member: MemberEntity)

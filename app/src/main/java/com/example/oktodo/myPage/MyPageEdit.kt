@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.util.Base64
 import android.util.Log
 import android.view.MotionEvent
 import android.widget.Toast
@@ -106,11 +107,15 @@ class MyPageEdit : AppCompatActivity() {
         val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
         val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
 
+        // NavigationView 메뉴 텍스트 업데이트 코드 추가
+        NavigationMenuClickListener(this).updateMenuText(navigationView)
+
         // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
         CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
 
         // View Binding을 사용하여 NavigationView에 리스너 설정
         binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
+
     }
 
     // Activity가 다시 시작될 때마다 호출되는 onResume() 메소드 오버라이드
@@ -136,9 +141,6 @@ class MyPageEdit : AppCompatActivity() {
                 val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
                 binding.editImage.setImageBitmap(bitmap)
             }
-        } ?: run {
-            // 기본 이미지 설정
-            binding.editImage.setImageResource(R.drawable.profileee)
         }
     }
 
@@ -153,10 +155,14 @@ class MyPageEdit : AppCompatActivity() {
         // 입력 유효성 검사 실패 시 함수 종료
         if (!validateInputs(this, updateEmail, updatePassword, updateNickName)) return
 
-        // 이미지 처리 및 바이트 배열 가져오기 (SignUpUtils 클래스 사용)
+        // 이미지 처리: 새 이미지가 없으면 기존 이미지 사용
+        val defaultImageByteArray = sharedPreferences.getString("ProfileImageUrl", null)?.let {
+            Base64.decode(it, Base64.DEFAULT)
+        } ?: signUpUtils.getDefaultImageByteArray(this) // 기본 이미지 사용
+
         val imageByteArray: ByteArray = imageUri?.let {
             signUpUtils.convertUriToByteArray(this, it)
-        } ?: signUpUtils.getDefaultImageByteArray(this) // 기본 이미지 사용
+        } ?: defaultImageByteArray // 새 이미지가 없을 경우 기존 이미지 또는 기본 이미지 사용
 
         lifecycleScope.launch {
             // userMno가 null이 아닐 때만 조회
@@ -173,6 +179,8 @@ class MyPageEdit : AppCompatActivity() {
                 editor.putString("Nickname", updateEntity.nickName)
                 editor.putString("Email", updateEntity.email)
                 editor.putString("Password", updateEntity.password)
+                val imageBase64String = Base64.encodeToString(imageByteArray, Base64.DEFAULT)
+                editor.putString("ProfileImageUrl", imageBase64String)
                 editor.apply()
 
                 if (imageByteArray.isNotEmpty()) {

@@ -173,8 +173,5 @@ class BusanChosenActivity : AppCompatActivity() {
                 }
             }
         }
-
-
     }
-
 }

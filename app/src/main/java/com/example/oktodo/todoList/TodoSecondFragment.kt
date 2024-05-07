@@ -13,6 +13,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -65,11 +66,15 @@ class TodoSecondFragment : Fragment() {
             startActivity(intent)
         }
 
-        viewModel.selectedTodo?.let {todo ->
+        viewModel.selectedTodo?.let { todo ->
             binding.todoEditText.setText(todo.todoContent)
 
             // todoTime 값을 버튼에 설정
-            val formattedTime = String.format("%02d:%02d", todo.todoTime / (60 * 60 * 1000), (todo.todoTime % (60 * 60 * 1000)) / (60 * 1000))
+            val formattedTime = String.format(
+                "%02d:%02d",
+                todo.todoTime / (60 * 60 * 1000),
+                (todo.todoTime % (60 * 60 * 1000)) / (60 * 1000)
+            )
             binding.todoTime.text = formattedTime
 
             when (todo.importance) {
@@ -119,60 +124,75 @@ class TodoSecondFragment : Fragment() {
         }
 
         binding.doneFab.setOnClickListener {
-            if (binding.todoEditText.text.toString().isNotEmpty()) {
-                val checkedArray = booleanArrayOf(
-                    binding.checkboxMonday.isChecked,
-                    binding.checkboxTuesday.isChecked,
-                    binding.checkboxWednesday.isChecked,
-                    binding.checkboxThursday.isChecked,
-                    binding.checkboxFriday.isChecked,
-                    binding.checkboxSaturday.isChecked,
-                    binding.checkboxSunday.isChecked,
-                )
-
-                val dayCheckedString = convertBooleanArrayToString(checkedArray)
-
-                val checkedRadioButtonId = binding.todoImportanceRadioGroup.checkedRadioButtonId
-                val todoImportance = when (checkedRadioButtonId) {
-                    R.id.btn_high -> "1"
-                    R.id.btn_middle -> "2"
-                    R.id.btn_low -> "3"
-                    else -> ""
+            try {
+                val inputData = binding.todoEditText.text.toString()
+                // 값이 유효한지 확인
+                if (inputData.isBlank()) {
+                    // 유효하지 않은 경우 Toast 메시지를 띄움
+                    Toast.makeText(requireContext(), "내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
                 }
-
-                val selectedTimeText = binding.todoTime.text.toString()
-                val selectedTimeParts = selectedTimeText.split(":")
-                val selectedHour = selectedTimeParts[0].toInt()
-                val selectedMinute = selectedTimeParts[1].toInt()
-
-                // 선택된 시간을 밀리초로 변환
-                val selectedTimeInMillis = ((selectedHour.toLong() * 60 * 60 * 1000) + (selectedMinute.toLong() * 60 * 1000))
-
-                if (viewModel.selectedTodo != null) {
-                    viewModel.updateTodo(
-                        binding.todoEditText.text.toString(),
-                        calendar.timeInMillis,
-                        day = dayCheckedString,
-                        importance = todoImportance,
-                        todoTime = selectedTimeInMillis,
+                if (inputData.isNotEmpty()) {
+                    val checkedArray = booleanArrayOf(
+                        binding.checkboxMonday.isChecked,
+                        binding.checkboxTuesday.isChecked,
+                        binding.checkboxWednesday.isChecked,
+                        binding.checkboxThursday.isChecked,
+                        binding.checkboxFriday.isChecked,
+                        binding.checkboxSaturday.isChecked,
+                        binding.checkboxSunday.isChecked,
                     )
-                } else {
-                    if (mno != null) {
-                        viewModel.addTodo(
-                            mno = mno,
-                            binding.todoEditText.text.toString(),
+
+                    val dayCheckedString = convertBooleanArrayToString(checkedArray)
+
+                    val checkedRadioButtonId = binding.todoImportanceRadioGroup.checkedRadioButtonId
+                    val todoImportance = when (checkedRadioButtonId) {
+                        R.id.btn_high -> "1"
+                        R.id.btn_middle -> "2"
+                        R.id.btn_low -> "3"
+                        else -> ""
+                    }
+
+                    val selectedTimeText = binding.todoTime.text.toString()
+                    val selectedTimeParts = selectedTimeText.split(":")
+                    val selectedHour = selectedTimeParts[0].toInt()
+                    val selectedMinute = selectedTimeParts[1].toInt()
+
+                    // 선택된 시간을 밀리초로 변환
+                    val selectedTimeInMillis =
+                        ((selectedHour.toLong() * 60 * 60 * 1000) + (selectedMinute.toLong() * 60 * 1000))
+
+                    if (viewModel.selectedTodo != null) {
+                        viewModel.updateTodo(
+                            inputData,
+                            calendar.timeInMillis,
                             day = dayCheckedString,
-                            checked = false,
                             importance = todoImportance,
-                            date = calendar.timeInMillis,
                             todoTime = selectedTimeInMillis,
-                            todoRegTime = LocalTime.now(),
                         )
                     } else {
-                        Toast.makeText(requireContext(), "잠시 후 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                        if (mno != null) {
+                            viewModel.addTodo(
+                                mno = mno,
+                                inputData,
+                                day = dayCheckedString,
+                                checked = false,
+                                importance = todoImportance,
+                                date = calendar.timeInMillis,
+                                todoTime = selectedTimeInMillis,
+                                todoRegTime = LocalTime.now(),
+                            )
+                        } else {
+                            Toast.makeText(requireContext(), "잠시 후 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                        }
                     }
+                    findNavController().popBackStack()
                 }
-                findNavController().popBackStack()
+            } catch (e: Exception) {
+                // 예외가 발생한 경우에 대한 처리
+                e.printStackTrace() // 예외 로그 출력
+                Toast.makeText(requireContext(), "입력되지 않은 값이 있습니다.", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 

@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         val todoView = findViewById<View>(R.id.todo_view) // todo_view ID를 가진 뷰를 참조
         todoView.setOnClickListener {
             val intent = Intent(this, TodoMainActivity::class.java)
-            intent.putExtra("mno", mno)
+//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
 
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         val forumView = findViewById<View>(R.id.comm_view)
         forumView.setOnClickListener {
             val intent = Intent(this, ForumMainActivity::class.java)
-            intent.putExtra("mno", mno)
+//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
     }
@@ -126,24 +126,9 @@ class MainActivity : AppCompatActivity() {
     // 날씨 보기 클릭 이벤트 처리
     private suspend fun handleWeatherViewClick() {
         withContext(Dispatchers.Main) {
-            val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
-            // 로그인 상태 확인
-            val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
-            // 추가: 로그인 타입 확인
-            val loginType = prefs.getString("LoginType", null)
-
-            // 기존 로그인 상태 확인 조건에 더하여 로그인 타입이 구글, 카카오, 네이버 중 하나라도 해당되는지 확인
-            val isAuthorizedUser =
-                isLoggedIn && (loginType == "Google" || loginType == "Kakao" || loginType == "Naver" || loginType == "General")
-
-            if (isAuthorizedUser) {
-                // 로그인되어 있고, 구글/카카오/네이버 중 하나로 로그인되어 있을 경우 FragmentActivity로 이동
-                val intent = Intent(this@MainActivity, FragmentActivity::class.java)
-                startActivity(intent)
-            } else {
-                // 로그인 되어 있지 않거나 위 조건을 만족하지 않을 경우, 로그인 요청 메세지 표시
-                Toast.makeText(this@MainActivity, "로그인 후 이용 가능합니다.", Toast.LENGTH_LONG).show()
-            }
+            // 모든 사용자가 FragmentActivity로 이동할 수 있도록 수정
+            val intent = Intent(this@MainActivity, FragmentActivity::class.java)
+            startActivity(intent)
         }
     }
 

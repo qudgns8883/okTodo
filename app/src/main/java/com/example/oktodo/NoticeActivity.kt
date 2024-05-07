@@ -13,7 +13,12 @@ import com.example.oktodo.util.menuClickListener.CardViewClickListener
 import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.Firebase
+import com.google.firebase.FirebaseApp
+import com.google.firebase.FirebaseOptions
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.firestore
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -33,7 +38,16 @@ class NoticeActivity   : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
 //      데이터 받아오기
-        val db = Firebase.firestore
+        val coroutineScope = CoroutineScope(Dispatchers.Main)
+        val options = FirebaseOptions.Builder()
+            .setProjectId("ok-todo")
+            .setApplicationId("1:456771333726:android:835d3908582369dba14ecf")
+            .setApiKey("AIzaSyDaZneOZaKCk8pYMhu6QyxT0uMIT1WsOSg")
+            .build()
+        // 새로운 FirebaseApp을 초기화
+        val otherFirebaseApp = FirebaseApp.initializeApp(this, options, "other")
+        // Firestore에 대한 참조를 가져옴
+        val db = FirebaseFirestore.getInstance(otherFirebaseApp)
 
         val docRef = db.collection("Notice")
         docRef.get()
@@ -73,11 +87,15 @@ class NoticeActivity   : AppCompatActivity() {
         val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
         val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
 
+        // NavigationView 메뉴 텍스트 업데이트 코드 추가
+        NavigationMenuClickListener(this).updateMenuText(navigationView)
+
         // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
         CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
 
         // View Binding을 사용하여 NavigationView에 리스너 설정
         binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
+
     }
     //    onCreate 끝
     private fun dateToString(date: Date?):String{

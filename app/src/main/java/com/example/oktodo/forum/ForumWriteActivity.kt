@@ -9,6 +9,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -117,6 +118,13 @@ class ForumWriteActivity : AppCompatActivity() {
             }
             val inputPlace1 = binding.locationTextView.text.toString()
             val inputPlace2 = binding.locationTextView2.text.toString()
+
+            // 값이 유효한지 확인
+            if (inputData.isBlank() || inputCategory.isBlank() || inputPlace1.isBlank() || inputPlace2.isBlank()) {
+                // 유효하지 않은 경우 Toast 메시지를 띄움
+                Toast.makeText(this, "모든 필드를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             if (forumCno != null) {
                 viewModel.updateForum(

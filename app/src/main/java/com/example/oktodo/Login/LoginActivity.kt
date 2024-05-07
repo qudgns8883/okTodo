@@ -17,6 +17,7 @@ import com.example.oktodo.R
 import com.example.oktodo.databinding.ActivityLoginBinding
 import com.example.oktodo.db.AppDatabase
 import com.example.oktodo.db.MemberDao
+import com.example.oktodo.db.MemberEntity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -123,6 +124,40 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private suspend fun registerMemberAndLog(email: String, loginType: String, nickname: String, profileImage: String) {
+        // 이메일로 기존 회원 검색
+        val existingMember = memberDao.findMemberByEmail(email)
+        if (existingMember == null) {
+            try {
+                // 새 회원 등록
+                val byteArrayImage = profileImage.toByteArray(Charsets.UTF_8)
+                val newMember = MemberEntity(null, email, loginType, nickname, byteArrayImage)
+                memberDao.insertMember(newMember)
+
+                // 새로 등록한 회원 정보 가져오기
+                val insertedMember = memberDao.findMemberByEmail(email)
+                saveMemberIdToPreferences(insertedMember?.mno)
+
+                // 로그 출력
+                Log.d("LoginActivity", "Member registration successful: Email: $email, LoginType: $loginType, Nickname: $nickname, ImageSize: ${byteArrayImage.size} bytes")
+            } catch (e: Exception) {
+                Log.e("LoginActivity", "Member registration failed", e)
+            }
+        } else {
+            // 기존 회원의 mno를 SharedPreferences에 저장
+            saveMemberIdToPreferences(existingMember.mno)
+
+            // 로그 출력
+            Log.d("LoginActivity", "Member already exists: Email: $email")
+        }
+    }
+
+    private fun saveMemberIdToPreferences(mno: Int?) {
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE).edit()
+        prefs.putString("mno", mno.toString())
+        prefs.apply()
+    }
+
     // ================== 네이버 소셜 로그인 ================
     // 네이버 로그인 시작 함수
     private fun startNaverLogin() {
@@ -146,6 +181,12 @@ class LoginActivity : AppCompatActivity() {
                     prefs.putString("Email", email) // 이메일 정보 저장
                     prefs.putString("LoginType", "Naver") // 로그인 타입 저장
                     prefs.apply()
+
+                    // 회원 등록 및 로그 출력 함수 호출
+                    lifecycleScope.launch {
+                        // 여기서는 lifecycleScope가 코루틴을 제공합니다.
+                        registerMemberAndLog(email, "Naver", nickname, profileImage)
+                    }
 
                     // ChosenActivity로 넘어가기
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
@@ -249,15 +290,25 @@ class LoginActivity : AppCompatActivity() {
             // 구글 로그인 성공 시, 로그와 함께 사용자 정보를 저장
             Log.d(tag, "updateUI: Login success with ${user.displayName}")
 
+            // 닉네임과 프로필 이미지 URL 추출
+            val nickname = user.displayName
+            val profileImage = user.photoUrl.toString()
+            val email = user.email
+
             if (user.displayName != null && user.photoUrl != null) {
                 // SharedPreferences를 사용해 사용자 정보를 저장
                 val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE).edit()
                 prefs.putBoolean("IsLoggedIn", true)
-                prefs.putString("Nickname", user.displayName) // 닉네임 저장
-                prefs.putString("ProfileImageUrl", user.photoUrl.toString()) // 프로필 이미지 URL 저장
-                prefs.putString("Email", user.email ?: "") // 이메일 저장, 이메일이 null일 경우 빈 문자열 저장
+                prefs.putString("Nickname", nickname) // 닉네임 저장
+                prefs.putString("ProfileImageUrl", profileImage) // 프로필 이미지 URL 저장
+                prefs.putString("Email", email) // 이메일 저장, 이메일이 null일 경우 빈 문자열 저장
                 prefs.putString("LoginType", "Google") // 로그인 타입 저장
                 prefs.apply()
+
+                // 회원 등록 및 로그 출력 함수 호출
+                lifecycleScope.launch {
+                    registerMemberAndLog(email!!, "Google", nickname!!, profileImage)
+                }
 
                 // ChosenActivity로 넘어가기
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
@@ -290,21 +341,38 @@ class LoginActivity : AppCompatActivity() {
 
     // 카카오톡 사용자 정보 가져오기
     private fun fetchKakaoUserInfo() {
+
+
         UserApiClient.instance.me { user, error ->
             if (error != null) {
                 Log.e(TAG, "사용자 정보 요청 실패", error)
             } else if (user != null) {
+
+                val nickname = user.kakaoAccount?.profile?.nickname
+                val profileImage =  user.kakaoAccount?.profile?.profileImageUrl
+                val email = user.kakaoAccount?.email
+
                 // Shared Preferences에 로그인 상태, 닉네임, 프로필 이미지 URL 저장
                 val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE).edit()
                 prefs.putBoolean("IsLoggedIn", true)
-                prefs.putString("Nickname", user.kakaoAccount?.profile?.nickname) // 닉네임 저장
+                prefs.putString("Nickname",nickname) // 닉네임 저장
                 prefs.putString(
                     "ProfileImageUrl",
-                    user.kakaoAccount?.profile?.profileImageUrl
+                    profileImage
                 ) // 프로필 이미지 URL 저장
-                prefs.putString("Email", user.kakaoAccount?.email) // 이메일 정보 저장
+                prefs.putString("Email", email) // 이메일 정보 저장
                 prefs.putString("LoginType", "Kakao") // 로그인 타입 저장
                 prefs.apply()
+
+//                // 회원 등록 및 로그 출력 함수 호출
+//                lifecycleScope.launch {
+//                    // 여기서는 lifecycleScope가 코루틴을 제공합니다.
+//                    registerMemberAndLog(email!!, "Kakao", nickname!!, profileImage!!)
+//                }
+
+                lifecycleScope.launch {
+                    registerMemberAndLog(email ?: "", "kakao", nickname ?: "", profileImage ?: "")
+                }
 
                 // 사용자 정보 요청이 성공한 후 ChosenActivity로 이동
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)

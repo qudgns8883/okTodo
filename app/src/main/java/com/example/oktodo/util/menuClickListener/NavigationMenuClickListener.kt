@@ -104,7 +104,8 @@ class NavigationMenuClickListener(private val context: Context) :
 
     // Google 로그아웃 처리
     private fun signOut() {
-        val googleSignInClient = GoogleSignIn.getClient(context, GoogleSignInOptions.DEFAULT_SIGN_IN)
+        val googleSignInClient =
+            GoogleSignIn.getClient(context, GoogleSignInOptions.DEFAULT_SIGN_IN)
         if (context is Activity) {
             googleSignInClient.signOut().addOnCompleteListener(context) {
                 // Google 로그아웃 완료 후에는 FirebaseAuth 로그아웃 처리
@@ -117,6 +118,20 @@ class NavigationMenuClickListener(private val context: Context) :
         } else {
             // context가 Activity가 아닐 경우 처리
             Log.e("NavigationMenuClickListener", "Context is not an instance of Activity.")
+        }
+    }
+
+    // 네비게이션 메뉴 아이템의 텍스트 업데이트
+    fun updateMenuText(navigationView: NavigationView) {
+        val menu = navigationView.menu
+        val loginMenuItem = menu.findItem(R.id.logout)
+
+        if (isLoggedIn()) {
+            // 로그인 상태일 경우
+            loginMenuItem.title = "로그아웃"
+        } else {
+            // 로그인 상태가 아닐 경우
+            loginMenuItem.title = "로그인"
         }
     }
 }

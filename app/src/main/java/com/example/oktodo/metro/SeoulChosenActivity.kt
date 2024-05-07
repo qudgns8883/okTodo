@@ -106,13 +106,14 @@ class SeoulChosenActivity : AppCompatActivity() {
             val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
             val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
 
+            // NavigationView 메뉴 텍스트 업데이트 코드 추가
+            NavigationMenuClickListener(this@SeoulChosenActivity).updateMenuText(navigationView)
+
             // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
             CardViewClickListener.setupCardViewClickListeners(headerView, this@SeoulChosenActivity, this@SeoulChosenActivity)
 
             // View Binding을 사용하여 NavigationView에 리스너 설정
             binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this@SeoulChosenActivity))
-
-
 
             val trainScheduleList = fetchTrainSchedule(stationData)
             adapter.updateData(trainScheduleList)

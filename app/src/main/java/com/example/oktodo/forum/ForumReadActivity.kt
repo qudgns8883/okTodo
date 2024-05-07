@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
@@ -63,14 +64,9 @@ class ForumReadActivity : AppCompatActivity() {
         binding.locationTextView.setText(forumPlace1)
         binding.locationTextView2.setText(forumPlace2)
 
-
-        if (mno == "default_value") { // mno null(예외 처리된 값)
-            binding.checkBtn.visibility = View.GONE // 수정 버튼 안 보이게 함
-        } else if (postMno != mno) { // 작성자 불일치
-            binding.checkBtn.visibility = View.GONE
-        } else { // 작성자 일치
-            // Write로 값 넘겨주기
+        if (postMno == mno) { // 작성자 일치
             binding.checkBtn.setOnClickListener {
+                // Write로 값 넘겨주기
                 val intent = Intent(this, ForumWriteActivity::class.java)
                 intent.putExtra("forumCno", forumCno)
                 intent.putExtra("forumContent", forumContent)
@@ -80,6 +76,8 @@ class ForumReadActivity : AppCompatActivity() {
                 intent.putExtra("mno", mno)
                 startActivity(intent)
             }
+        } else { // 작성자 불일치
+            binding.checkBtn.visibility = View.GONE
         }
 
         binding.resetBtn.setOnClickListener {
@@ -89,7 +87,7 @@ class ForumReadActivity : AppCompatActivity() {
 
     private fun toggleDrawer() {
         val drawerLayout = findViewById<FrameLayout>(R.id.navigation_drawer)
-        if(isDrawerOpen) {
+        if (isDrawerOpen) {
             drawerLayout.visibility = View.GONE
         } else {
             drawerLayout.visibility = View.VISIBLE
