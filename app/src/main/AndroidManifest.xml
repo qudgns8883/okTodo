@@ -68,8 +68,12 @@
             android:value="kakaod16087d80c91cf7da093934da501b028" />
 
         <activity
-            android:name=".metro.BusanBusActivity"
+            android:name=".metro.BusanBusChosenActivity"
             android:exported="false" />
+        <activity
+            android:name=".metro.BusanBusActivity"
+            android:exported="false">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -78,6 +82,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".HelpActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".NoticeActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".metro.MetroActivity"
@@ -88,18 +101,14 @@
             android:exported="false" />
         <activity
             android:name=".metro.BusanSubLineActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".metro.SeoulSubLineActivity"
             android:exported="false">
-
         </activity>
         <activity
             android:name=".metro.SeoulChosenActivity"
             android:exported="false" />
-
         <activity
             android:name=".todoList.TodoMainActivity"
             android:exported="false" />

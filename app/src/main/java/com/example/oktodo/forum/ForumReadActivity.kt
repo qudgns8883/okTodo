@@ -7,12 +7,14 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.ForumActivityReadBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
 
 class ForumReadActivity : AppCompatActivity() {
     lateinit var binding: ForumActivityReadBinding
@@ -45,6 +47,8 @@ class ForumReadActivity : AppCompatActivity() {
         val forumCategory = intent.getStringExtra("forumCategory")
         val forumPlace1 = intent.getStringExtra("forumPlace1")
         val forumPlace2 = intent.getStringExtra("forumPlace2")
+        val postMno = intent.getStringExtra("postMno")
+        val mno = intent.getStringExtra("mno")
 
         // 교통 or 날씨 라디오버튼
         val inputCategory = when (forumCategory) {
@@ -59,15 +63,23 @@ class ForumReadActivity : AppCompatActivity() {
         binding.locationTextView.setText(forumPlace1)
         binding.locationTextView2.setText(forumPlace2)
 
-        // Write로 값 넘겨주기
-        binding.checkBtn.setOnClickListener {
-            val intent = Intent(this, ForumWriteActivity::class.java)
-            intent.putExtra("forumCno", forumCno)
-            intent.putExtra("forumContent", forumContent)
-            intent.putExtra("forumCategory", forumCategory)
-            intent.putExtra("forumPlace1", forumPlace1)
-            intent.putExtra("forumPlace2", forumPlace2)
-            startActivity(intent)
+
+        if (mno == "default_value") { // mno null(예외 처리된 값)
+            binding.checkBtn.visibility = View.GONE // 수정 버튼 안 보이게 함
+        } else if (postMno != mno) { // 작성자 불일치
+            binding.checkBtn.visibility = View.GONE
+        } else { // 작성자 일치
+            // Write로 값 넘겨주기
+            binding.checkBtn.setOnClickListener {
+                val intent = Intent(this, ForumWriteActivity::class.java)
+                intent.putExtra("forumCno", forumCno)
+                intent.putExtra("forumContent", forumContent)
+                intent.putExtra("forumCategory", forumCategory)
+                intent.putExtra("forumPlace1", forumPlace1)
+                intent.putExtra("forumPlace2", forumPlace2)
+                intent.putExtra("mno", mno)
+                startActivity(intent)
+            }
         }
 
         binding.resetBtn.setOnClickListener {

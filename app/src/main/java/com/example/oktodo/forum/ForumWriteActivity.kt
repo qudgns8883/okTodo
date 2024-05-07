@@ -48,6 +48,8 @@ class ForumWriteActivity : AppCompatActivity() {
         }
 
         // Intent에서 포럼 정보 가져오기
+        // intent에서 값을 가져오고, null인 경우 대체값을 사용
+        val mno = intent?.getStringExtra("mno") ?: "default_value"
         val forumContent = intent.getStringExtra("forumContent")
         val forumCno = intent.getStringExtra("forumCno")
         val forumCategory = intent.getStringExtra("forumCategory")
@@ -125,13 +127,16 @@ class ForumWriteActivity : AppCompatActivity() {
                     forumPlace2 = inputPlace2
                 )
             } else {
-                viewModel.addForum(
-                    inputData,
-                    forumTime = currentTime,
-                    forumCategory = inputCategory,
-                    forumPlace1 = inputPlace1,
-                    forumPlace2 = inputPlace2
-                )
+                if (mno != null) {
+                    viewModel.addForum(
+                        mno = mno,
+                        inputData,
+                        forumTime = currentTime,
+                        forumCategory = inputCategory,
+                        forumPlace1 = inputPlace1,
+                        forumPlace2 = inputPlace2
+                    )
+                }
             }
             val resultIntent = intent
             resultIntent.putExtra("result", inputData)

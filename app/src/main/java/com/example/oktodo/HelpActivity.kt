@@ -3,19 +3,17 @@ package com.example.oktodo
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.databinding.ActivityHelpBinding
-import com.example.oktodo.todoList.TodoMainActivity
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 
-class HelpActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
+class HelpActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityHelpBinding
     private lateinit var drawerLayout: FrameLayout
@@ -75,18 +73,16 @@ class HelpActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         showNavigationButton.setOnClickListener {
             toggleDrawer() // 네비게이션 뷰를 보이도록 변경
         }
-        //네비바 항목 페이지 이동
-        binding.mainDrawerView.setNavigationItemSelectedListener(this)
 
-        // 네비게이션 뷰에서 icon_todo ImageView를 찾아 클릭 이벤트 설정
+        // NavigationView의 헤더 뷰를 얻음
         val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
-        val headView = navigationView.getHeaderView(0)
-        val todoView = headView.findViewById<ImageView>(R.id.icon_todo)
-        todoView.setOnClickListener {
-            val intent = Intent(this@HelpActivity, TodoMainActivity::class.java)
-            startActivity(intent)
-        }
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
 
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
     }
     private fun toggleDrawer() {
         val drawerLayout = findViewById<FrameLayout>(R.id.navigation_drawer)
@@ -111,28 +107,4 @@ class HelpActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         }
         return super.dispatchTouchEvent(ev)
     }
-
-    //네비바 페이지 이동
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        var intent : Intent? =  null
-
-        when(item.itemId)
-        {
-            R.id.userMyPage->
-                Log.d("aaa","마이페이지 선택")
-            R.id.help->
-                intent = Intent(this,HelpActivity::class.java)
-            R.id.notice->
-                intent = Intent(this,NoticeActivity::class.java)
-            R.id.logout->
-                Log.d("aaa","로그아웃 선택")
-
-        }
-        startActivity(intent)
-        return super.onContextItemSelected(item)
-    }
-
-
-
 }

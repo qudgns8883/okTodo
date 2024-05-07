@@ -1,41 +1,38 @@
 package com.example.oktodo.Login
 
-import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.oktodo.MainActivity
+import com.example.oktodo.R
 import com.example.oktodo.databinding.ActivitySignupBinding
 import com.example.oktodo.db.AppDatabase
 import com.example.oktodo.db.MemberDao
 import com.example.oktodo.db.MemberEntity
+import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.example.oktodo.util.signUpUtils.SignUpUtils
 import com.example.oktodo.util.signUpUtils.SignUpUtils.convertUriToByteArray
 import com.example.oktodo.util.signUpUtils.SignUpUtils.saveImageAndPathInPreferences
 import com.example.oktodo.util.signUpUtils.SignUpUtils.validateInputs
-import kotlinx.coroutines.Dispatchers
+import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.io.ByteArrayOutputStream
-import java.io.File
-import java.io.FileNotFoundException
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding
     lateinit var db: AppDatabase
     lateinit var memberDao: MemberDao
     private var imageUri: Uri? = null
+    private var isDrawerOpen = false
 
     // SignUpUtils 인스턴스 생성
     private val signUpUtils = SignUpUtils
@@ -66,6 +63,32 @@ class SignUpActivity : AppCompatActivity() {
         binding.btnImageView.setOnClickListener {
             activityResult.launch("image/*")
         }
+
+        // 메뉴 아이콘 클릭 시 네비게이션 드로어의 가시성을 토글
+        binding.menuIcon.setOnClickListener {
+            isDrawerOpen = DrawerUtil.toggleDrawer(binding.navigationDrawer, isDrawerOpen)
+        }
+
+        // 메인 레이아웃에 터치 리스너를 설정
+        // 경고를 무시: 이 경우 performClick을 호출하지 않는 것이 의도된 동작
+        binding.root.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                    isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                }
+            }
+            false
+        }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
     }
 
     // 회원가입 로직을 처리하는 함수

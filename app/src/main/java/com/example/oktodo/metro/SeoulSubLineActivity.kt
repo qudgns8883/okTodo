@@ -2,6 +2,7 @@ package com.example.oktodo.metro
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -12,6 +13,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
+import com.example.oktodo.databinding.ActivitySeoulSubLineBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 
 
 class SeoulSubLineActivity : AppCompatActivity() {
@@ -22,11 +28,17 @@ class SeoulSubLineActivity : AppCompatActivity() {
     private lateinit var backBtn: Button
     private lateinit var line_spinner: Spinner
     private lateinit var station_spinner: Spinner
+    private lateinit var binding: ActivitySeoulSubLineBinding
+    private var isDrawerOpen = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_seoul_sub_line)
+
+        binding = ActivitySeoulSubLineBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         station_spinner = findViewById(R.id.spinner_station_selector)
         line_spinner = findViewById(R.id.spinner_line_selector)
@@ -132,6 +144,33 @@ class SeoulSubLineActivity : AppCompatActivity() {
         backBtn.setOnClickListener {
             finish()
         }
+
+        // 메뉴 아이콘 클릭 시 네비게이션 드로어의 가시성을 토글
+        binding.menuIcon.setOnClickListener {
+            isDrawerOpen = DrawerUtil.toggleDrawer(binding.navigationDrawer, isDrawerOpen)
+        }
+
+        // 메인 레이아웃에 터치 리스너를 설정
+        // 경고를 무시: 이 경우 performClick을 호출하지 않는 것이 의도된 동작
+        binding.root.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                    isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                }
+            }
+            false
+        }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
+
 
     }
 }

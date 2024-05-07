@@ -1,24 +1,29 @@
 package com.example.oktodo.todoList
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.oktodo.HelpActivity
 import com.example.oktodo.MainActivity
-import com.example.oktodo.NoticeActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.TodoActivityMainBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 
 class TodoMainActivity : AppCompatActivity() {
 
@@ -34,6 +39,17 @@ class TodoMainActivity : AppCompatActivity() {
         binding = TodoActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 로그인 확인
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
+        val mno = if (isLoggedIn) {
+            prefs.getString("mno", "").toString()
+        } else {
+            Toast.makeText(this, "Login please", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
         setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -46,6 +62,16 @@ class TodoMainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
+
         // 토글
         drawerLayout = findViewById(R.id.navigation_drawer)
         val showNavigationButton = findViewById<View>(R.id.menu_icon)
@@ -57,7 +83,7 @@ class TodoMainActivity : AppCompatActivity() {
 
     private fun toggleDrawer() {
         val drawerLayout = findViewById<FrameLayout>(R.id.navigation_drawer)
-        if(isDrawerOpen) {
+        if (isDrawerOpen) {
             drawerLayout.visibility = View.GONE
         } else {
             drawerLayout.visibility = View.VISIBLE
@@ -84,6 +110,4 @@ class TodoMainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
-
-
 }

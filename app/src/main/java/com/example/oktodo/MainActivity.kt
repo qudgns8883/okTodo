@@ -22,6 +22,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.oktodo.forum.ForumMainActivity
@@ -37,6 +38,9 @@ class MainActivity : AppCompatActivity() {
     // 코루틴을 Android의 메인 스레드(즉, UI 스레드)에서 실행하도록 지정
     private val scope = CoroutineScope(Job() + Dispatchers.Main)
 
+    // mno 값 저장
+    var mno: String = "default_value"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // 뷰 바인딩 설정
@@ -45,8 +49,14 @@ class MainActivity : AppCompatActivity() {
 
         scope.launch {
             // 네이버 로그인 기능을 사용하기 전 SDK 초기화
-            NaverIdLoginSDK.initialize(this@MainActivity, "uiQucVW4O9r9bhg80XvD", "FyxVPv_DH_", "부산it 네이버로그인")
+            NaverIdLoginSDK.initialize(
+                this@MainActivity,
+                getString(R.string.social_login_info_naver_client_id),
+                getString(R.string.social_login_info_naver_client_secret),
+                getString(R.string.social_login_info_naver_client_name)
+            )
         }
+
         // 코루틴 내에서 `loginUpdateUI` 함수를 비동기적으로 실행
         scope.launch {
             loginUpdateUI()
@@ -71,6 +81,7 @@ class MainActivity : AppCompatActivity() {
         val todoView = findViewById<View>(R.id.todo_view) // todo_view ID를 가진 뷰를 참조
         todoView.setOnClickListener {
             val intent = Intent(this, TodoMainActivity::class.java)
+//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
 
@@ -78,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         val forumView = findViewById<View>(R.id.comm_view)
         forumView.setOnClickListener {
             val intent = Intent(this, ForumMainActivity::class.java)
+//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
     }
@@ -90,63 +102,24 @@ class MainActivity : AppCompatActivity() {
             val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
             // 로그인 상태에 따라 닉네임 설정, 기본값은 "LOGIN"
             val nickname = if (isLoggedIn) prefs.getString("Nickname", "") else "LOGIN"
-
-//            val profileImageUrl = prefs.getString("ProfileImageUrl", "")
-//            Log.d("LoginActivity", "ProfileImageUrl Path: $profileImageUrl") // 로그 찍는 부분
-//
-//            val imagePath = prefs.getString("UserImageFilePath", null)
-//            Log.d("LoginActivity", "ImageImageImageImage Path: $imagePath") // 로그 찍는 부분
+            mno = if (isLoggedIn) prefs.getString("mno", "").toString() else "default_value"
 
             // 로그를 사용하여 profileImageUrl 확인
             // 사용자 닉네임으로 UI 업데이트
             binding.textLogin.text = nickname
 
-            setupLoginButton(isLoggedIn, prefs)
-        }
-    }
-
-    // 로그인 버튼의 동작을 설정
-    private fun setupLoginButton(isLoggedIn: Boolean, prefs: SharedPreferences) {
-        binding.placeBlock1.setOnClickListener {
-            if (isLoggedIn) {
-                // 로그아웃 로직
-                performLogout(prefs)
+            // 로그인 상태가 아닐 때만 로그인 페이지로 이동하도록 설정
+            if (!isLoggedIn) {
+                binding.placeBlock1.setOnClickListener {
+                    val intent = Intent(this@MainActivity, LoginActivity::class.java)
+                    startActivity(intent)
+                }
             } else {
-                // 로그인이 되어있지 않은 경우 LoginActivity로 이동
-                val intent = Intent(this@MainActivity, LoginActivity::class.java)
-                startActivity(intent)
+                // 로그인 상태일 경우, 클릭 리스너에 아무런 동작도 수행하지 않음
+                binding.placeBlock1.setOnClickListener {
+                    // 로그인 상태일 때는 아무 동작도 하지 않음
+                }
             }
-        }
-    }
-
-    // 로그아웃 처리를 수행하고 UI를 업데이트하는 함수
-    private fun performLogout(prefs: SharedPreferences) {
-        CoroutineScope(Dispatchers.Main).launch {
-            // Google 로그아웃
-            signOut()  // 메인 스레드에서 안전하다고 가정. 그렇지 않은 경우 withContext(Dispatchers.IO) { } 사용
-            // FirebaseAuth 로그아웃
-            FirebaseAuth.getInstance().signOut()  // 메인 스레드에서 안전
-            // 네이버 로그인 SDK를 이용한 로그아웃 실행
-            withContext(Dispatchers.IO) {  // 네트워크 요청 포함될 수 있으므로 IO 스레드에서 실행
-                NaverIdLoginSDK.logout()
-            }
-        }
-
-        // SharedPreferences에서 사용자 정보 삭제
-        prefs.edit().apply {
-            putBoolean("IsLoggedIn", false)
-            remove("LoginType")
-            remove("Nickname")
-            remove("ProfileImageUrl")
-            apply()
-        }
-
-        // 로그아웃 알림 표시
-//        Toast.makeText(this@MainActivity, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show()
-
-        // UI 업데이트
-        CoroutineScope(Dispatchers.Main).launch {
-            loginUpdateUI()
         }
     }
 
@@ -170,19 +143,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // 로그인 되어 있지 않거나 위 조건을 만족하지 않을 경우, 로그인 요청 메세지 표시
                 Toast.makeText(this@MainActivity, "로그인 후 이용 가능합니다.", Toast.LENGTH_LONG).show()
-            }
-        }
-    }
-
-    // Google 로그아웃 처리
-    private fun signOut() {
-        val googleSignInClient = GoogleSignIn.getClient(this, GoogleSignInOptions.DEFAULT_SIGN_IN)
-        googleSignInClient.signOut().addOnCompleteListener(this) {
-            // 로그아웃 완료 후 UI 업데이트
-            FirebaseAuth.getInstance().signOut()
-            // UI 업데이트를 위해 loginUpdateUI 호출
-            CoroutineScope(Dispatchers.Main).launch {
-                loginUpdateUI()
             }
         }
     }

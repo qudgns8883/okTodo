@@ -4,21 +4,20 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.databinding.ActivityNoticeBinding
-import com.example.oktodo.todoList.TodoMainActivity
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class NoticeActivity   : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
+class NoticeActivity   : AppCompatActivity() {
     lateinit var adapter : ListAdapter
     private lateinit var binding: ActivityNoticeBinding
     private lateinit var drawerLayout: FrameLayout
@@ -34,7 +33,6 @@ class NoticeActivity   : AppCompatActivity() , NavigationView.OnNavigationItemSe
         setSupportActionBar(binding.toolbar)
 
 //      데이터 받아오기
-
         val db = Firebase.firestore
 
         val docRef = db.collection("Notice")
@@ -47,8 +45,6 @@ class NoticeActivity   : AppCompatActivity() , NavigationView.OnNavigationItemSe
                         content = document.data.get("content").toString(),
 //                        regTime = dateToString(document.data.get("regTime"))
                         regTime = dateToString(document.getTimestamp("regTime")?.toDate())
-
-
                     )
                     noticeList.add(notice)
                     adapter = ListAdapter(noticeList)
@@ -58,8 +54,6 @@ class NoticeActivity   : AppCompatActivity() , NavigationView.OnNavigationItemSe
             .addOnFailureListener { exception ->
                 Log.d("test!!!", "failed with ", exception)
             }
-
-
 
         //아이콘 이동
         val mainView = findViewById<View>(R.id.icon_home)
@@ -74,18 +68,16 @@ class NoticeActivity   : AppCompatActivity() , NavigationView.OnNavigationItemSe
         showNavigationButton.setOnClickListener {
             toggleDrawer() // 네비게이션 뷰를 보이도록 변경
         }
-        //네비바 항목 페이지 이동
-        binding.mainDrawerView.setNavigationItemSelectedListener(this)
 
-        // 네비게이션 뷰에서 icon_todo ImageView를 찾아 클릭 이벤트 설정
+        // NavigationView의 헤더 뷰를 얻음
         val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
-        val headView = navigationView.getHeaderView(0)
-        val todoView = headView.findViewById<ImageView>(R.id.icon_todo)
-        todoView.setOnClickListener {
-            val intent = Intent(this@NoticeActivity, TodoMainActivity::class.java)
-            startActivity(intent)
-        }
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
 
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
     }
     //    onCreate 끝
     private fun dateToString(date: Date?):String{
@@ -116,28 +108,4 @@ class NoticeActivity   : AppCompatActivity() , NavigationView.OnNavigationItemSe
         }
         return super.dispatchTouchEvent(ev)
     }
-
-    //네비바 페이지 이동
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        var intent : Intent? =  null
-
-        when(item.itemId)
-        {
-            R.id.userMyPage->
-                Log.d("aaa","마이페이지 선택")
-            R.id.help->
-                intent = Intent(this,HelpActivity::class.java)
-            R.id.notice->
-                intent = Intent(this,NoticeActivity::class.java)
-            R.id.logout->
-                Log.d("aaa","로그아웃 선택")
-
-        }
-        startActivity(intent)
-        return super.onContextItemSelected(item)
-    }
-
-
-
 }

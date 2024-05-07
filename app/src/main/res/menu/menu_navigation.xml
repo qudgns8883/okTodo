@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/userMyPage"
+        android:id="@+id/mypage"
         android:icon="@drawable/icon_mypage"
         android:title="마이페이지"/>
     <item

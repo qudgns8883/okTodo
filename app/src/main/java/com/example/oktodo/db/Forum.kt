@@ -2,13 +2,24 @@ package com.example.oktodo.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import java.lang.reflect.Member
 import java.util.Date
 
-@Entity
+@Entity(
+    foreignKeys = [
+        ForeignKey(
+            entity = MemberEntity::class,
+            parentColumns = ["mno"],
+            childColumns = ["mno"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ]
+)
 data class Forum(
-    //    @ColumnInfo(name = "mno")
-    //    var mno: String,
+    @ColumnInfo(name = "mno")
+    var mno: String,
 
     @ColumnInfo(name = "forum_content")
     var forumContent: String,

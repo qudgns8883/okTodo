@@ -22,6 +22,9 @@ import com.example.oktodo.R
 import com.example.oktodo.databinding.FragmentOneBinding
 import com.example.oktodo.databinding.FragmentTwoBinding
 import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 import java.io.IOException
 import java.lang.IllegalArgumentException
 import java.time.ZoneId
@@ -118,6 +121,16 @@ class TwoFragment : Fragment() {
             }
             false
         }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = view.findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0)
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, requireContext(), this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        weatherBinding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(requireContext()))
     }
 
     // UI 업데이트 메소드

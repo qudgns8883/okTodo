@@ -6,7 +6,6 @@ import android.location.Address
 import android.location.Geocoder
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -22,11 +21,10 @@ import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.FragmentOneBinding
 import com.example.oktodo.databinding.FragmentTwoBinding
-import com.example.oktodo.myPage.MyPage
-import com.example.oktodo.util.base.BaseFragment
 import com.example.oktodo.util.drawerUtil.DrawerUtil
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 import java.io.IOException
 import java.lang.IllegalArgumentException
 import java.time.ZoneId
@@ -34,7 +32,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-class OneFragment : BaseFragment() {
+class OneFragment : Fragment() {
     // 뷰모델 및 바인딩 변수 선언
     private lateinit var viewModel: LocationViewModel
     private lateinit var airBinding: FragmentOneBinding
@@ -124,20 +122,16 @@ class OneFragment : BaseFragment() {
             }
             false
         }
-    }
 
-    // 인터페이스로 정의한 메뉴 관련 로직을 처리
-    override fun handleMenuClick(itemId: Int): Boolean {
-                Log.d("intentwwwwwwwww", "${itemId}")
-        when (itemId) {
-            R.id.userMyPage -> {
-                // MyPage 액티비티로 이동하는 로직
-                val intent = Intent(requireActivity(), MyPage::class.java)
-                startActivity(intent)
-                return true
-            }
-        }
-        return false
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = view.findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0)
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, requireContext(), this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        airBinding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(requireContext()))
     }
 
     // UI 업데이트 메소드

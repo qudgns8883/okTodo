@@ -2,14 +2,25 @@ package com.example.oktodo.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import java.time.LocalTime
 import java.util.Calendar
 
-@Entity(tableName = "todo")
+@Entity(
+    tableName = "todo",
+    foreignKeys = [
+        ForeignKey(
+            entity = MemberEntity::class,
+            parentColumns = ["mno"],
+            childColumns = ["mno"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ]
+)
 data class Todo(
-//    @ColumnInfo(name = "mno")
-//    var mno: String,
+    @ColumnInfo(name = "mno")
+    var mno: String,
 
     @ColumnInfo(name = "todo_content")
     var todoContent: String,
@@ -37,10 +48,19 @@ data class Todo(
     var tno: Long = 0
 }
 
-@Entity(tableName = "todo2")
+@Entity(
+    tableName = "todo2",
+    foreignKeys = [
+        ForeignKey(
+            entity = MemberEntity::class,
+            parentColumns = ["mno"],
+            childColumns = ["mno"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ]
+)
 data class Todo2(
 
-    @PrimaryKey
     @ColumnInfo(name = "tno2")
     var tno2: Long,
 
@@ -57,5 +77,11 @@ data class Todo2(
     var day: Long,
 
     @ColumnInfo(name = "date")
-    var date: Long = Calendar.getInstance().timeInMillis
-)
+    var date: Long,
+
+    @ColumnInfo(name = "mno")
+    var mno: String
+) {
+    @PrimaryKey(autoGenerate = true)
+    var tno: Long = 0
+}

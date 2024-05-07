@@ -1,6 +1,7 @@
 package com.example.oktodo.forum
 
 import android.app.Application
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,7 +19,7 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
     // Room 데이터베이스
     private val db: AppDatabase = Room.databaseBuilder(
         application,
-        AppDatabase::class.java, "forum"
+        AppDatabase::class.java, "db_todo"
     ).build()
 
     private val _items = MutableStateFlow<List<Forum>>(emptyList())
@@ -63,9 +64,9 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    fun addForum(text: String, forumTime: Date, forumPlace1: String, forumPlace2: String, forumCategory: String) {
+    fun addForum(mno: String, text: String, forumTime: Date, forumPlace1: String, forumPlace2: String, forumCategory: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            db.forumDao().insert(Forum(text, forumTime, forumPlace1, forumPlace2, forumCategory))
+            db.forumDao().insert(Forum(mno, text, forumTime, forumPlace1, forumPlace2, forumCategory))
         }
     }
 

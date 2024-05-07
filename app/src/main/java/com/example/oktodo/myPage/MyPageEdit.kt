@@ -2,11 +2,9 @@ package com.example.oktodo.myPage
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
-import android.provider.SyncStateContract.Helpers.update
 import android.util.Log
 import android.view.MotionEvent
 import android.widget.Toast
@@ -14,30 +12,21 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.oktodo.Login.LoginActivity
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.ActivityMypageEditBinding
 import com.example.oktodo.db.AppDatabase
-import com.example.oktodo.db.Converters
 import com.example.oktodo.db.MemberDao
 import com.example.oktodo.db.MemberEntity
 import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.example.oktodo.util.signUpUtils.SignUpUtils
 import com.example.oktodo.util.signUpUtils.SignUpUtils.convertUriToByteArray
 import com.example.oktodo.util.signUpUtils.SignUpUtils.saveImageAndPathInPreferences
 import com.example.oktodo.util.signUpUtils.SignUpUtils.validateInputs
-import kotlinx.coroutines.Dispatchers
+import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.io.ByteArrayOutputStream
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class MyPageEdit : AppCompatActivity() {
     // 뷰 바인딩, 데이터베이스, DAO 초기화
@@ -112,6 +101,16 @@ class MyPageEdit : AppCompatActivity() {
             }
             false
         }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
     }
 
     // Activity가 다시 시작될 때마다 호출되는 onResume() 메소드 오버라이드

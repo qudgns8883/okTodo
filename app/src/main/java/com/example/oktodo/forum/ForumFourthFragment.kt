@@ -27,6 +27,17 @@ class ForumFourthFragment : Fragment() {
 
     private val binding get() = _binding!!
 
+    // 프래그먼트에서 액티비티 값 받기
+    companion object {
+        fun userInstance(mno: String): ForumFourthFragment {
+            val fragment = ForumFourthFragment()
+            val args = Bundle()
+            args.putString("mno", mno)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
     private fun initRecyclerView(recyclerView: RecyclerView, adapter: RecyclerView.Adapter<*>) {
         recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
@@ -53,6 +64,9 @@ class ForumFourthFragment : Fragment() {
         // 프래그먼트 1에 대한 쿼리 호출
         viewModel.queryForFragment1()
 
+        // 액티비티에서 받은 값 사용하기
+        val mno = arguments?.getString("mno")
+
         // recyclerView 초기화 및 설정
         val recyclerView = binding.forumRecyclerView
         adapter = ForumAdapter(
@@ -65,6 +79,8 @@ class ForumFourthFragment : Fragment() {
                 intent.putExtra("forumCategory", forum.forumCategory)
                 intent.putExtra("forumPlace1", forum.forumPlace1)
                 intent.putExtra("forumPlace2", forum.forumPlace2)
+                intent.putExtra("postMno", forum.mno)
+                intent.putExtra("mno", mno)
                 startActivity(intent)
             }
         )

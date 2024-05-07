@@ -3,6 +3,7 @@ package com.example.oktodo.todoList
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,8 @@ import com.example.oktodo.databinding.TodoItemBinding
 import com.example.oktodo.db.Todo
 import com.example.oktodo.db.Todo2
 import com.example.oktodo.util.adapter.TodoListAdapter
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.observeOn
 import kotlinx.coroutines.launch
 import java.util.Calendar
 
@@ -63,6 +66,7 @@ class TodoFirstFragment : Fragment() {
     ): View? {
         _binding = TodoFragmentFirstBinding.inflate(inflater, container, false)
         _binding2 = TodoItemBinding.inflate(inflater)
+
         return binding.root
     }
 

@@ -6,7 +6,6 @@ import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 
 @Entity
-@TypeConverters(Converters::class)
 data class MemberEntity(
     // autoGenerate = true는 이 기본 키가 자동으로 생성되도록 지정
     @PrimaryKey(autoGenerate = true)
