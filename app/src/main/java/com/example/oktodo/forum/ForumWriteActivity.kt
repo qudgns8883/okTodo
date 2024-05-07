@@ -62,9 +62,8 @@ class ForumWriteActivity : AppCompatActivity() {
         val forumContent = intent.getStringExtra("forumContent")
         val forumCno = intent.getStringExtra("forumCno")
         val forumCategory = intent.getStringExtra("forumCategory")
-        // 팝업1-팝업2 순으로 열리게 구현해놔서 수정시 팝업2만 수정 불가 (코드 수정 필요)
-//        val forumPlace1 = intent.getStringExtra("forumPlace1")
-//        val forumPlace2 = intent.getStringExtra("forumPlace2")
+        val forumPlace1 = intent.getStringExtra("forumPlace1")
+        val forumPlace2 = intent.getStringExtra("forumPlace2")
 
         // 교통 or 날씨 라디오버튼
         val inputCategory = when (forumCategory) {
@@ -85,17 +84,17 @@ class ForumWriteActivity : AppCompatActivity() {
         // 초기 선택된 지역 표시
         locationTextView.text = selectedLocation
         locationTextView2.text = selectedLocation2
-        // 팝업1-팝업2 순으로 열리게 구현해놔서 수정시 팝업2만 수정 불가 (코드 수정 필요)
-//        if(forumPlace1 != null) {
-//            locationTextView.text = forumPlace1
-//        } else {
-//            locationTextView.text = selectedLocation
-//        }
-//        if(forumPlace2 != null) {
-//            locationTextView2.text = forumPlace2
-//        } else {
-//            locationTextView2.text = selectedLocation2
-//        }
+        if(forumPlace1 != null) {
+            locationTextView.text = forumPlace1
+            selectedLocation = forumPlace1
+        } else {
+            locationTextView.text = selectedLocation
+        }
+        if(forumPlace2 != null) {
+            locationTextView2.text = forumPlace2
+        } else {
+            locationTextView2.text = selectedLocation2
+        }
 
         // 팝업 메뉴 초기화
         popupMenu = PopupMenu(this, myLocationView)
@@ -109,6 +108,11 @@ class ForumWriteActivity : AppCompatActivity() {
         locationTextView2.setOnClickListener {
             updatePopupMenu() // 팝업 메뉴 갱신
             popupMenu.show()
+        }
+
+        // forumPlace1이 null이 아닌 경우 팝업 메뉴를 초기화하고 표시
+        if (forumPlace1 != null) {
+            selectLocationPopupMenu()
         }
 
         // save 관련
@@ -229,8 +233,14 @@ class ForumWriteActivity : AppCompatActivity() {
         popupMenu.menu.clear()
         // 선택된 지역에 따라 다른 메뉴를 표시
         when (selectedLocation) {
-            "서울" -> popupMenu.menuInflater.inflate(R.menu.popup_menu_seoul, popupMenu.menu)
-            "부산" -> popupMenu.menuInflater.inflate(R.menu.popup_menu_busan, popupMenu.menu)
+            "서울" -> {
+                popupMenu.menuInflater.inflate(R.menu.popup_menu_seoul, popupMenu.menu)
+                popupMenu.menu.findItem(R.id.action_seoul)?.isChecked = true
+            }
+            "부산" -> {
+                popupMenu.menuInflater.inflate(R.menu.popup_menu_busan, popupMenu.menu)
+                popupMenu.menu.findItem(R.id.action_busan)?.isChecked = true
+            }
         }
         popupMenu.setOnMenuItemClickListener { menuItem ->
             selectedLocation2 = menuItem.title.toString()
