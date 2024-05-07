@@ -59,6 +59,7 @@
         android:text="부산 지하철\n시간표"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:layout_marginBottom="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,13 +70,27 @@
         android:layout_width="170dp"
         android:layout_height="80dp"
         android:background="@drawable/button_sub"
-        android:text="서울지하철 실시간 도착정보"
+        android:text="서울지하철\n실시간 도착정보"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@+id/busanBtn" />
+
+
+    <android.widget.Button
+        android:id="@+id/busanBusBtn"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_sub"
+        android:text="부산 버스\n실시간 도착정보"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/seoulBtn" />
 
     <!--토글-->
     <FrameLayout

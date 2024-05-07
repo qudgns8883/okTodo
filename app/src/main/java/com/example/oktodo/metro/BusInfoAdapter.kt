@@ -56,13 +56,20 @@ class BusInfoAdapter(private var busInfoList: List<BusInfo>): RecyclerView.Adapt
 
     class BusInfoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(busInfo: BusInfo) {
+
             itemView.findViewById<TextView>(R.id.lineno).text = "${busInfo.lineno}번 버스"
-//            itemView.findViewById<TextView>(R.id.min1).text = "${busInfo.min1}분 후 도착"
-//            itemView.findViewById<TextView>(R.id.min2).text = "${busInfo.min2}분 후 도착"
-//            itemView.findViewById<TextView>(R.id.station1).text = "${busInfo.station1}정거장 전"
-//            itemView.findViewById<TextView>(R.id.station2).text = "${busInfo.station2}정거장 전"
-            itemView.findViewById<TextView>(R.id.busInfo1).text = "${busInfo.min1}분 후 도착 / ${busInfo.station1}정거장 전"
-            itemView.findViewById<TextView>(R.id.busInfo2).text = "${busInfo.min2}분 후 도착 / ${busInfo.station2}정거장 전"
+
+            if(busInfo.min1 == "") {
+                itemView.findViewById<TextView>(R.id.busInfo1).text = "도착정보없음"
+            } else {
+                itemView.findViewById<TextView>(R.id.busInfo1).text = "${busInfo.min1}분 후 도착 / ${busInfo.station1}정거장 전"
+            }
+
+            if(busInfo.min2 == "") {
+                itemView.findViewById<TextView>(R.id.busInfo2).text = "도착정보없음"
+            } else {
+                itemView.findViewById<TextView>(R.id.busInfo2).text = "${busInfo.min2}분 후 도착 / ${busInfo.station2}정거장 전"
+            }
 
         }
     }

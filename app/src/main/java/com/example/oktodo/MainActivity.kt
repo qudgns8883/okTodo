@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oktodo.AirAndWeather.FragmentActivity
 import com.example.oktodo.Login.LoginActivity
@@ -29,6 +30,7 @@ import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
 import com.example.oktodo.myPage.MyPage
 import com.example.oktodo.todoList.TodoMainActivity
+import com.example.oktodo.util.menuClickListener.AuthManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -117,10 +119,22 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // 로그인 상태일 경우, 클릭 리스너에 아무런 동작도 수행하지 않음
                 binding.placeBlock1.setOnClickListener {
-                    // 로그인 상태일 때는 아무 동작도 하지 않음
+                    showLogoutDialog()
                 }
             }
         }
+    }
+
+    private fun showLogoutDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("로그아웃")
+            .setMessage("로그아웃 하시겠습니까?")
+            .setPositiveButton("예") { dialog, which ->
+                // "예"를 선택했을 때 로그아웃 수행
+                AuthManager.performLogout(this)
+            }
+            .setNegativeButton("아니요", null) // "아니요"를 선택했을 때 아무런 동작도 하지 않음
+            .show()
     }
 
     // 날씨 보기 클릭 이벤트 처리

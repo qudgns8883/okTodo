@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -34,7 +35,7 @@ class SeoulChosenActivity : AppCompatActivity() {
     private lateinit var adapter: TrainScheduleAdapter
     private lateinit var binding: ActivitySeoulChosenBinding
     private var isDrawerOpen = false
-    private lateinit var drawerLayout: DrawerLayout
+
 
 
 
@@ -51,7 +52,11 @@ class SeoulChosenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val mainBtn = findViewById<ImageView>(R.id.icon_home)
+        val leaveBtn = findViewById<Button>(R.id.leaveBtn)
 
+        leaveBtn.setOnClickListener {
+            finish()
+        }
 
         mainBtn.setOnClickListener{
             intent = Intent(this,MainActivity::class.java)

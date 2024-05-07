@@ -3,6 +3,7 @@ package com.example.oktodo.metro
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
@@ -45,11 +46,54 @@ class BusanChosenActivity : AppCompatActivity() {
         textView = findViewById(R.id.B_subText)
         stationTextView = findViewById(R.id.BusanStation)
         val mainBtn = findViewById<ImageView>(R.id.icon_home)
+        val leaveBtn = findViewById<Button>(R.id.leaveBtn)
+
+        leaveBtn.setOnClickListener {
+            finish()
+        }
 
         mainBtn.setOnClickListener {
             intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
+
+
+        // 메뉴 아이콘 클릭 시 네비게이션 드로어의 가시성을 토글
+        binding.menuIcon.setOnClickListener {
+            isDrawerOpen = DrawerUtil.toggleDrawer(binding.navigationDrawer, isDrawerOpen)
+        }
+
+        // 메인 레이아웃에 터치 리스너를 설정
+        // 경고를 무시: 이 경우 performClick을 호출하지 않는 것이 의도된 동작
+        binding.root.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                    isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                }
+            }
+            false
+        }
+
+        scrollView.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
+                if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
+                    isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
+                }
+            }
+            false
+        }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+        CardViewClickListener.setupCardViewClickListeners(headerView, this@BusanChosenActivity, this@BusanChosenActivity)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this@BusanChosenActivity))
+
+
 
         val stationName = intent.getStringExtra("BusanStationName")
         val stationUpdown = intent.getStringExtra("BusanStationUpdown")
@@ -64,6 +108,9 @@ class BusanChosenActivity : AppCompatActivity() {
             fetchBusanStationData(stationData)
         }
     }
+
+
+    // 서울 지하철과 동일한 원리의 로직
 
     private fun loadBusanStationData(
         stationName: String?,
@@ -111,46 +158,6 @@ class BusanChosenActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
 
-            // 메뉴 아이콘 클릭 시 네비게이션 드로어의 가시성을 토글
-            binding.menuIcon.setOnClickListener {
-                isDrawerOpen = DrawerUtil.toggleDrawer(binding.navigationDrawer, isDrawerOpen)
-            }
-
-            // 메인 레이아웃에 터치 리스너를 설정
-            // 경고를 무시: 이 경우 performClick을 호출하지 않는 것이 의도된 동작
-            binding.root.setOnTouchListener { _, event ->
-                if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
-                    if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
-                        isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
-                    }
-                }
-                false
-            }
-
-            scrollView.setOnTouchListener { _, event ->
-                if (event.action == MotionEvent.ACTION_DOWN && isDrawerOpen) {
-                    if (!DrawerUtil.isPointInsideView(event.rawX, event.rawY, binding.navigationDrawer)) {
-                        isDrawerOpen = DrawerUtil.closeDrawer(binding.navigationDrawer, isDrawerOpen)
-                    }
-                }
-                false
-            }
-
-            // NavigationView의 헤더 뷰를 얻음
-            val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
-            val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
-
-            // NavigationView 메뉴 텍스트 업데이트 코드 추가
-            NavigationMenuClickListener(this@BusanChosenActivity).updateMenuText(navigationView)
-
-            // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
-            CardViewClickListener.setupCardViewClickListeners(headerView, this@BusanChosenActivity, this@BusanChosenActivity)
-
-            // View Binding을 사용하여 NavigationView에 리스너 설정
-            binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this@BusanChosenActivity))
-
-
-
             var counter = 0
 
             for (i in 0 until itemList.length()) {
@@ -166,8 +173,5 @@ class BusanChosenActivity : AppCompatActivity() {
                 }
             }
         }
-
-
     }
-
 }
