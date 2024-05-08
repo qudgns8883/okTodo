@@ -37,7 +37,7 @@ class HelpActivity : AppCompatActivity(){
                 when (tab?.position) {
                     0 -> helpImage.setImageResource(R.drawable.help_sun)
                     1 -> helpImage.setImageResource(R.drawable.help_todo)
-                    2 -> helpImage.setImageResource(R.drawable.help_sub)
+                    2 -> helpImage.setImageResource(R.drawable.help_sub3)
                     3 -> helpImage.setImageResource(R.drawable.help_com)
                 }
             }
