@@ -234,6 +234,12 @@ class MyPage : AppCompatActivity() {
         val mnoString = sharedPreferences.getString("mno", null)
         val mno = mnoString?.toIntOrNull()
 
+        sharedPreferences.edit().apply {
+            clear() // 모든 데이터를 삭제
+            putBoolean("IsLoggedIn", false) // "IsLoggedIn" 키에 대해 false 값을 저장
+            apply() // 변경사항을 비동기적으로 적용
+        }
+
         // 비동기 처리를 위해 Coroutine 사용
         lifecycleScope.launch {
             try {

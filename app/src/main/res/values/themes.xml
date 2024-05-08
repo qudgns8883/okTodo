@@ -18,11 +18,7 @@
     <style name="CustomTabText" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">18dp</item>
     </style>
-    <style name="NavigationViewStyle" parent="Widget.Design.NavigationView">
-        <item name="android:background">@color/white</item>
+    <style name="NavigationViewStyle">
         <item name="android:textSize">18dp</item>
     </style>
-
-
-
 </resources>
