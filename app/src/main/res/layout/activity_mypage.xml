@@ -18,9 +18,9 @@
 
     <ImageView
         android:id="@+id/menu_icon"
-        android:layout_width="53dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
         android:src="@drawable/icon_menu"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,9 +43,9 @@
 
     <ImageView
         android:id="@+id/homeIcon"
-        android:layout_width="53dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/icon_home"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +54,7 @@
 
     <!--보여주기-->
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -91,6 +92,7 @@
             android:id="@+id/email_place"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints,UselessParent">
 
@@ -182,7 +184,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <android.widget.Button
             android:id="@+id/editBtn"
@@ -199,7 +202,6 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="80dp"
             android:background="@drawable/button_login2"
             android:text="회원 탈퇴"
             android:textColor="#ffffff"
@@ -223,7 +225,9 @@
             android:layout_gravity="start"
             app:headerLayout="@layout/navigation_header"
             app:menu="@menu/menu_navigation"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            app:theme="@style/NavigationViewStyle"
+            app:itemBackground="@color/white"/>
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

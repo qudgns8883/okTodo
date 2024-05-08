@@ -17,14 +17,14 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.oktodo.databinding.ForumFragmentThirdBinding
+import com.example.oktodo.databinding.ForumFragmentSecondBinding
 import com.example.oktodo.util.adapter.ForumAdapter
 import kotlinx.coroutines.launch
 
 class ForumThirdFragment : Fragment() {
     private lateinit var adapter: ForumAdapter
     private val viewModel by activityViewModels<ForumMainViewModel>()
-    private var _binding: ForumFragmentThirdBinding? = null
+    private var _binding: ForumFragmentSecondBinding? = null
 
     private val binding get() = _binding!!
 
@@ -43,7 +43,7 @@ class ForumThirdFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = ForumFragmentThirdBinding.inflate(inflater, container, false)
+        _binding = ForumFragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
     }
 

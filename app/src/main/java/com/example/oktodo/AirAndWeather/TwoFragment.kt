@@ -133,7 +133,7 @@ class TwoFragment : Fragment() {
         CardViewClickListener.setupCardViewClickListeners(headerView, requireContext(), this)
 
         // View Binding을 사용하여 NavigationView에 리스너 설정
-        airBinding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(requireContext()))
+        weatherBinding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(requireContext()))
     }
 
     // UI 업데이트 메소드
