@@ -104,6 +104,7 @@
         android:clickable="true"
         android:src="@drawable/ic_baseline_add_24"
         android:textColor="#404040"
+        android:backgroundTint="#C2D8FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
