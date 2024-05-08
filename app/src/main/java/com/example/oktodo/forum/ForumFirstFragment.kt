@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.oktodo.databinding.ForumFragmentFirstBinding
+import com.example.oktodo.databinding.ForumFragmentSecondBinding
 import com.example.oktodo.util.adapter.ForumAdapter
 import kotlinx.coroutines.launch
 
 class ForumFirstFragment : Fragment() {
     private lateinit var adapter: ForumAdapter
     private val viewModel by activityViewModels<ForumMainViewModel>()
-    private var _binding: ForumFragmentFirstBinding? = null
+    private var _binding: ForumFragmentSecondBinding? = null
 
     private val binding get() = _binding!!
 
@@ -41,7 +41,7 @@ class ForumFirstFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = ForumFragmentFirstBinding.inflate(inflater, container, false)
+        _binding = ForumFragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -64,6 +64,7 @@ class ForumFirstFragment : Fragment() {
                 intent.putExtra("forumCategory", forum.forumCategory)
                 intent.putExtra("forumPlace1", forum.forumPlace1)
                 intent.putExtra("forumPlace2", forum.forumPlace2)
+                intent.putExtra("postMno", forum.mno)
                 startActivity(intent)
             }
         )
@@ -75,12 +76,12 @@ class ForumFirstFragment : Fragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.items.collect { newList ->
                     adapter.submitList(newList)
-//                    adapter.loadData(newList)
-//                    // 데이터가 로드된 후에 최상단으로 스크롤
-//                    recyclerView.post {
-//                        recyclerView.smoothScrollToPosition(0) // 스크롤이 부드럽게 이루어져 사용자가 직접 스크롤 하는 경우에 자주 사용
-////                        recyclerView.scrollToPosition(0) // 프로그래밍적으로 스크롤 조작시 사용.. 근데 지금은 scrollToPosition이 작동 안함
-//                    }
+                    adapter.loadData(newList)
+                    // 데이터가 로드된 후에 최상단으로 스크롤
+                    recyclerView.post {
+                        recyclerView.smoothScrollToPosition(0) // 스크롤이 부드럽게 이루어져 사용자가 직접 스크롤 하는 경우에 자주 사용
+//                        recyclerView.scrollToPosition(0) // 프로그래밍적으로 스크롤 조작시 사용.. 근데 지금은 scrollToPosition이 작동 안함
+                    }
                 }
             }
         }
