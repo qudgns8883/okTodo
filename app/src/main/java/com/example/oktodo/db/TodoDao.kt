@@ -17,10 +17,10 @@ interface TodoDao {
     fun getTodoByDay(day: String): Flow<List<Todo>>
 
     // 체크, 미체크 cnt
-    @Query("SELECT COUNT(*) FROM todo WHERE checked = true AND mno = :mno")
-    suspend fun getCheckedCount(mno: String): Long
-    @Query("SELECT COUNT(*) FROM todo WHERE checked = false AND mno = :mno")
-    suspend fun getUncheckedCount(mno: String): Long
+    @Query("SELECT COUNT(*) FROM todo WHERE checked = true AND mno = :mno AND day LIKE '%' || :day || '%'")
+    suspend fun getCheckedCount(mno: String, day: String): Long
+    @Query("SELECT COUNT(*) FROM todo WHERE checked = false AND mno = :mno AND day LIKE '%' || :day || '%'")
+    suspend fun getUncheckedCount(mno: String, day: String): Long
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(entity: Todo)

@@ -25,10 +25,21 @@ class TodoWorker(context: Context, params: WorkerParameters) : CoroutineWorker(c
 
     override suspend fun doWork(): Result {
         val todayWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK).toLong()
+        // 요일 Long -> String
+        val day = when (todayWeek) {
+            Calendar.SUNDAY.toLong() -> "sun"
+            Calendar.MONDAY.toLong() -> "mon"
+            Calendar.TUESDAY.toLong() -> "tue"
+            Calendar.WEDNESDAY.toLong() -> "wed"
+            Calendar.THURSDAY.toLong() -> "thu"
+            Calendar.FRIDAY.toLong() -> "fri"
+            Calendar.SATURDAY.toLong() -> "sat"
+            else -> ""
+        }
 
         // 비동기 작업으로 데이터베이스 값 가져오기 + 계산
-        val checkCnt = db.todoDao().getCheckedCount(mno)
-        val uncheckCnt = db.todoDao().getUncheckedCount(mno)
+        val checkCnt = db.todoDao().getCheckedCount(mno, day)
+        val uncheckCnt = db.todoDao().getUncheckedCount(mno, day)
         val totalCount = checkCnt + uncheckCnt
         val calculate =
             if (totalCount > 0) ((checkCnt.toDouble() / totalCount) * 100).toLong() else 0
