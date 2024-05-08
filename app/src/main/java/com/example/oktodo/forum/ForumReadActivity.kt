@@ -17,6 +17,9 @@ import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.ForumActivityReadBinding
 import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
+import com.example.oktodo.util.menuClickListener.CardViewClickListener
+import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.navigation.NavigationView
 
 class ForumReadActivity : AppCompatActivity() {
     lateinit var binding: ForumActivityReadBinding
@@ -51,6 +54,19 @@ class ForumReadActivity : AppCompatActivity() {
         showNavigationButton.setOnClickListener {
             toggleDrawer() // 네비게이션 뷰를 보이도록 변경
         }
+
+        // NavigationView의 헤더 뷰를 얻음
+        val navigationView = findViewById<NavigationView>(R.id.main_drawer_view)
+        val headerView = navigationView.getHeaderView(0) // index 0으로 첫 번째 헤더 뷰를 얻음
+
+        // NavigationView 메뉴 텍스트 업데이트 코드 추가
+        NavigationMenuClickListener(this).updateMenuText(navigationView)
+
+        // 싱글톤 객체의 메소드를 호출하여 클릭 리스너를 설정
+         CardViewClickListener.setupCardViewClickListeners(headerView, this, this)
+
+        // View Binding을 사용하여 NavigationView에 리스너 설정
+        binding.mainDrawerView.setNavigationItemSelectedListener(NavigationMenuClickListener(this))
 
         // Intent에서 포럼 정보 가져오기
         val forumContent = intent.getStringExtra("forumContent")

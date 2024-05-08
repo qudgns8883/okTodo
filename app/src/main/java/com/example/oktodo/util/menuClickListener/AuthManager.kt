@@ -33,7 +33,7 @@ object AuthManager {
         }
     }
 
-    private fun signOut(context: Context) {
+     fun signOut(context: Context) {
         val googleSignInClient = GoogleSignIn.getClient(context, GoogleSignInOptions.DEFAULT_SIGN_IN)
         if (context is Activity) {
             googleSignInClient.signOut().addOnCompleteListener(context) {
