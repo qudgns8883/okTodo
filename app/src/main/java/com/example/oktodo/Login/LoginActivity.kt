@@ -256,7 +256,7 @@ class LoginActivity : AppCompatActivity() {
         try {
             val account = completedTask.getResult(ApiException::class.java)
             if (account != null) {
-                firebaseAuthWithGoogle(account.idToken!!) // Firebase 인증 프로세스로 넘어감
+                firebaseAuthWithGoogle(account.idToken!!, account) // Firebase 인증 프로세스로 넘어감
             }
         } catch (e: ApiException) {
             // 로그인 실패 시 로그
@@ -264,19 +264,17 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
     // Firebase를 통한 로그인 처리 함수
-    private fun firebaseAuthWithGoogle(idToken: String?) {
+    private fun firebaseAuthWithGoogle(idToken: String?, googleSignInAccount: GoogleSignInAccount) {
         val credential: AuthCredential = GoogleAuthProvider.getCredential(idToken, null)
         mAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // 로그인에 성공했을 경우 UI를 업데이트
                     Log.d(tag, "signInWithCredential:success")
                     Toast.makeText(this@LoginActivity, "구글 로그인 성공!", Toast.LENGTH_SHORT).show()
-                    val user = mAuth.currentUser
-                    googleUpdateUI(user) // UI 업데이트
+                    googleUpdateUI(googleSignInAccount) // GoogleSignInAccount 객체를 사용하여 UI 업데이트
                 } else {
-                    // 로그인 실패 시 사용자에게 알림
                     Log.w(tag, "signInWithCredential:failure", task.exception)
                     Toast.makeText(this@LoginActivity, "구글 로그인 실패!", Toast.LENGTH_SHORT).show()
                     googleUpdateUI(null) // 실패 UI 업데이트
@@ -285,32 +283,32 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 구글 로그인 후, 사용자 정보에 따른 UI 업데이트 함수
-    private fun googleUpdateUI(user: FirebaseUser?) {
-        if (user != null) {
+    private fun googleUpdateUI(googleSignInAccount: GoogleSignInAccount?) {
+        if (googleSignInAccount != null) {
             // 구글 로그인 성공 시, 로그와 함께 사용자 정보를 저장
-            Log.d(tag, "updateUI: Login success with ${user.displayName}")
+            val nickname = googleSignInAccount.displayName
+            // 캐시를 우회하기 위해 이미지 URL에 타임스탬프 추가
+            val profileImage = googleSignInAccount.photoUrl.toString() + "?timestamp=" + System.currentTimeMillis()
+            val email = googleSignInAccount.email
 
-            // 닉네임과 프로필 이미지 URL 추출
-            val nickname = user.displayName
-            val profileImage = user.photoUrl.toString()
-            val email = user.email
+            Log.d(tag, "updateUI: Login success with $nickname")
 
-            if (user.displayName != null && user.photoUrl != null) {
+            if (nickname != null && profileImage != null) {
                 // SharedPreferences를 사용해 사용자 정보를 저장
                 val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE).edit()
                 prefs.putBoolean("IsLoggedIn", true)
                 prefs.putString("Nickname", nickname) // 닉네임 저장
-                prefs.putString("ProfileImageUrl", profileImage) // 프로필 이미지 URL 저장
-                prefs.putString("Email", email) // 이메일 저장, 이메일이 null일 경우 빈 문자열 저장
+                prefs.putString("ProfileImageUrl", profileImage) // 프로필 이미지 URL 저장 (캐시 우회)
+                prefs.putString("Email", email ?: "") // 이메일 저장, 이메일이 null일 경우 빈 문자열 저장
                 prefs.putString("LoginType", "Google") // 로그인 타입 저장
                 prefs.apply()
 
                 // 회원 등록 및 로그 출력 함수 호출
                 lifecycleScope.launch {
-                    registerMemberAndLog(email!!, "Google", nickname!!, profileImage)
+                    registerMemberAndLog(email!!, "Google", nickname, profileImage)
                 }
 
-                // ChosenActivity로 넘어가기
+                // MainActivity로 넘어가기
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -319,6 +317,10 @@ class LoginActivity : AppCompatActivity() {
                 Log.w(tag, "updateUI: No user info available after login.")
                 Toast.makeText(this, "로그인에 실패하였습니다: 사용자 정보를 가져올 수 없습니다.", Toast.LENGTH_SHORT).show()
             }
+        } else {
+            // 로그인 실패 UI 업데이트
+            Log.w(tag, "updateUI: No GoogleSignInAccount.")
+            Toast.makeText(this@LoginActivity, "구글 로그인 실패!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -342,7 +344,6 @@ class LoginActivity : AppCompatActivity() {
     // 카카오톡 사용자 정보 가져오기
     private fun fetchKakaoUserInfo() {
 
-
         UserApiClient.instance.me { user, error ->
             if (error != null) {
                 Log.e(TAG, "사용자 정보 요청 실패", error)
@@ -363,12 +364,6 @@ class LoginActivity : AppCompatActivity() {
                 prefs.putString("Email", email) // 이메일 정보 저장
                 prefs.putString("LoginType", "Kakao") // 로그인 타입 저장
                 prefs.apply()
-
-//                // 회원 등록 및 로그 출력 함수 호출
-//                lifecycleScope.launch {
-//                    // 여기서는 lifecycleScope가 코루틴을 제공합니다.
-//                    registerMemberAndLog(email!!, "Kakao", nickname!!, profileImage!!)
-//                }
 
                 lifecycleScope.launch {
                     registerMemberAndLog(email ?: "", "kakao", nickname ?: "", profileImage ?: "")

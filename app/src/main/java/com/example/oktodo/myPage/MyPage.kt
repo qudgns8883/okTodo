@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
 import android.view.MotionEvent
 import android.widget.EditText
 import android.widget.Toast
@@ -20,9 +21,16 @@ import com.example.oktodo.databinding.ActivityMypageBinding
 import com.example.oktodo.db.AppDatabase
 import com.example.oktodo.db.MemberDao
 import com.example.oktodo.util.drawerUtil.DrawerUtil
+import com.example.oktodo.util.menuClickListener.AuthManager
+import com.example.oktodo.util.menuClickListener.AuthManager.signOut
 import com.example.oktodo.util.menuClickListener.CardViewClickListener
 import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.google.android.material.navigation.NavigationView
+import com.navercorp.nid.NaverIdLoginSDK
+import com.navercorp.nid.oauth.NidOAuthLogin
+
+import com.navercorp.nid.oauth.OAuthLoginCallback
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -35,6 +43,7 @@ class MyPage : AppCompatActivity() {
     lateinit var db: AppDatabase
     lateinit var memberDao: MemberDao
     private var isDrawerOpen = false
+
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -105,10 +114,12 @@ class MyPage : AppCompatActivity() {
                 Toast.makeText(this, "소셜 로그인 회원은 수정을 할 수 없습니다.", Toast.LENGTH_SHORT).show()
             }
 
-            // 회원 탈퇴 버튼 비활성화 및 메시지 표시
-            binding.deleteBtn.alpha = 0.5f
+            // 회원 탈퇴 가능
+            binding.deleteBtn.isEnabled = true
+            binding.deleteBtn.alpha = 1.0f
             binding.deleteBtn.setOnClickListener {
-                Toast.makeText(this, "소셜 로그인 회원은 탈퇴를 할 수 없습니다.", Toast.LENGTH_SHORT).show()
+                // 회원 탈퇴 로직 구현
+                showDeleteConfirmDialog()
             }
         } else {
             // 일반 로그인 사용자의 경우
@@ -169,6 +180,8 @@ class MyPage : AppCompatActivity() {
         alertDialog.setTitle("비밀번호 확인")
         alertDialog.setMessage("수정을 계속하려면 비밀번호를 입력하세요.")
 
+
+
         val input = EditText(this).apply {
             inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
@@ -207,6 +220,7 @@ class MyPage : AppCompatActivity() {
             if (password == savedPassword) {
                 // 비밀번호 일치 시 회원 탈퇴 확인 대화상자를 띄움
                 showDeleteConfirmDialog()
+
             } else {
                 Toast.makeText(applicationContext, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
             }
@@ -217,6 +231,7 @@ class MyPage : AppCompatActivity() {
 
     // 회원 탈퇴 확인 대화 상자를 보여주는 함수
     private fun showDeleteConfirmDialog() {
+
         AlertDialog.Builder(this).apply {
             setTitle("회원 탈퇴")
             setMessage("정말로 탈퇴하시겠습니까?")
@@ -233,6 +248,15 @@ class MyPage : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
         val mnoString = sharedPreferences.getString("mno", null)
         val mno = mnoString?.toIntOrNull()
+        sharedPreferences.edit().apply {
+            signOut(this@MyPage)
+            putBoolean("IsLoggedIn", false)
+            remove("LoginType")
+            remove("Nickname")
+            remove("ProfileImageUrl")
+            apply()
+        }
+
 
         // 비동기 처리를 위해 Coroutine 사용
         lifecycleScope.launch {
@@ -242,7 +266,7 @@ class MyPage : AppCompatActivity() {
                     memberDao.deleteMember(member)
                     withContext(Dispatchers.Main) {
                         Toast.makeText(applicationContext, "회원 탈퇴가 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@MyPage, LoginActivity::class.java).apply {
+                        val intent = Intent(this@MyPage, MainActivity::class.java).apply {
                             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         }
                         startActivity(intent)
