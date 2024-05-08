@@ -73,7 +73,7 @@ class ForumMainActivity  : AppCompatActivity() {
 
         // 시작 시 첫 번째 탭이 선택된 상태로 하기 위해서 추가
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.forum_tabContent, ForumFourthFragment.userInstance(mno)) // 액티비티에서 프래그먼트로 값 넘겨주기
+            replace(R.id.forum_tabContent, ForumFourthFragment())
             addToBackStack(null)
             commit()
         }
@@ -83,9 +83,9 @@ class ForumMainActivity  : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 val transaction = supportFragmentManager.beginTransaction()
                 when (tab?.position) {
-                    0 -> transaction.replace(R.id.forum_tabContent, ForumFourthFragment.userInstance(mno))
-                    1 -> transaction.replace(R.id.forum_tabContent, ForumSecondFragment.userInstance(mno))
-                    2 -> transaction.replace(R.id.forum_tabContent, ForumThirdFragment.userInstance(mno))
+                    0 -> transaction.replace(R.id.forum_tabContent, ForumFourthFragment())
+                    1 -> transaction.replace(R.id.forum_tabContent, ForumSecondFragment())
+                    2 -> transaction.replace(R.id.forum_tabContent, ForumThirdFragment())
                 }
                 transaction.addToBackStack(null)
                 transaction.commit()

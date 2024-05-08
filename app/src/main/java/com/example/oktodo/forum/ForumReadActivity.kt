@@ -1,5 +1,6 @@
 package com.example.oktodo.forum
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Build
@@ -29,6 +30,15 @@ class ForumReadActivity : AppCompatActivity() {
         binding = ForumActivityReadBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 로그인 확인
+        val prefs = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isLoggedIn = prefs.getBoolean("IsLoggedIn", false)
+        val mno = if (isLoggedIn) {
+            prefs.getString("mno", "").toString()
+        } else {
+            "default_value"
+        }
+
         binding.homeIcon.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -49,7 +59,6 @@ class ForumReadActivity : AppCompatActivity() {
         val forumPlace1 = intent.getStringExtra("forumPlace1")
         val forumPlace2 = intent.getStringExtra("forumPlace2")
         val postMno = intent.getStringExtra("postMno")
-        val mno = intent.getStringExtra("mno")
 
         // 교통 or 날씨 라디오버튼
         val inputCategory = when (forumCategory) {
