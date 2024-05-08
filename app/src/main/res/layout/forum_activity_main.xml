@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <!--헤더-->
     <View
@@ -96,16 +96,30 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#C2D8FF"
+        android:clickable="true"
+        android:src="@drawable/icon_search2"
+        android:textColor="#404040"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/main_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#C2D8FF"
         android:clickable="true"
         android:src="@drawable/ic_baseline_add_24"
         android:textColor="#404040"
-        android:backgroundTint="#C2D8FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -123,9 +137,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:headerLayout="@layout/navigation_header"
+            app:itemBackground="@color/white"
             app:menu="@menu/menu_navigation"
-            tools:ignore="MissingConstraints"
-            app:itemBackground="@color/white"/>
+            tools:ignore="MissingConstraints" />
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

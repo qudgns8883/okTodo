@@ -7,15 +7,19 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.oktodo.MainActivity
 import com.example.oktodo.R
 import com.example.oktodo.databinding.ForumActivityMainBinding
+import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
 import com.example.oktodo.util.menuClickListener.CardViewClickListener
 import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
 import com.google.android.material.navigation.NavigationView
@@ -98,6 +102,14 @@ class ForumMainActivity  : AppCompatActivity() {
 
             // 선택된 탭 버튼을 다시 선택할 때 이벤트
             override fun onTabReselected(tab: TabLayout.Tab?) {
+                val transaction = supportFragmentManager.beginTransaction()
+                when (tab?.position) {
+                    0 -> transaction.replace(R.id.forum_tabContent, ForumFirstFragment())
+                    1 -> transaction.replace(R.id.forum_tabContent, ForumSecondFragment())
+                    2 -> transaction.replace(R.id.forum_tabContent, ForumThirdFragment())
+                }
+                transaction.addToBackStack(null)
+                transaction.commit()
             }
         })
 
@@ -122,6 +134,44 @@ class ForumMainActivity  : AppCompatActivity() {
                 intent.putExtra("mno", mno)
                 requestLauncher.launch(intent)
             }
+        }
+
+        // 버튼 클릭 리스너 설정
+        binding.searchFab.setOnClickListener {
+            // AlertDialog.Builder를 사용하여 다이얼로그 생성
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("검색") // 다이얼로그 제목 설정
+
+            // 검색을 위한 EditText 추가
+            val input = EditText(this)
+            builder.setView(input)
+
+            // "확인" 버튼 설정
+            builder.setPositiveButton("확인") { dialog, which ->
+                val searchText = input.text.toString()
+
+                // 검색어를 포함한 번들을 생성하여 프래그먼트로 전달
+                val bundle = Bundle()
+                bundle.putString("searchText", searchText)
+
+                // 프래그먼트 인스턴스 생성 및 번들 전달
+                val fragment = ForumFourthFragment()
+                fragment.arguments = bundle
+
+                // 새로운 프래그먼트를 보여줌
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.forum_tabContent, fragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+
+            // "취소" 버튼 설정
+            builder.setNegativeButton("취소") { dialog, which ->
+                dialog.cancel() // 다이얼로그를 닫음
+            }
+
+            // 다이얼로그 보이기
+            builder.show()
         }
     }
 

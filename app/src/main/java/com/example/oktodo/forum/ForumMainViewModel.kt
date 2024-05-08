@@ -4,6 +4,8 @@ import android.app.Application
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.room.Room
 import com.example.oktodo.db.AppDatabase
@@ -11,6 +13,8 @@ import com.example.oktodo.db.Forum
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.flatMapConcat
+import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import java.util.Date
 
@@ -56,6 +60,16 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
+    // 프래그먼트 4에 대한 쿼리(검색)
+    fun queryForFragment4(searchText: String) {
+        Log.d("test", "test::::::searchText ::: $searchText")
+        viewModelScope.launch(Dispatchers.IO) {
+            db.forumDao().getSearch(searchText).collect { forums ->
+                _items.value = forums
+            }
+        }
+    }
+
     fun loadForumData() {
         viewModelScope.launch(Dispatchers.IO) {
             db.forumDao().getAll().collect { newForums ->
@@ -64,13 +78,27 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    fun addForum(mno: String, text: String, forumTime: Date, forumPlace1: String, forumPlace2: String, forumCategory: String) {
+    fun addForum(
+        mno: String,
+        text: String,
+        forumTime: Date,
+        forumPlace1: String,
+        forumPlace2: String,
+        forumCategory: String
+    ) {
         viewModelScope.launch(Dispatchers.IO) {
-            db.forumDao().insert(Forum(mno, text, forumTime, forumPlace1, forumPlace2, forumCategory))
+            db.forumDao()
+                .insert(Forum(mno, text, forumTime, forumPlace1, forumPlace2, forumCategory))
         }
     }
 
-    fun updateForum(text: String, cno: Long, forumPlace1: String, forumPlace2: String, forumCategory: String) {
+    fun updateForum(
+        text: String,
+        cno: Long,
+        forumPlace1: String,
+        forumPlace2: String,
+        forumCategory: String
+    ) {
         viewModelScope.launch(Dispatchers.IO) {
             // 데이터베이스에서 엔티티를 찾음
             val forumToUpdate = db.forumDao().getForumById(cno)
