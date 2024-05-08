@@ -16,4 +16,14 @@
         android:id="@+id/logout"
         android:icon="@drawable/icon_logout"
         android:title="로그인"/>
+    <item
+        android:title=""/>
+    <item
+        android:title=""/>
+    <item
+        android:title=""/>
+    <item
+        android:title=""/>
+
+
 </menu>

@@ -10,16 +10,17 @@
 
     <ImageView
         android:id="@+id/homeIcon"
-        android:layout_width="53dp"
-        android:layout_height="53dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/icon_home_b"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_home_g3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--입력란-->
     <LinearLayout
+        android:layout_marginTop="40dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -97,7 +98,7 @@
         android:id="@+id/buttonLogin"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="80dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

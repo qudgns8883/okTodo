@@ -37,7 +37,7 @@
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rectangle_9">
 
         <androidx.cardview.widget.CardView
+            android:layout_marginTop="30dp"
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -71,9 +72,10 @@
     <LinearLayout
         android:id="@+id/icons"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:gravity="center"
         android:orientation="horizontal"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout">
