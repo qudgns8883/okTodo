@@ -109,7 +109,7 @@ class TodoFirstFragment : Fragment() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.items2.collect { newList ->
-                    // Todo 데이터를 전달하여 이모티콘 설정
+                    // Todo데이터를 전달하여 이모티콘 설정
                     setEmotionImages(newList)
                 }
             }
@@ -160,6 +160,10 @@ class TodoFirstFragment : Fragment() {
 
             emotionImagesMap[i.toLong()] = emotionImageResourceId
         }
+
+        // 당일에 대한 기본 이모티콘 설정
+        val todayImageResourceId = R.drawable.bg_soso
+        emotionImagesMap[Calendar.getInstance().get(Calendar.DAY_OF_WEEK).toLong()] = todayImageResourceId
 
         // 설정된 이모티콘을 UI에 적용
         binding.apply {
