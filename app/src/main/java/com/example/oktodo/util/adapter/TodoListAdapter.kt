@@ -71,8 +71,6 @@ class TodoListAdapter(
             binding.doneCheck.isChecked = todo.checked
             binding.todoImportantView.setImageResource(newImageResourceId)
 
-
-
             // 체크박스의 상태가 변경될 때마다 해당 Todo의 체크 상태를 업데이트하는 기능 추가
             binding.doneCheck.setOnCheckedChangeListener { _, isChecked ->
                 updateDoneChecked(todo, isChecked) // 상태 변경 시 해당 함수를 호출하여 Todo 상태를 업데이트합니다
