@@ -161,8 +161,8 @@ class TodoFirstFragment : Fragment() {
             emotionImagesMap[i.toLong()] = emotionImageResourceId
         }
 
-        // 당일에 대한 기본 이모티콘 설정
-        val todayImageResourceId = R.drawable.bg_soso
+        // 당일에 대한 이모티콘 설정
+        val todayImageResourceId = R.drawable.icon_help
         emotionImagesMap[Calendar.getInstance().get(Calendar.DAY_OF_WEEK).toLong()] = todayImageResourceId
 
         // 설정된 이모티콘을 UI에 적용
