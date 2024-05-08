@@ -92,6 +92,7 @@
             android:id="@+id/email_place"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints,UselessParent">
 
