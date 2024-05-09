@@ -155,6 +155,7 @@ class ForumMainActivity  : AppCompatActivity() {
 
             // 검색을 위한 EditText 추가
             val input = EditText(this)
+            input.hint = "검색어를 입력하세요" // placeholder 설정
             builder.setView(input)
 
             // "확인" 버튼 설정
