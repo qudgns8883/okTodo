@@ -165,7 +165,6 @@ class ForumMainActivity  : AppCompatActivity() {
 
                 // 검색어를 포함한 번들을 생성하여 프래그먼트로 전달
                 val bundle = Bundle()
-                bundle.putString("searchText2", searchText2) // 라디오 버튼
                 bundle.putString("searchText", searchText) // 입력받은 text
 
                 when (searchText2) {
@@ -200,7 +199,6 @@ class ForumMainActivity  : AppCompatActivity() {
                         transaction.replace(R.id.forum_tabContent, fragment)
                         transaction.addToBackStack(null)
                         transaction.commit()
-
                     }
                 }
             }

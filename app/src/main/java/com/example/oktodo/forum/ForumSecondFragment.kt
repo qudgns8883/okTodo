@@ -53,11 +53,9 @@ class ForumSecondFragment : Fragment() {
 
         // getArguments()를 사용하여 번들을 가져옴
         var searchText: String? = null
-        var searchText2: String? = null
         val bundle = arguments
         if (bundle != null && bundle.containsKey("searchText")) {
             searchText = bundle.getString("searchText")
-            searchText2 = bundle.getString("searchText2")
         }
 
         // 프래그먼트 2에 대한 쿼리 호출
