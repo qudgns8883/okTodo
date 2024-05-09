@@ -19,8 +19,14 @@ interface ForumDao {
     @Query("SELECT * FROM forum WHERE forum_category = '날씨' ORDER BY cno DESC")
     fun getAllW(): Flow<List<Forum>>
 
-    @Query("SELECT * FROM forum WHERE (forum_content LIKE '%' || :searchText || '%') OR (forum_place1 LIKE '%' || :searchText || '%') OR (forum_place2 LIKE '%' || :searchText || '%')")
+    @Query("SELECT * FROM forum WHERE (forum_content LIKE '%' || :searchText || '%') OR (forum_place1 LIKE '%' || :searchText || '%') OR (forum_place2 LIKE '%' || :searchText || '%') ORDER BY cno DESC")
     fun getSearch(searchText: String): Flow<List<Forum>>
+
+    @Query("SELECT * FROM forum WHERE ((forum_content LIKE '%' || :searchText || '%') OR (forum_place1 LIKE '%' || :searchText || '%') OR (forum_place2 LIKE '%' || :searchText || '%')) AND forum_category = '교통' ORDER BY cno DESC")
+    fun getSearchT(searchText: String): Flow<List<Forum>>
+
+    @Query("SELECT * FROM forum WHERE ((forum_content LIKE '%' || :searchText || '%') OR (forum_place1 LIKE '%' || :searchText || '%') OR (forum_place2 LIKE '%' || :searchText || '%')) AND forum_category = '날씨' ORDER BY cno DESC")
+    fun getSearchW(searchText: String): Flow<List<Forum>>
 
     @Query("SELECT * FROM forum WHERE cno = :cno")
     suspend fun getForumById(cno: Long): Forum?

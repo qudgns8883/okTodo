@@ -4,11 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
 import android.widget.FrameLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -22,6 +24,7 @@ import com.example.oktodo.databinding.ForumActivityMainBinding
 import com.example.oktodo.util.drawerUtil.DrawerUtil.toggleDrawer
 import com.example.oktodo.util.menuClickListener.CardViewClickListener
 import com.example.oktodo.util.menuClickListener.NavigationMenuClickListener
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 
@@ -138,9 +141,17 @@ class ForumMainActivity  : AppCompatActivity() {
 
         // 버튼 클릭 리스너 설정
         binding.searchFab.setOnClickListener {
+            val options = arrayOf("전체", "교통", "날씨")
+            val defaultOptionIndex = 0 // "전체"를 기본 선택으로 설정
+
             // AlertDialog.Builder를 사용하여 다이얼로그 생성
             val builder = AlertDialog.Builder(this)
             builder.setTitle("검색") // 다이얼로그 제목 설정
+
+            // 라디오 버튼 목록 설정
+            builder.setSingleChoiceItems(options, defaultOptionIndex) { dialog, which ->
+                // 선택된 옵션에 대한 처리만 수행하고 다이얼로그를 종료하지 않음
+            }
 
             // 검색을 위한 EditText 추가
             val input = EditText(this)
@@ -149,20 +160,49 @@ class ForumMainActivity  : AppCompatActivity() {
             // "확인" 버튼 설정
             builder.setPositiveButton("확인") { dialog, which ->
                 val searchText = input.text.toString()
+                val selectedOptionIndex = (dialog as AlertDialog).listView.checkedItemPosition // 선택된 옵션의 인덱스 가져오기
+                val searchText2 = options[selectedOptionIndex] // 선택된 옵션의 텍스트 가져오기
 
                 // 검색어를 포함한 번들을 생성하여 프래그먼트로 전달
                 val bundle = Bundle()
-                bundle.putString("searchText", searchText)
+                bundle.putString("searchText2", searchText2) // 라디오 버튼
+                bundle.putString("searchText", searchText) // 입력받은 text
 
-                // 프래그먼트 인스턴스 생성 및 번들 전달
-                val fragment = ForumFourthFragment()
-                fragment.arguments = bundle
+                when (searchText2) {
+                    "전체" -> {
+                        // "전체" 옵션이 선택된 경우 firstfragment로 이동
+                        tabLayout.getTabAt(0)?.select() // 해당 탭으로 이동
+                        val fragment = ForumFirstFragment()
+                        fragment.arguments = bundle
+                        val transaction = supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.forum_tabContent, fragment)
+                        transaction.addToBackStack(null)
+                        transaction.commit()
 
-                // 새로운 프래그먼트를 보여줌
-                val transaction = supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.forum_tabContent, fragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                    }
+                    "교통" -> {
+                        // "교통" 옵션이 선택된 경우 secondfragment로 이동
+                        tabLayout.getTabAt(1)?.select()
+                        val fragment = ForumSecondFragment()
+                        fragment.arguments = bundle
+                        val transaction = supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.forum_tabContent, fragment)
+                        transaction.addToBackStack(null)
+                        transaction.commit()
+
+                    }
+                    "날씨" -> {
+                        // "날씨" 옵션이 선택된 경우 thirdfragment로 이동
+                        tabLayout.getTabAt(2)?.select()
+                        val fragment = ForumThirdFragment()
+                        fragment.arguments = bundle
+                        val transaction = supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.forum_tabContent, fragment)
+                        transaction.addToBackStack(null)
+                        transaction.commit()
+
+                    }
+                }
             }
 
             // "취소" 버튼 설정

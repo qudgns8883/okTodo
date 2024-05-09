@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.flatMapConcat
 import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.invoke
 import kotlinx.coroutines.launch
 import java.util.Date
 
@@ -34,38 +35,46 @@ class ForumMainViewModel(application: Application) : AndroidViewModel(applicatio
     val updateComplete: StateFlow<Boolean> = _updateComplete
 
     // 프래그먼트 4에 대한 쿼리(전체 탭)
-    fun queryForFragment1() {
+    fun queryForFragment1(searchText: String?) {
         viewModelScope.launch(Dispatchers.IO) {
-            db.forumDao().getAll().collect { forums ->
-                _items.value = forums
+            if (!searchText.isNullOrEmpty()) { // 검색어가 있을 때
+                db.forumDao().getSearch(searchText).collect { forums ->
+                    _items.value = forums
+                }
+            } else { // 검색어가 없을 때
+                db.forumDao().getAll().collect { forums ->
+                    _items.value = forums
+                }
             }
         }
     }
 
     // 프래그먼트 2에 대한 쿼리(교통 탭)
-    fun queryForFragment2() {
+    fun queryForFragment2(searchText: String?) {
         viewModelScope.launch(Dispatchers.IO) {
-            db.forumDao().getAllT().collect { forums ->
-                _items.value = forums
+            if (!searchText.isNullOrEmpty()) { // 검색어가 있을 때
+                db.forumDao().getSearchT(searchText).collect { forums ->
+                    _items.value = forums
+                }
+            } else { // 검색어가 없을 때
+                db.forumDao().getAllT().collect { forums ->
+                    _items.value = forums
+                }
             }
         }
     }
 
     // 프래그먼트 3에 대한 쿼리(날씨 탭)
-    fun queryForFragment3() {
+    fun queryForFragment3(searchText: String?) {
         viewModelScope.launch(Dispatchers.IO) {
-            db.forumDao().getAllW().collect { forums ->
-                _items.value = forums
-            }
-        }
-    }
-
-    // 프래그먼트 4에 대한 쿼리(검색)
-    fun queryForFragment4(searchText: String) {
-        Log.d("test", "test::::::searchText ::: $searchText")
-        viewModelScope.launch(Dispatchers.IO) {
-            db.forumDao().getSearch(searchText).collect { forums ->
-                _items.value = forums
+            if (!searchText.isNullOrEmpty()) { // 검색어가 있을 때
+                db.forumDao().getSearchW(searchText).collect { forums ->
+                    _items.value = forums
+                }
+            } else { // 검색어가 없을 때
+                db.forumDao().getAllW().collect { forums ->
+                    _items.value = forums
+                }
             }
         }
     }

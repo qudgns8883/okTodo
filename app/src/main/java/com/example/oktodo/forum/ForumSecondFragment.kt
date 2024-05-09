@@ -51,8 +51,17 @@ class ForumSecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // getArguments()를 사용하여 번들을 가져옴
+        var searchText: String? = null
+        var searchText2: String? = null
+        val bundle = arguments
+        if (bundle != null && bundle.containsKey("searchText")) {
+            searchText = bundle.getString("searchText")
+            searchText2 = bundle.getString("searchText2")
+        }
+
         // 프래그먼트 2에 대한 쿼리 호출
-        viewModel.queryForFragment2()
+        viewModel.queryForFragment2(searchText)
 
         // recyclerView 초기화 및 설정
         val recyclerView = binding.forumRecyclerView
