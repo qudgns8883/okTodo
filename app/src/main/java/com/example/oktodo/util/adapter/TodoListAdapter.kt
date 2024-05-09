@@ -86,14 +86,14 @@ class TodoListAdapter(
 
     // 체크박스를 재설정하는 메서드 추가
     @SuppressLint("NotifyDataSetChanged")
-    fun disableCheckboxes() {
+    fun unCheckboxes() {
         // 현재 표시되고 있는 아이템 수만큼 반복
         for (i in 0 until itemCount) {
             // 해당 위치의 ViewHolder 가져오기
             val viewHolder = recyclerView.findViewHolderForAdapterPosition(i)
             if (viewHolder is TodoViewHolder) {
                 // ViewHolder 내의 binding을 사용하여 체크박스 비활성화
-                viewHolder.binding.doneCheck.isEnabled = false
+                viewHolder.binding.doneCheck.isChecked = false
             }
         }
         notifyDataSetChanged() // RecyclerView(현재 표시되고 있는 데이터를 다시 로드하고 갱신하여 화면에 새로운 데이터를 반영)에 연결된 어댑터가 데이터의 변경 사항을 알려주는 역할

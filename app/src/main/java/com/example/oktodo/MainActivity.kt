@@ -29,6 +29,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.oktodo.forum.ForumMainActivity
 import com.example.oktodo.metro.MetroActivity
 import com.example.oktodo.myPage.MyPage
+import com.example.oktodo.todoList.TodoBackgroundActivity
 import com.example.oktodo.todoList.TodoMainActivity
 import com.example.oktodo.util.menuClickListener.AuthManager
 
@@ -83,7 +84,6 @@ class MainActivity : AppCompatActivity() {
         val todoView = findViewById<View>(R.id.todo_view) // todo_view ID를 가진 뷰를 참조
         todoView.setOnClickListener {
             val intent = Intent(this, TodoMainActivity::class.java)
-//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
 
@@ -91,9 +91,11 @@ class MainActivity : AppCompatActivity() {
         val forumView = findViewById<View>(R.id.comm_view)
         forumView.setOnClickListener {
             val intent = Intent(this, ForumMainActivity::class.java)
-//            intent.putExtra("mno", mno)
             startActivity(intent)
         }
+
+        // BackgroundActivity 시작
+        startTodoBackgroundActivity()
     }
 
     // 로그인 상태를 확인하고 UI를 업데이트하는 함수
@@ -144,6 +146,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, FragmentActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    // todoList 체크해제 백그라운드
+    private fun startTodoBackgroundActivity() {
+        val intent = Intent(this, TodoBackgroundActivity::class.java)
+        startActivity(intent)
     }
 
     // 액티비티 종료 시 호출, Coroutine 작업 취소

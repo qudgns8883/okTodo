@@ -110,6 +110,9 @@
             android:name=".metro.SeoulChosenActivity"
             android:exported="false" />
         <activity
+            android:name=".todoList.TodoBackgroundActivity"
+            android:exported="false" />
+        <activity
             android:name=".todoList.TodoMainActivity"
             android:exported="false" />
         <activity

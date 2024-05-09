@@ -39,7 +39,7 @@ abstract class AppDatabase : RoomDatabase() { // 조건 2
             return appDatabase
         }
 
-        // TodoWorker 에서 사용
+        // TodoWorker, TodoBackground 에서 사용
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
