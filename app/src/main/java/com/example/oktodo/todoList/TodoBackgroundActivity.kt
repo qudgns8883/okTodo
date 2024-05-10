@@ -37,12 +37,9 @@ class TodoBackgroundActivity : AppCompatActivity() {
         val alarmTime = Calendar.getInstance()
 
         // 매일 정해진 시간에 알람 설정
-        alarmTime.set(Calendar.HOUR_OF_DAY, 0)
-        alarmTime.set(Calendar.MINUTE, 0)
+        alarmTime.set(Calendar.HOUR_OF_DAY, 23)
+        alarmTime.set(Calendar.MINUTE, 52)
         alarmTime.set(Calendar.SECOND, 0)
-
-        // 알람이 제대로 설정되었는지 로그 추가
-        Log.d("test", "알람 설정 시간::::: ${alarmTime.time}")
 
         // 알람 설정
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, alarmTime.timeInMillis, AlarmManager.INTERVAL_DAY, pendingIntent)
@@ -57,14 +54,9 @@ class TodoBackgroundReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         try {
-            Log.d("test", "정해진 시간에 백그라운드 작동 확인 start")
-
             CoroutineScope(Dispatchers.IO).launch {
                 adapter.unCheckboxes() // 체크박스 비활성화 작업을 수행하는 메서드 호출
             }
-
-            // 정해진 시간에 작업을 수행하는 부분에 로그 추가
-            Log.d("test", "정해진 시간에 백그라운드 작동 확인 end")
         } catch (e: Exception) {
             // 예외 발생 시 로그 출력
             Log.e("test", "오류 발생: ${e.message}", e)
