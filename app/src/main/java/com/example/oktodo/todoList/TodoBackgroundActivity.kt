@@ -37,8 +37,8 @@ class TodoBackgroundActivity : AppCompatActivity() {
         val alarmTime = Calendar.getInstance()
 
         // 매일 정해진 시간에 알람 설정
-        alarmTime.set(Calendar.HOUR_OF_DAY, 23)
-        alarmTime.set(Calendar.MINUTE, 52)
+        alarmTime.set(Calendar.HOUR_OF_DAY, 0)
+        alarmTime.set(Calendar.MINUTE, 0)
         alarmTime.set(Calendar.SECOND, 0)
 
         // 알람 설정
